@@ -6,9 +6,11 @@
 const packageJson = require('../../package.json');
 
 export const environment = {
-  appName: 'NEW Material',
+  appName: 'NEW',
   envName: 'DEV',
   production: false,
+  hostname: 'http://localhost:4200/',
+  dynPath: 'New',
   versions: {
     app: packageJson.version,
     angular: packageJson.dependencies['@angular/core'],

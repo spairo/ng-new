@@ -3,6 +3,9 @@ import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs/Subject';
 import {  ProgramasService } from './programas.service'
 
+import { environment as env } from '@env/environment';
+
+
 import * as myGlobals from 'globals';
 
 
@@ -22,7 +25,7 @@ export class ProgramasComponent implements OnInit {
 
   ngOnInit() {
 
-
+    console.log(env);
     // console.log(this._programs.getPrueba());
 
    // this._programs.getJSON().subscribe(data => {
