@@ -9,8 +9,8 @@ export const environment = {
   appName: 'NEW',
   envName: 'DEV',
   production: false,
-  hostname: 'http://localhost:4200/',
-  dynPath: 'New',
+  hostname: 'http://localhost:4200',
+  dynPath: '/assets/mocks-api/',
   versions: {
     app: packageJson.version,
     angular: packageJson.dependencies['@angular/core'],
