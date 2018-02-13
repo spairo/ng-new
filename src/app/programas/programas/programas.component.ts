@@ -16,7 +16,7 @@ import * as myGlobals from 'globals';
 })
 export class ProgramasComponent implements OnInit {
 
-  public articulo;
+  public programs;
 
   constructor(
     private _programs: ProgramasService
@@ -24,7 +24,9 @@ export class ProgramasComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log(env);
+    this._programs.buildApi('programas').subscribe(data => {
+      this.programs = data;
+    });
 
     // console.log(this._programs.getPrueba());
 
