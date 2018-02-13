@@ -1,0 +1,50 @@
+$colors = {
+	blue: {
+		aqua: #3EB6BB,
+		base: #094FA4,
+		dark: #006EC1,
+		deepsky: #52BCEC,
+		degraded1: #66ADD8,
+		degraded2: #6699C4,
+		light: #B5E5F9,
+		medium: #009EE5,
+		pale: #89D1F3,
+		whiteBlue: #F0F9FE
+	},
+	gray: {
+		base: #666666,
+		dark: #1A1A1A,
+		degraded1:#FBFBFB,
+		degraded2: #EDEDED,
+		light: #CCCCCC,
+		medium: #363636,
+		pale: #B3B3B3,
+		whiteGray: #F2F2F2,
+		whiteSmoke: #D8D8D8
+	},
+	green: {
+		dark: #008000,
+		base: #86C82D
+	},
+	magenta: {
+		base: #C8175E
+	},
+	orange: {
+		base: #F6891E
+	},
+	shadow: {
+		low: rgba(0, 0, 0, 0.2),
+		white: rgba(255, 255, 255, 0.8)
+	},
+	white: {
+		base: #FFFFFF
+	},
+	yellow: {
+		base: #FDBD2C
+	}
+}
+
+$color(color, tone = 'base')
+	return $colors[color][tone]
+/* $color('NameColor') Sin Tono toma Base */
+/* $color('NameColor', 'ToneColor') Con Tono de color */
