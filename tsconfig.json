@@ -14,8 +14,7 @@
     ],
     "paths": {
       "@app/*": ["app/*"],
-      "@env/*": ["environments/*"],
-      "@mocks/*": ["mocks/*"]
+      "@env/*": ["environments/*"]
     },
     "lib": [
       "es2016",

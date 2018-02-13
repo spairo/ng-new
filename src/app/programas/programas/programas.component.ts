@@ -5,13 +5,10 @@ import {  ProgramasService } from './programas.service'
 
 import { environment as env } from '@env/environment';
 
-import * as myGlobals from 'globals';
-
-
 @Component({
   selector: 'new-programas',
   templateUrl: './programas.component.html',
-  styleUrls: ['./programas.component.scss'],
+  styleUrls: ['./programas.component.styl'],
   providers: [ProgramasService]
 })
 export class ProgramasComponent implements OnInit {
@@ -28,25 +25,7 @@ export class ProgramasComponent implements OnInit {
       this.programs = data;
     });
 
-    // console.log(this._programs.getPrueba());
-
-   // this._programs.getJSON().subscribe(data => {
-     // console.log(data);
-   // });
-
-    /*
-    this._programs.getPrograms().subscribe(
-      result => {
-				//this.articulos = result;
-
-        console.log(result);
-
-
-			},error => {
-        var errorMessage = < any > error;
-        console.warn(this.errorMessage);
-      }
-    );*/
   }
+
 }
 
