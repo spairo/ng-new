@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { SettingsComponent } from './settings';
 import { ProgramasComponent } from './programas';
+import { PortafoliosComponent } from './portafolios';
 
 const routes: Routes = [
   {
@@ -15,6 +16,13 @@ const routes: Routes = [
     component: SettingsComponent,
     data: {
       title: 'Settings'
+    }
+  },
+  {
+    path: 'protafolios',
+    component: PortafoliosComponent,
+    data: {
+      title: 'protafolios'
     }
   },
   {
