@@ -7,6 +7,7 @@ import { CoreModule } from '@app/core';
 
 import { SettingsModule } from './settings';
 import { ProgramasModule } from './programas';
+import { PortafoliosModule } from './portafolios';
 import { StaticModule } from './static';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +27,7 @@ import { AppComponent } from './app.component';
     StaticModule,
     SettingsModule,
     ProgramasModule,
+    PortafoliosModule,
 
     // app
     AppRoutingModule
