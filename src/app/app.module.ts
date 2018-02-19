@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { SharedModule } from '@app/shared';
+import { ApibuilderModule } from '@app/apibuilder'
 import { CoreModule } from '@app/core';
 
 import { SettingsModule } from './settings';
@@ -22,6 +23,7 @@ import { AppComponent } from './app.component';
     // core & shared
     CoreModule,
     SharedModule,
+    ApibuilderModule,
 
     // features
     StaticModule,

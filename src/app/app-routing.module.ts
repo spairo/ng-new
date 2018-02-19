@@ -19,10 +19,10 @@ const routes: Routes = [
     }
   },
   {
-    path: 'protafolios',
+    path: 'portafolios',
     component: PortafoliosComponent,
     data: {
-      title: 'protafolios'
+      title: 'portafolios'
     }
   },
   {

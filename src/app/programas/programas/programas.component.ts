@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs/Subject';
+
 import {  ProgramasService } from './programas.service'
 
+import { SharedModule } from '@app/shared';
 import { environment as env } from '@env/environment';
 
 @Component({
@@ -16,13 +18,14 @@ export class ProgramasComponent implements OnInit {
   public programs;
 
   constructor(
-    private _programs: ProgramasService
+    private _programs: ProgramasService,
   ) {}
 
   ngOnInit() {
 
-    this._programs.buildApi('programas').subscribe(data => {
+    this._programs.getPrograms('programas').subscribe(data => {
       this.programs = data;
+      console.log(this.programs);
     });
 
   }

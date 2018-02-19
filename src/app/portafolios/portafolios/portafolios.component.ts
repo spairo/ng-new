@@ -16,7 +16,7 @@ export class PortafoliosComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-      alert('portafolios');
+
   }
 
 }

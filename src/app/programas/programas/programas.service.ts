@@ -4,23 +4,44 @@ import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Observable';
 
 import { environment as env } from '@env/environment';
+import { ApibuilderService } from '@app/apibuilder'
 
 @Injectable()
 export class ProgramasService {
 
-  public url:string;
+  public compleURL: string;
 
-  constructor(private _http: HttpClient) {}
+  constructor(
+    private _http: HttpClient,
+    private _apibuilder: ApibuilderService
+  ) {}
 
-  buildApi(url){
 
-    if(!env.production){
-      this.url = env.hostname + env.dynPath + url + '.json';
-    }
+  const service = {
+    clonePortfolio: {
+        method: 'post',
+        url: '/portafolio/clonar'
+    },
+  };
 
-    return this._http.get(this.url).map(res => res);
 
+  getPrograms(service) {
+
+    this.compleURL = this._apibuilder.buildURL(service);
+
+    return this._http.get(this.compleURL).map(res => res);
   }
+
+  getPrueba() { return 'Hola mundo desde el servicio.'; }
+
+
+
+
+
+
+
+
+
 
   /*
   addProducto(producto: Producto): Observable<any>{
