@@ -16,15 +16,6 @@ export class ProgramasService {
     private _apibuilder: ApibuilderService
   ) {}
 
-
-  const service = {
-    clonePortfolio: {
-        method: 'post',
-        url: '/portafolio/clonar'
-    },
-  };
-
-
   getPrograms(service) {
 
     this.compleURL = this._apibuilder.buildURL(service);
