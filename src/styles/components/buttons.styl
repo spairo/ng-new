@@ -1,0 +1,90 @@
+button
+	border: 0
+	border-radius: 5px
+	color: $color('white')
+	cursor: pointer
+	font: 11px 'Stag Sans Book'
+	height: 30px
+	width: 100px
+
+	&.btn
+		$button(
+			$degraded($color('blue', 'dark'), $color('blue')),
+			$color('blue'),
+			$degraded($color('blue', 'degraded1'), $color('blue', 'degraded2'))
+		)
+
+	&.btn-catalog
+		$button(
+			$color('white'),
+			$color('blue'),
+			$color('gray', 'whiteGray')
+		)
+		border: 1px solid $color('blue')
+		color: $color('blue')
+		width: 99%
+
+		&:disabled
+			border: 1px solid $color('gray', 'pale')
+			color: $color('gray', 'pale')
+
+	&.btn-copy
+		$button(
+			$color('white'),
+			$color('blue'),
+			$color('gray', 'whiteGray'),
+		)
+		border: 1px solid $color('blue')
+		color: $color('blue')
+
+		&:disabled
+			border: 1px solid $color('gray', 'pale')
+			color: $color('gray', 'pale')
+
+	&.btn-delete
+		$button(
+			$color('magenta'),
+			$color('magenta'),
+			$color('magenta'),
+		)
+
+		&.large
+			width: 150px
+
+	&.btn-large
+		$button(
+			$degraded($color('blue', 'dark'), $color('blue')),
+			$color('blue'),
+			$degraded($color('blue', 'degraded1'), $color('blue', 'degraded2'))
+		)
+		width: 150px
+
+		&.gray
+			$button(
+				$color('gray', 'pale'),
+				$color('gray', 'light'),
+				$color('gray', 'pale')
+			)
+
+	&.btn-add
+		$button(
+			$color('white'),
+			$color('blue'),
+			$degraded($color('blue', 'degraded1'), $color('blue', 'degraded2'))
+		)
+		border: 2px dashed $color('blue', 'medium')
+		border-radius: 50%
+		color: $color('blue', 'medium')
+		font-size: 30px
+		height: 56px
+		width: 56px
+
+		&:hover
+			border: 2px solid $color('blue', 'medium')
+
+		&.big
+			display: block
+			font-size: 85px
+			height: 150px
+			margin: 15% auto 20px
+			width: 150px

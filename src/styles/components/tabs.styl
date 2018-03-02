@@ -1,0 +1,85 @@
+.tabs
+	list-style: none
+	margin: 0
+	overflow: hidden
+	padding: 0
+	width: 100%
+
+	&.large
+		li
+			width: 170px
+
+	li
+		background: $color('gray', 'whiteGray')
+		border: 1px solid $color('gray', 'whiteSmoke')
+		border-radius: 5px 5px 0 0
+		cursor: pointer
+		float: left
+		line-height: 35px
+		padding: 0 10px
+		text-transform: capitalize
+		width: 150px
+
+		&.current
+			background: $color('white')
+			border-bottom: 1px solid $color('white')
+			color: $color('blue')
+
+		&.last
+			background: transparent
+			border: 0
+			border-bottom: 1px solid $color('gray', 'whiteSmoke')
+			cursor: default
+			height: 37px
+			padding: 0
+
+			i
+				&.tooltip
+					.content
+						margin: -45px 0 0 -65px
+						padding: 0
+						width: 145px
+
+					&.double
+						.content
+							line-height: 17px
+							margin: -53px 0 0 -51px
+							padding: 5px
+							width: 115px
+
+			&.view
+				width: 522px
+
+		i
+			float: right
+			margin-top: 10px
+
+	&.portfolio
+		font-size: 15px
+
+		li
+			width: 145px
+
+			span
+				display: block
+				overflow: hidden
+				text-overflow: ellipsis
+				white-space: nowrap
+				width: 125px
+
+.content-tab
+	border: 1px solid $color('gray', 'whiteSmoke')
+	border-radius: 0 0 5px 5px
+	border-top: none
+	display: inline-block
+	font-size: 12px
+	padding: 20px 0
+	width: 100%
+
+	&.accordion
+		max-height: 350px
+		overflow: auto
+
+	.message
+		margin: 20px 0
+		text-align: center

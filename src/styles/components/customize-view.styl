@@ -1,0 +1,80 @@
+.options
+	border-left: 1px solid $color('gray', 'light')
+	cursor: pointer
+	display: inline-block
+	width: 250px
+
+	div
+		cursor: pointer
+		display: block
+
+		&.edit-view
+			color: $color('blue', 'medium')
+			display: inline-block
+			font-size: 12px
+
+			&:hover
+				text-decoration: underline
+
+		&.restore-view
+			color: $color('gray', 'light')
+			display: inline-block
+			font-size: 12px
+			margin-right: 25px
+
+			&:hover
+				color: $color('gray')
+				text-decoration: underline
+
+		&.title-view
+			color: $color('blue')
+			font-weight: bold
+			margin-bottom: 3px
+
+.submenu
+	display: inline-block
+
+	.content
+		background-color: $color('white')
+		border-radius: 5px
+		box-shadow 1px 0 18px 2px $color('gray', 'light')
+		color: $color('gray')
+		margin: 10px 0 0 2px
+		position: absolute
+		width: 245px
+		z-index: 1
+
+		&:after
+			border-color: transparent transparent $color('white') transparent
+			border-style: solid
+			border-width: 8px
+			bottom: 100%
+			content: ' '
+			position: absolute
+			right: 10%
+
+		.personalize
+			border-top: 1px solid $color('gray', 'light')
+			font-size: 12px
+			padding: 10px 15px
+			text-align: left
+
+		ul
+			font-style: normal
+			line-height: 20px
+			list-style-type: none
+			margin: 0
+			padding: 10px
+			text-align: left
+
+			&.check
+				li
+					cursor: pointer
+					margin: 5px 0
+					white-space: nowrap
+
+					&:hover
+						color: $color('blue', 'medium')
+
+					label
+						cursor: pointer

@@ -1,0 +1,228 @@
+.table-scroll
+	border-radius: 6px
+	margin-bottom: 30px
+	overflow-y: auto
+
+	&.max-vertical
+	&.vertical
+		height: 450px
+		margin-top: 20px
+		overflow-x: auto
+
+		&.border
+			border: 1px solid $color('gray', 'light')
+			margin: 10px 0
+			overflow-x: hidden
+			overflow-y: auto
+
+			table
+				border: 0
+
+		thead
+			tr
+				th
+					cursor: default
+				&.no-hover
+					&:hover
+						background-color: $color('gray', 'whiteGray')
+						cursor: default
+
+		tr
+			&.default
+				&:hover
+					background-color: $color('gray', 'whiteGray')
+
+			&:hover
+				background-color: $color('white')
+				cursor: default
+
+	&.max-vertical
+		height: auto
+		max-height: 350px
+
+.scroll-vertical-small
+	border-radius: 6px
+	height: 270px
+	margin-bottom: 30px
+	overflow-x: hidden
+	overflow-y: auto
+
+	&.size-310
+		height: 310px
+
+	&.size-350
+		height: 350px
+
+	td
+		white-space: normal
+
+		input
+			min-width: 80px
+
+.scroll-vertical-filter
+	border-radius: 6px
+	height: 550px
+	overflow-x: hidden
+	overflow-y: auto
+
+	label
+		font-size: 13px
+
+.table-wrap
+	border-radius: 6px
+	overflow: hidden
+	width: 1550px
+
+	&.medium
+		width: 945px
+
+	&.print
+		margin-bottom: 30px
+		width: 1272px
+
+		th
+		.traffic-light
+			cursor: default
+
+		td
+			padding: 5px 15px
+			white-space: normal
+
+	&.small
+		width: 580px
+
+.table-wrap-border
+	border-bottom: 1px solid $color('gray', 'whiteSmoke')
+	border-radius: 6px
+	position: relative
+
+.title-table
+	background-color: $color('gray', 'whiteGray')
+	border: 1px solid $color('gray', 'whiteSmoke')
+	border-bottom: none
+	color: $color('blue')
+	padding: 10px 5px
+	text-align: center
+
+table
+	border: 1px solid $color('gray', 'whiteSmoke')
+	border-bottom: none
+	border-collapse: collapse
+	font-size: 13px
+	width: 100%
+
+	&:last-child
+		border-bottom: 1px solid $color('gray', 'whiteSmoke')
+
+	thead
+		background-color: $color('gray', 'whiteGray')
+
+		tr
+			border-bottom: 1px solid $color('gray', 'whiteSmoke')
+
+			&.search
+				td
+					padding: 5px
+
+					input
+						min-width: 100px
+
+			th
+				cursor: pointer
+				font-weight: normal
+				height: 40px
+
+				&.default
+					cursor: default
+
+				&.delete
+					width: 50px
+
+				&.show-cols
+					border-right: 1px solid $color('gray', 'whiteSmoke')
+
+					&.hide
+						border-right: none
+
+				span
+					&.sortorder
+						$icon-after('sorter', 12px, 12px)
+						&:after
+							background-position: -27px -5px
+							margin-left: 5px
+
+						&.reverse
+							$icon-after('sorter', 12px, 12px)
+							&:after
+								background-position: -5px -5px
+								margin-left: 5px
+
+	tbody
+		color: $color('gray', 'medium')
+
+		tr
+			border-top: 1px solid $color('gray', 'whiteSmoke')
+
+			&:hover
+				background-color: $color('blue', 'whiteBlue')
+				cursor: pointer
+
+			&.no-hover
+				background-color: $color('white')
+				cursor: default
+
+			td
+				border-right: 1px solid $color('gray', 'whiteSmoke')
+				height: 45px
+				max-width: 450px
+				overflow: hidden
+				padding: 0 30px
+				text-align: center
+				text-overflow: ellipsis
+				white-space: nowrap
+
+				&.amount
+					color: $color('blue', 'medium')
+					text-align: right
+
+				.expiration
+					color: $color('orange')
+
+				.green
+					color: $color('green')
+
+				&.icons
+					width: 50px
+
+				&.show-cols
+					border-right: none
+					padding: 0 10px
+
+				&.size-120
+					width: 120px
+
+				.magenta
+					color: $color('magenta')
+
+			&.drop
+				border-bottom: 1px solid $color('gray', 'whiteSmoke')
+				border-top: none
+
+				&:hover
+					background-color: $color('white')
+					cursor: default
+
+				td
+					&.drop
+						padding: 30px
+						text-align: left
+
+						table
+							thead
+								tr
+									&:hover
+										background-color: $color('gray', 'whiteGray')
+									th
+										color: $color('gray')
+										cursor: default
+										text-align: center

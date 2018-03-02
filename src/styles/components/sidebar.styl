@@ -1,0 +1,111 @@
+.title-ul
+	border-bottom: 1px solid $color('gray', 'whiteSmoke')
+	color: $color('blue')
+	font-size: 15px
+	line-height: 40px
+	margin: 10px
+	padding: 0
+
+ul
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+	&.datalist
+		height: 360px
+		overflow-x: hidden
+		overflow-y: auto
+
+		&._336
+			height: 336px
+
+		&.auto
+			height: auto
+
+		li
+			align-items: center
+			display: flex
+			font-size: 13px
+			min-height: 35px
+			padding: 0 15px
+			position: relative
+
+			i
+				margin: 0
+
+			.add
+				margin-bottom: 5px
+
+			.delete
+				margin-top: 5px
+
+			.edit
+				display: none
+
+			.edit-container
+				width: 100%
+
+				i
+					&.add
+						margin: 7px 0 0 0
+
+					&.delete
+						margin: 2px 0 0 0
+
+			&.active
+			&:hover
+				background-color: $color('gray', 'whiteGray')
+				background-position: 96% 50%
+				cursor: pointer
+
+			&.hover
+				cursor: default
+
+			&:hover
+				.edit
+					bottom: 11px
+					display: block
+					float: right
+					position: absolute
+					right: 20px
+					top: 7px
+
+			&.not-cursor
+				background-color: $color('white')
+				background-image: none
+				cursor: default
+				font-weight: normal
+
+		.add-new
+			color: $color('gray', 'pale')
+			cursor: pointer
+			padding: 12px 0 12px 40px
+
+			&:hover
+				font-weight: bold
+
+	&.sidebar
+		border-right: 1px solid $color('gray', 'whiteSmoke')
+		height: 100%
+
+		li
+			cursor: pointer
+			font-size: 14px
+			line-height: 45px
+			padding-left: 10px
+
+			&.active
+				background-color: $color('gray', 'whiteGray')
+				background-position: 96% 50%
+
+		&.small
+			height: 239px
+
+	li
+		&.active
+			background: url('../assets/icons/active-sidebar.png') no-repeat 98% 94%
+			cursor: pointer
+			font-weight: bold
+
+		i
+			margin: 20px 10px -4px 8px

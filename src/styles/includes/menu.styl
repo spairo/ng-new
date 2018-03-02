@@ -1,0 +1,154 @@
+nav
+	background: $degraded($color('blue', 'dark'), $color('blue'))
+	border-radius: 5px
+	font-size: 16px
+	height: 50px
+	margin-bottom: 10px
+
+	li
+		background: url('../assets/img/separate.png') no-repeat center left
+		float: left
+		line-height: 50px
+		list-style: none
+		position: relative
+		text-align: center
+		width: 305px
+
+		&.active
+			background-color: $color('blue')
+
+			&:first-child
+				border-radius: 5px 0 0 5px
+
+			&:last-child
+				border-radius: 0 5px 5px 0
+
+		&:hover
+			background: $color('white')
+			border: 1px solid $color('gray', 'light')
+			border-bottom: none
+
+			a
+				color: $color('blue')
+
+				&.adjustments
+					$icon-before('adjustments', 30px , 30px)
+					&:before
+						background-position: -5px -5px
+
+				&.blotter
+					$icon-before('blotter', 30px , 30px)
+					&:before
+						background-position: -45px -5px
+
+				&.catalogs
+					$icon-before('catalogs', 30px, 30px)
+					&:before
+						background-position: -5px -5px
+
+				&.tracing
+					$icon-before('tracing', 30px, 30px)
+					&:before
+						background-position: -45px -5px
+
+			ul
+				display: block
+
+		&:first-child
+			width: 52px
+
+			&:hover
+				background-color: $color('blue')
+				border: 0
+				border-radius: 5px 0 0 5px
+
+		&:last-child
+			&:hover
+				border-radius: 0 5px 0 0
+
+			ul
+				&.columns
+					left: -163px
+
+		a
+			color: $color('white')
+			display: block
+			text-decoration: none
+
+			&.adjustments
+				$icon-before('adjustments', 30px , 30px)
+				&:before
+					background-position: -45px -5px
+
+			&.blotter
+				$icon-before('blotter', 30px, 30px)
+				&:before
+					background-position: -5px -5px
+
+			&.catalogs
+				$icon-before('catalogs', 30px, 30px)
+				&:before
+					background-position: -5px -5px
+
+			&.home
+				$icon-before('home', 30px, 30px)
+				&:before
+					padding: 0
+
+			&.tracing
+				$icon-before('tracing', 30px, 30px)
+				&:before
+					background-position: -5px -5px
+
+		ul
+			background: $color('white')
+			border: 1px solid $color('gray', 'light')
+			border-radius: 0 0 5px 5px
+			border-top: none
+			box-shadow: 2px 2px 5px $color('gray', 'light')
+			display: none
+			left: -1px
+			margin: 0
+			padding: 0
+			position: absolute
+			width: 305px
+			z-index: 1
+
+			&.columns
+				padding: 0
+				width: 591px
+
+			.title
+				color: $color('blue')
+				float: left
+				font-size: 14px
+				height: 40px
+				margin-top: 10px
+				padding-left: 15px
+				text-align: left
+
+			li
+				background: none
+				display: block
+				line-height: 20px
+				padding: 5px 25px
+				text-align: left
+
+				&.active
+					background: none
+
+				&:hover
+					background-color: $color('white')
+					border: 0
+					border-radius: 0 0 5px 5px
+					width: 100%
+
+					a
+						color: $color('blue', 'medium') !important
+
+				&:last-child
+					padding-bottom: 20px
+
+				a
+					color: $color('gray') !important
+					font-size: 13px

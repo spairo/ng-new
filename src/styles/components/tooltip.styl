@@ -1,0 +1,53 @@
+.tooltip
+	display: inline-block
+
+	.box
+		float: left
+		height: 20px
+		margin: 0 1px
+		width: 20px
+
+	.content
+		background-color: $color('white')
+		border-radius: 5px
+		box-shadow 1px 0 18px 2px $color('gray', 'light')
+		color: $color('gray')
+		display: none
+		margin: -36px 0 0 -51px
+		padding: 8px
+		position: absolute
+		width: 120px
+		z-index: 1
+
+		.txt
+			font-size: 12px !important
+			font-style: normal
+			margin: 0 !important
+			text-align: center !important
+
+		&.colors
+			margin: -36px 0 0 -95px
+			padding: 5px
+			width: 208px
+
+		&.range
+			margin: -187px 0 0 -118px
+			width: 250px
+
+	&:hover
+		.content
+			display: block
+
+			&:after
+				border-color: $color('white') transparent transparent transparent
+				border-style: solid
+				border-width: 8px
+				content: ' '
+				left: 50%
+				margin-left: -5px
+				position: absolute
+				top: 100%
+
+	&.double
+		.content
+			margin-top: -46px

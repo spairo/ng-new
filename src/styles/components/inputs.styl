@@ -1,0 +1,49 @@
+input:not([type='file'])
+	border: 1px solid $color('gray', 'whiteSmoke')
+	border-radius: 5px
+	color: $color('gray')
+	font-family: Arial, sans-serif
+	height: 30px
+	padding: 0 5px
+	width: 100%
+
+	&:disabled
+		background-color: $color('gray', 'whiteGray')
+
+	&.error
+		border: 1px solid $color('magenta')
+
+select[multiple]
+	border: 1px solid $color('gray', 'whiteSmoke')
+	border-radius: 5px
+	color: $color('gray')
+	font-family: Arial, sans-serif
+	height: 200px
+	width: 100%
+
+	option
+		padding: 5px
+
+		&:checked
+			background-color: $color('gray', 'pale')
+
+textarea
+	border: 1px solid $color('gray', 'whiteSmoke')
+	border-radius: 5px
+	color: $color('gray')
+	font-family: Arial, sans-serif
+	height: 70px
+	padding: 5px
+	resize: none
+	width: 100%
+
+	&._60
+		height: 60px
+
+input::-webkit-inner-spin-button
+	height: 30px
+	margin-right: -5px
+
+.ng-submitted
+	.ng-invalid
+		border: 1px solid $color('magenta')

@@ -1,0 +1,43 @@
+.pagination
+	float: right
+	list-style-type: none
+	margin: 0 0 30px
+	padding-left: 10px
+
+	li
+		background: $color('white')
+		border: 1px solid $color('gray', 'light')
+		border-radius: 5px
+		display: inline-block
+		margin: 0 3px
+		text-align: center
+
+		a
+			color: $color('gray')
+			line-height: 20px
+			padding: 0 11px
+			text-decoration: none
+
+		&.active
+			a
+				cursor: default
+
+		&.active
+		&:hover
+			background: $color('blue', 'whiteBlue')
+			border: 1px solid $color('blue', 'medium')
+
+		&.disabled
+			a
+				cursor: not-allowed
+
+			&:hover
+				background: $color('white')
+				border: 1px solid $color('gray', 'light')
+
+span
+	&.count
+		color: $color('gray', 'pale')
+		float: right
+		font-size: 12px
+		margin: 4px 0 30px

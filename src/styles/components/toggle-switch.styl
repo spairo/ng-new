@@ -1,0 +1,68 @@
+.toggle
+	margin-bottom: 5px
+
+	input[type='checkbox']
+		display: none
+		&:checked
+			~ label
+				width: 100% !important
+
+				.toggle-switch
+					background: $degraded(
+						$color('gray', 'degraded1'),
+						$color('gray', 'degraded2')
+					) !important
+
+					&:after
+						border-radius: 0 5px 5px 0
+						color: $color('green', 'dark')
+						content: attr(data-checked)
+						transform: translate3d(100%, 0, 0)
+
+					&:before
+						border-radius: 5px 0 0 5px
+						content: attr(data-unchecked)
+						left: 0
+
+		&:disabled
+			~ label
+				.toggle-switch
+					cursor: default
+
+	label
+		border-radius: 5px
+		width: 100% !important
+
+		.toggle-switch
+			cursor: pointer
+			height: 20px
+			position: relative
+
+			&:after
+				background: $color('gray', 'pale')
+				border: 1px solid $color('gray', 'light')
+				border-radius: 5px 0 0 5px
+				color: $color('magenta')
+				content: attr(data-unchecked)
+				font-weight: bold
+				line-height: 20px
+				position: absolute
+				text-align: center
+				width: 50%
+				z-index: 5
+
+			&:before
+				background: $degraded(
+					$color('gray', 'degraded1'),
+					$color('gray', 'degraded2')
+				) !important
+				border: 1px solid $color('gray', 'light')
+				border-radius: 0 5px 5px 0
+				color: $color('gray', 'light')
+				content: attr(data-checked)
+				font-weight: bold
+				left: 50%
+				line-height: 20px
+				position: absolute
+				text-align: center
+				width: 50%

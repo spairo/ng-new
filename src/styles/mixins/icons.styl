@@ -1,0 +1,82 @@
+$icons = {
+	add: '../assets/icons/add.png',
+	add-date: '../assets/icons/add-date.png',
+	adjustments: '../assets/icons/adjustments.png',
+	amortizations: '../assets/icons/upload-amortizations.png',
+	analytics: '../assets/icons/analytics.png',
+	blotter: '../assets/icons/blotter.png',
+	burger: '../assets/icons/burger.png',
+	calculate: '../assets/icons/calculate.png',
+	calendar: '../assets/icons/calendar.png',
+	catalogs: '../assets/icons/catalogs.png',
+	cancel: '../assets/icons/cancel.png',
+	clip: '../assets/icons/clip.png',
+	clip-nja: '../assets/icons/clip-nja.png',
+	close: '../assets/icons/close.png',
+	configuration: '../assets/icons/configuration.png',
+	complex-alta: '../assets/icons/caracteristicas/ico_alta.svg',
+	complex-baja: '../assets/icons/caracteristicas/ico_baja.svg',
+	complex-media: '../assets/icons/caracteristicas/ico_media.svg',
+	complex-mbaja: '../assets/icons/caracteristicas/ico_muybaja.svg',
+	copy: '../assets/icons/copy.png',
+	delete: '../assets/icons/delete.png',
+	docs: '../assets/icons/docs.png',
+	download-blotter: '../assets/icons/download-blotter.png',
+	drop-table: '../assets/icons/drop-table.png',
+	edit: '../assets/icons/edit.png',
+	edit-bco: '../assets/icons/edit-bco.png',
+	error: '../assets/icons/error.png',
+	excel: '../assets/icons/excel.png',
+	export-pdf: '../assets/icons/export-pdf.png',
+	filter: '../assets/icons/filter.png',
+	home: '../assets/icons/home.png',
+	info: '../assets/icons/info.png',
+	i: '../assets/icons/i.png',
+	liquidity: '../assets/icons/caracteristicas/ico_liquidez.svg',
+	pay-off: '../assets/icons/pay-off.png',
+	plus: '../assets/icons/ico_mas_azul.png',
+	print: '../assets/icons/print.png',
+	pdf: '../assets/icons/pdf.png',
+	performance: '../assets/icons/performance.png',
+	position: '../assets/icons/position.png',
+	preview: '../assets/icons/preview.png',
+	range: '../assets/icons/range-slider.png',
+	reload: '../assets/icons/reload.png',
+	replace-cal: '../assets/icons/replace-cal.png',
+	search: '../assets/icons/search.png',
+	select: '../assets/icons/select.png',
+	select-up: '../assets/icons/select-up.png',
+	show-columns: '../assets/icons/show-columns.png',
+	sorter: '../assets/icons/sorter.png',
+	status: '../assets/icons/status.png',
+	tracing: '../assets/icons/tracing.png',
+	traffic-light: '../assets/icons/traffic-light.png',
+	volatility: '../assets/icons/caracteristicas/ico_volatilidad.svg',
+	views: '../assets/icons/views.png',
+	views-graphics: '../assets/icons/views-graphics.png',
+	void: '../assets/icons/void.png',
+	void_gray: '../assets/icons/void_gray.png',
+	xml: '../assets/icons/xml.png',
+	warning: '../assets/icons/warning.png'
+}
+
+$icon(icon, width = 25px, height = 25px)
+	background: url($icons[icon]) no-repeat
+	height: height
+	width: width
+
+$before-after(icon, width, height)
+	$icon(icon, width, height)
+	content: ' '
+	display: inline-table
+	margin-top: -3px
+	padding-right: 10px
+	vertical-align: middle
+
+$icon-after(icon, width, height)
+	&:after
+		$before-after(icon, width, height)
+
+$icon-before(icon, width, height)
+	&:before
+		$before-after(icon, width, height)

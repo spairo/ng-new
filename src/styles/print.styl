@@ -1,0 +1,36 @@
+header
+nav
+.breadcrumb
+.not
+	display: none
+
+body
+	-webkit-print-color-adjust: exact
+
+.grid-box
+	&.double
+		margin-bottom: 50px
+
+	&.simple
+		margin-bottom: 30px
+
+@media print
+	body
+		margin-left 50px
+	div
+		page-break-inside: avoid
+
+	.seriePanel
+		width 88%
+	.content-graphic-detail
+		transform scale(0.9,0.9)
+		margin-left -60px
+	.parentPanel
+		padding-right 160px
+	.mb-20
+		table
+			thead
+				page-break-inside: auto
+
+@page
+	margin: 20px 0px 0px 0px

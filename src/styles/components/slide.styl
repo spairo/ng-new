@@ -1,0 +1,66 @@
+.rzslider
+	display: inline-block
+	font-style: normal
+	height: 4px
+	margin: 35px 0 15px 0
+	position: relative
+	vertical-align: middle
+	width: 100%
+
+	span
+		display: inline-block
+		position: absolute
+		white-space: nowrap
+
+	.rz-bar
+		background: $color('blue')
+		border-radius: 5px
+		height: 7px
+		left: 0
+		opacity: 0.2
+		width: 100%
+		z-index: 1
+
+	.rz-bar-wrapper
+		box-sizing: border-box
+		height: 32px
+		left: 0
+		margin-top: -16px
+		padding-top: 16px
+		width: 100%
+		z-index: 1
+
+	.rz-bubble
+		bottom: 16px
+		color: $color('blue')
+		cursor: default
+
+		&:after
+			content: '%'
+
+		&.rz-limit
+			bottom: 7px
+			color: $color('gray', 'pale')
+			font-size: 11px
+
+	.rz-pointer
+		background-color: $color('blue')
+		border-radius: 16px
+		cursor: pointer
+		height: 20px
+		top: -7px
+		width: 20px
+		z-index: 3
+
+	.rz-ticks
+		box-sizing: border-box
+		display: flex
+		height: 0
+		left: 0
+		list-style: none
+		margin: 0
+		padding: 0 11px
+		position: absolute
+		top: -3px
+		width: 100%
+		z-index: 1

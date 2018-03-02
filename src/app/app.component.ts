@@ -20,7 +20,7 @@ import { NIGHT_MODE_THEME, selectorSettings } from './settings';
 @Component({
   selector: 'new-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.styl'],
   animations: [routerTransition]
 })
 export class AppComponent implements OnInit, OnDestroy {

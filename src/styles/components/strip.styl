@@ -1,0 +1,30 @@
+.strip
+	background-color: $color('blue', 'whiteBlue')
+	border-bottom: 1px solid $color('blue', 'medium')
+	border-top: 1px solid $color('blue', 'medium')
+	display: table
+	font-size: 12px
+	line-height: 55px
+	margin-bottom: 30px
+	padding: 0 15px
+	width: 100%
+
+	i
+		float: right
+		margin: 15px 0 15px 10px
+
+	label
+		color: $color('gray')
+		margin-right: 5px
+
+	span
+		color: $color('blue', 'medium')
+
+		&.medium
+			font-size: 18px
+			margin: 0 10px
+
+	.tooltip
+		&:hover
+			.content
+				line-height: 14px

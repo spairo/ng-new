@@ -1,0 +1,35 @@
+.filter-search
+	background-color: $color('white')
+	border-radius: 5px
+	box-shadow 1px 0 18px 2px $color('gray', 'light')
+	color: $color('gray')
+	display: inline-block
+	margin: 0
+	padding: 0 5px
+	position: absolute
+	width: 300px
+	z-index: 1
+
+	ul
+		font-style: normal
+		line-height: 20px
+		list-style-type: none
+		margin: 0
+		max-height: 250px
+		overflow: auto
+		padding: 10px
+		text-align: left
+		width: inherit
+		z-index: 10
+
+		&.check
+			li
+				margin: 5px 0
+
+		li
+			cursor: pointer
+
+			&:hover
+				label
+					color: $color('blue', 'medium')
+					cursor: pointer

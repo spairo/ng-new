@@ -1,0 +1,40 @@
+*
+	box-sizing: border-box
+
+body
+	color: $color('gray')
+	font-family: Arial, sans-serif
+	margin: 0
+	padding: 0
+
+.container
+	margin: 0 auto
+	width: 1272px
+
+	a
+		&.file
+		&.link
+			color: $color('blue', 'medium')
+			display: block
+			font-size: 14px
+			margin-top: 5px
+
+		&.link
+			cursor: pointer
+			margin-top: 15px
+			text-decoration: underline
+
+	hr
+		border-top: 1px solid $color('gray', 'whiteSmoke')
+		margin: 0 15px 25px
+
+	label
+		&.valmer
+			float: left
+			font-size: 12px
+			margin-bottom: 5px
+			text-align: left
+			width: 121px
+
+.clear
+	clear: both
