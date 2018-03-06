@@ -8,7 +8,7 @@ import { environment as env } from '@env/environment';
 @Component({
   selector: 'new-portafolios',
   templateUrl: './portafolios.component.html',
-  styleUrls: ['./portafolios.component.scss'],
+  styleUrls: ['./portafolios.component.styl'],
   providers: [PortafoliosService]
 })
 export class PortafoliosComponent implements OnInit {

@@ -1,3 +1,13 @@
-<p>
-  portafolios works!
-</p>
+<div class="row">
+  <div class="col-12">
+    <ul class="tabs portfolio">
+			<li ng-click="main.activeTab = 'banquero'; main.tabCode = 'B000'; main.portafolioBanker();" [ngClass]="{current: main.activeTab === 'banquero'}"><span>Mi Portafolio</span></li>
+			<li ng-click="main.activeTab = 'default'; main.tabCode = '0000'; main.portafolioDefault();" [ngClass]="{current: main.activeTab === 'default'}"><span>Cierres recientes</span></li>
+			<li class="add" ng-repeat="tab in main.tabs" ng-click="main.activeTab = $index; main.tabCode = tab.codigo; main.portafolioTab(tab.codigo); main.filterSubjacents();" [ngClass]="{current: main.activeTab === $index}"><span>{{tab.nombrePortafolio}}</span><i class="burger tooltip iconPlus" ng-class="{'simple on': main.showView === 'simple', 'double on': main.showView === 'double', 'mosaic on': main.showView === 'mosaic'}" ng-init="main.showView = 'mosaic'"><div class="content" style="width: 140px; margin:-35px 0px 0px -60px;"><i class="delete simple" style="margin-top:0px;" [ngClass]="{on: main.showView === 'simple'}" ng-click="main.showView = 'simple'; $event.stopPropagation(); main.deletePortfolio.open(); main.codigoTab = tab.codigo;"></i>
+				<i class="copy simple" style="margin-top:0px;" ng-class="{on: main.showView === 'simple'}" ng-click="main.showView = 'simple'; main.clonePortfolio(tab.codigo)"></i><i class="edit simple" style="margin-top:0px;" [ngClass]="{on: main.showView === 'simple'}" ng-click="main.showView = 'simple'; $event.stopPropagation(); main.goEdition(tab.codigo)"></i></div></i>
+      </li>
+      <li class="add" style="background-color: #B3B3B3;" ng-click="main.goNew();" [ngClass]="{current: main.activeTab === $index}"><span>Crear portafolio</span><i class="plus tooltip newPlus" [ngClass]="{'simple on': main.showView === 'simple', 'double on': main.showView === 'double', 'mosaic on': main.showView === 'mosaic'}" ng-init="main.showView = 'mosaic'"></i></li>
+      <li class="last" style="width:calc(100% - (165 * {{main.tabs.length + 3}}px));"><i class="traffic-loading tooltip" ng-click="main.uploadTrafficLight.open();"><div class="content"><div class="txt">Registro de semáforos</div></div></i></li>
+	  </ul>
+  </div>
+</div>

@@ -1,0 +1,279 @@
+{
+	"underlyingAssets": [{
+		"code": "abcd",
+		"name": "CURR"
+	}, {
+		"code": "efgh",
+		"name": "EQD"
+	}, {
+		"code": "ijkl",
+		"name": "IRD"
+	}, {
+		"code": "mnop",
+		"name": "BOND"
+	}, {
+		"code": "qrst",
+		"name": "MIX"
+	}, {
+		"code": "uvwx",
+		"name": "HYBRID"
+	}],
+	"productTabs": [{
+		"code": "abcd",
+		"name": "Cierres recientes"
+	}, {
+		"code": "defg",
+		"name": "TIEE"
+	}, {
+		"code": "hijk",
+		"name": "Equity"
+	}, {
+		"code": "lmno",
+		"name": "Prueba RCC"
+	}, {
+		"code": "pqrs",
+		"name": "FX"
+	}],
+	"relatedContracts": ["350867", "351008", "351008", "353473", "353473", "363027", "366692", "366692", "366692", "367605"],
+	"structuredProductInformation": [{
+		"id": "3655",
+		"series": "C8012D",
+		"underlyingAssociates": [{
+			"name": "CURR"
+		}],
+		"paymentType": "Call Corto",
+		"productPrice": {
+			"amount": 100.0
+		},
+		"dueDate": "02-07-2019",
+		"currency": {
+			"code": "MXN"
+		},
+		"priceDifference": {
+			"amount": 1.25
+		},
+		"priceDate": "02-07-2019",
+		"status": "1",
+		"listPayOff": [],
+		"referenceAssets": [],
+		"prices": [],
+		"productIndicators": [],
+		"detailStructuredProducts": []
+	}, {
+		"id": "3656",
+		"series": "C8013D",
+		"underlyingAssociates": [{
+			"name": "CURR"
+		}],
+		"paymentType": "Call Digital",
+		"productPrice": {
+			"amount": 100.0
+		},
+		"dueDate": "02-07-2019",
+		"currency": {
+			"code": "MXN"
+		},
+		"priceDifference": {
+			"amount": 1.25
+		},
+		"priceDate": "02-07-2019",
+		"status": "1",
+		"listPayOff": [],
+		"referenceAssets": [],
+		"prices": [],
+		"productIndicators": [],
+		"detailStructuredProducts": []
+	}, {
+		"id": "3657",
+		"series": "C8014D",
+		"underlyingAssociates": [{
+			"name": "CURR"
+		}],
+		"paymentType": "Call KO Up",
+		"productPrice": {
+			"amount": 100.0
+		},
+		"dueDate": "02-07-2019",
+		"currency": {
+			"code": "MXN"
+		},
+		"priceDifference": {
+			"amount": 1.25
+		},
+		"priceDate": "02-07-2019",
+		"status": "1",
+		"listPayOff": [],
+		"referenceAssets": [],
+		"prices": [],
+		"productIndicators": [],
+		"detailStructuredProducts": []
+	}, {
+		"id": "3658",
+		"series": "C8015D",
+		"underlyingAssociates": [{
+			"name": "CURR"
+		}],
+		"paymentType": "Call Spread",
+		"productPrice": {
+			"amount": 100.0
+		},
+		"dueDate": "02-07-2019",
+		"currency": {
+			"code": "MXN"
+		},
+		"priceDifference": {
+			"amount": 1.25
+		},
+		"priceDate": "02-07-2019",
+		"status": "1",
+		"listPayOff": [],
+		"referenceAssets": [],
+		"prices": [],
+		"productIndicators": [],
+		"detailStructuredProducts": []
+	}, {
+		"id": "3659",
+		"series": "C8016",
+		"underlyingAssociates": [{
+			"name": "CURR"
+		}],
+		"paymentType": "Call Spread Escalonado",
+		"productPrice": {
+			"amount": 100.0
+		},
+		"dueDate": "02-07-2019",
+		"currency": {
+			"code": "MXN"
+		},
+		"priceDifference": {
+			"amount": 1.25
+		},
+		"priceDate": "02-07-2019",
+		"status": "1",
+		"listPayOff": [],
+		"referenceAssets": [],
+		"prices": [],
+		"productIndicators": [],
+		"detailStructuredProducts": []
+	}, {
+		"id": "3660",
+		"series": "C8017D",
+		"underlyingAssociates": [{
+			"name": "CURR"
+		}],
+		"paymentType": "Double No Touch",
+		"productPrice": {
+			"amount": 100.0
+		},
+		"dueDate": "02-07-2019",
+		"currency": {
+			"code": "MXN"
+		},
+		"priceDifference": {
+			"amount": 1.25
+		},
+		"priceDate": "02-07-2019",
+		"status": "1",
+		"listPayOff": [],
+		"referenceAssets": [],
+		"prices": [],
+		"productIndicators": [],
+		"detailStructuredProducts": []
+	}, {
+		"id": "3661",
+		"series": "S8017",
+		"underlyingAssociates": [{
+			"name": "CURR"
+		}],
+		"paymentType": "Double No Touch Cuponado",
+		"productPrice": {
+			"amount": 100.0
+		},
+		"dueDate": "02-07-2019",
+		"currency": {
+			"code": "MXN"
+		},
+		"priceDifference": {
+			"amount": 1.25
+		},
+		"priceDate": "02-07-2019",
+		"status": "1",
+		"listPayOff": [],
+		"referenceAssets": [],
+		"prices": [],
+		"productIndicators": [],
+		"detailStructuredProducts": []
+	}, {
+		"id": "3662",
+		"series": "S8016",
+		"underlyingAssociates": [{
+			"name": "CURR"
+		}],
+		"paymentType": "Dual",
+		"productPrice": {
+			"amount": 100.0
+		},
+		"dueDate": "02-07-2019",
+		"currency": {
+			"code": "MXN"
+		},
+		"priceDifference": {
+			"amount": 1.25
+		},
+		"priceDate": "02-07-2019",
+		"status": "1",
+		"listPayOff": [],
+		"referenceAssets": [],
+		"prices": [],
+		"productIndicators": [],
+		"detailStructuredProducts": []
+	}, {
+		"id": "3663",
+		"series": "S8016",
+		"underlyingAssociates": [{
+			"name": "CURR"
+		}],
+		"paymentType": "Dual Topada",
+		"productPrice": {
+			"amount": 100.0
+		},
+		"dueDate": "02-07-2019",
+		"currency": {
+			"code": "MXN"
+		},
+		"priceDifference": {
+			"amount": 1.25
+		},
+		"priceDate": "02-07-2019",
+		"status": "1",
+		"listPayOff": [],
+		"referenceAssets": [],
+		"prices": [],
+		"productIndicators": [],
+		"detailStructuredProducts": []
+	}, {
+		"id": "3664",
+		"series": "S8019",
+		"underlyingAssociates": [{
+			"name": "CURR"
+		}],
+		"paymentType": "Escalera KO Up",
+		"productPrice": {
+			"amount": 100.0
+		},
+		"dueDate": "02-07-2019",
+		"currency": {
+			"code": "MXN"
+		},
+		"priceDifference": {
+			"amount": 1.25
+		},
+		"priceDate": "02-07-2019",
+		"status": "1",
+		"listPayOff": [],
+		"referenceAssets": [],
+		"prices": [],
+		"productIndicators": [],
+		"detailStructuredProducts": []
+	}]
+}

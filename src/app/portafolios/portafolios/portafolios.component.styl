@@ -1,0 +1,859 @@
+@import '../styles/components/tabs'
+
+.box-portfolio
+  border: 1px solid $color('blue')
+  border-radius: 5px
+  cursor: pointer
+  display: inline-block
+  height: 220px
+  margin: 0 0 15px 15px
+  width: 210px
+
+  &.defeated
+    border: 1px solid $color('gray')
+
+    .title-box
+      background-color: $color('gray')
+
+  .title-box
+    background-color: $color('blue')
+    color: $color('white')
+    height: 75px
+    padding: 8px 10px
+    position: relative
+
+    img
+      float: left
+      margin: 10px 1px 10px 0
+
+    span
+      display: block
+
+      &.actives
+      &.payoff
+        margin-bottom: -5px
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        width: 170px
+
+      &.inline
+        display: inline-block
+        margin-right: 10px
+
+      &.actives
+        width: 167px
+
+      &.actives
+      &.price
+        color: $color('gray', 'pale')
+
+      &.serie
+        font-size: 16px
+
+    .traffic-light
+      border-radius: 50%
+      cursor: help
+      height: 15px
+      position: absolute
+      right: 10px
+      width: 15px
+
+      &.tooltip
+        .content
+          margin: 25px 0 0 -165px
+          width: 190px
+
+          &:after
+            display: none
+
+          &:before
+            border-color: transparent transparent $color('white') transparent
+            border-style: solid
+            border-width: 8px
+            bottom: 100%
+            content: ' '
+            margin-left: -5px
+            position: absolute
+            right: 5%
+
+  .content-prices
+    height: 45px
+    padding: 5px 0
+    text-align: center
+
+    span
+      &.down
+        color: $color('magenta')
+      &.up
+        color: $color('green')
+
+    .currency
+      font-size: 12px
+      font-weight: bold
+      margin-left: 3px
+
+    .date
+      display: inline-block
+      font-size: 11px
+
+    .performance
+      font-size: 13px
+      margin-left: 10px
+
+    .price
+      font-size: 20px
+
+  .content-graphic
+    height: 70px
+
+    &.disabled
+      background-color: $color('gray', 'whiteSmoke')
+
+    canvas
+      height: 80px !important
+      width 200px !important
+      transform: scale(0.9, 0.9);
+
+  .footer
+    height: 30px
+    padding: 5px 0
+
+    .date
+      font-size: 10px
+      padding-right: 5px
+
+      &.expiration
+        color: $color('orange')
+
+    .icons
+      padding-left: 2px
+
+      span
+        color: transparent
+
+      .tooltip
+        cursor: help
+        position: relative
+
+        &.simple
+          &:hover
+            span
+              margin-top: -43px
+
+          &.sbpp
+            &:hover
+              &:after
+                top: -95%
+
+        &.triple
+          &:hover
+            span
+              margin-top: -70px
+
+        span
+          margin-left: -999em
+          position: absolute
+
+        &:hover
+          &:after
+            border-color: $color('white') transparent transparent transparent
+            border-style: solid
+            border-width: 8px
+            content: ' '
+            left: 50%
+            margin-left: -8px
+            position: absolute
+            top: -68%
+
+          span
+            background-color: $color('white')
+            border-radius: 5px
+            box-shadow 1px 0 18px 2px $color('gray', 'light')
+            color: $color('gray')
+            margin: -57px 0 0 -87px
+            padding: 8px
+            text-align: center
+            width: 155px
+
+            &.complex
+              color: $color('blue', 'medium')
+
+      img
+        height: 18px
+        width: 18px
+
+      .bpp
+        color: $color('gray', 'pale')
+        display: inline-block
+        font-size: 14px
+        font-weight: bold
+        margin: -12px 0 0 2px
+        vertical-align: middle
+
+    .inline
+      display: inline-block
+
+.content-briefcases
+  border: 1px solid $color('gray', 'whiteSmoke')
+  border-radius: 5px
+  float: left
+  height: 160px
+  margin: 5px
+  padding: 10px
+  width: 48%
+
+  a
+    text-decoration: none
+
+  .btn-add
+    display: block
+    margin: 30px auto 10px
+
+  h4
+    border-bottom: 1px solid $color('gray', 'light')
+    color: $color('blue')
+    font-weight: normal
+    margin: 0
+    padding-bottom: 10px
+    position: relative
+
+    i
+      position: absolute
+      top: 0
+
+      &.copy
+        right: 30px
+
+      &.edit
+        right: 0
+
+    span
+      display: block
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      width: 210px
+
+  .overflow
+    height: 119px
+    overflow: auto
+
+    span
+      display: inline-block
+      font-size: 11px
+      margin: 10px 5px 0
+      table-layout: fixed
+      vertical-align: middle
+      width: 29%
+      word-wrap: break-word
+
+  .txt-button
+    color: $color('gray', 'pale')
+    text-align: center
+
+.checks-graphics
+  label
+    color: $color('gray', 'pale')
+    display: inline-block
+    font-size: 14px
+    float: left
+    margin-right: 10px
+
+.content-graphic-detail
+  width: 100%
+
+.disclaimer
+  float: left
+  font-size: 13px
+  margin-bottom: 20px
+  padding-right: 10px
+  width: 100%
+
+  .txt
+    background: $color('gray', 'degraded1')
+    border: 1px solid $color('gray', 'light')
+    border-radius: 5px
+    float: left
+    margin: 10px 0
+    padding: 0 10px 10px 10px
+    width: 100%
+
+    .strong
+      font-weight: bold
+
+.follow
+  font-size: 13px
+  margin: 10px
+  text-align: right
+
+i
+  &.excel
+    &.modal
+      left: 575px
+      position: absolute
+      top: 30px
+
+.icons-mosaic
+  position: absolute
+  right: 40px
+  top: 20px
+
+  .bpp
+    color: $color('gray', 'pale')
+    float: right
+    font-size: 26px
+    margin: 2px 0 0 8px
+
+  img
+    height: 32px
+    margin: 0 5px
+    width: 32px
+
+.icons-mosaic-pdf
+  position: absolute
+  right: 50px
+  top: 20px
+
+  .bpp
+    color: $color('gray', 'pale')
+    float: right
+    font-size: 26px
+    margin: 2px 0 0 8px
+
+  img
+    height: 32px
+    margin: 0 5px
+    width: 32px
+
+.content-tab
+  border-right: none
+
+.lateral
+  padding-left: 10px
+  position: relative
+  right: -15px
+
+.nav-graphics
+  border-bottom: 2px solid $color('gray', 'whiteSmoke')
+  font-size: 11px
+  margin-top: 20px
+
+  li
+    border-right: 1px solid $color('gray', 'whiteSmoke')
+    cursor: pointer
+    display: inline-block
+    height: 25px
+    margin: 5px 0
+    text-align: center
+    vertical-align: middle
+    width: 30%
+
+    &.activeTab
+      span
+        color: $color('blue', 'medium')
+
+    &:hover
+      color: $color('blue', 'medium')
+
+.nav-subjacents
+  color: $color('gray', 'pale')
+  font-size: 11px
+  margin-top: 0
+
+  li
+    border-right: 1px solid $color('gray', 'whiteSmoke')
+    cursor: pointer
+    display: inline-block
+    height: 25px
+    line-height: 25px
+    margin: 5px 0
+    text-align: center
+    vertical-align: middle
+    width: 14%
+
+    &.activeTab
+      color: $color('blue', 'medium')
+
+    &:hover
+      color: $color('blue', 'medium')
+
+.nav-review
+  background-color: $color('white')
+  border-radius: 5px
+  box-shadow 1px 0 18px 2px $color('gray', 'light')
+  color: $color('gray')
+  margin-left: 70px
+  position: absolute
+  width: 215px
+
+  p
+    font-size: 12px
+    font-weight: bold
+    margin: 10px 10px 0
+
+  ul
+    font-size: 13px
+    max-height: 240px
+    overflow: auto
+    padding: 5px 0
+
+    li
+      margin: 7px 5px 7px 10px
+
+      &.inactive
+        color: $color('gray', 'pale')
+
+      label
+        &.txt
+          cursor: pointer
+          display: inline-block
+
+.panel
+  h1
+    &.detail
+      font-size: 18px
+      font-weight: bold
+
+  &.active
+    min-height: 170px
+    margin-bottom: 10px
+    padding: 0 20px
+    font-size: 13px
+    line-height: 2em
+    overflow: hidden
+
+    .amount
+      color: $color('blue', 'medium')
+
+  &.detail
+    font-size: 13px
+    margin-bottom: 20px
+    min-height: 620px
+    padding: 0 20px
+
+    .field
+      display: block
+      height: 42px
+
+      label
+        color: $color('gray', 'pale')
+
+      .see-more
+        color: $color('blue', 'medium')
+        cursor: pointer
+
+        &:hover
+          text-decoration: underline
+
+    p
+      &.description
+        height: 80px
+      &.description-pdf
+        min-height: 10px
+
+
+    .traffic-light
+      border-radius: 50%
+      cursor: help
+      height: 15px
+      margin-right: 10px
+      vertical-align: middle
+      width: 15px
+
+      &.tooltip
+        .content
+          margin: -45px 0 0 -20px
+          width: 250px
+
+          &:after
+            left: 10%
+  &.tracing-pdf
+    font-size: 13px
+    height: 150px
+    margin-bottom: 20px
+    padding-left: 20px
+  &.tracing
+    font-size: 13px
+    height: 440px
+    margin-bottom: 20px
+    padding-left: 20px
+
+    a
+      margin-top: 30px
+      text-align: center
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
+    .chart-bar
+      display: inline-block !important
+      margin: 20px 0 20px 20px
+
+    .categories
+      display: inline-block
+      margin-left: 25px
+      position: absolute
+      top: 85px
+      width: 165px
+
+      .grid
+        display: inline-block
+        margin-bottom: 8px
+        width: 100%
+
+        .square
+          display: inline-block
+          height: 15px
+          margin-right: 3px
+          vertical-align: middle
+          width: 15px
+
+    h3
+      color: $color('blue')
+      margin: 0 0 25px
+
+    i
+      .content
+        margin: -45px 0 0 -160px
+        width: 180px
+
+        &:after
+          margin-left: 65px
+
+    label
+      color: $color('gray', 'pale')
+
+    .row
+      margin-bottom: 10px
+
+      .amount
+        color: $color('blue', 'medium')
+
+      &.border-top
+        border-top: 1px solid $color('gray', 'light')
+        padding-top: 15px
+
+    .performance-to
+      border-left: 3px solid $color('green')
+      border-right: 3px solid $color('green')
+      margin-bottom: 20px
+      text-align: center
+
+    .performance-to-detail
+      border-left: 3px solid $color('green')
+      border-right: 3px solid $color('green')
+      margin-bottom: 20px
+      margin-top: 40px
+      text-align: center
+      padding: 10px 0
+
+      a
+        margin-top: 15px
+
+      span
+        color: $color('green')
+        font-size: 18px
+
+    .total-performance
+      border-left: 3px solid $color('blue', 'medium')
+      border-right: 3px solid $color('blue', 'medium')
+      margin-bottom: 20px
+      padding: 10px 0
+      text-align: center
+
+      span
+        color: $color('blue', 'medium')
+        font-size: 18px
+
+
+  &.portfolio
+    background: $color('gray','degraded1')
+    border: 1px solid $color('gray', 'whiteSmoke')
+    margin-bottom: 0
+    max-height: 1378px
+    padding: 10px
+    position: relative
+
+    h1
+      margin: 10px 0 20px
+      width: 200px
+
+    .categories
+      font-size: 12px
+      //height: 840px
+      margin-top: 20px
+      overflow: auto
+
+      .grid
+        display: inline-block
+        margin-bottom: 8px
+        width: 100%
+
+        .square
+          display: inline-block
+          height: 15px
+          margin-right: 5px
+          vertical-align: middle
+          width: 15px
+
+          span
+            color: $color('white')
+            cursor: pointer
+            font-size: 1.22em
+            line-height: 16px
+            padding-left: .12em
+
+            &.less
+              font-size: 1.7em
+              line-height: 10px
+              padding-left: .15em
+
+        table
+          margin-top: 10px
+          &.list
+            border: 0
+
+            td
+              border: 0
+              cursor: default
+              height: 25px
+              padding: 0 20px
+              text-align: left
+              white-space: normal
+
+    .description
+      background-color: $color('blue', 'whiteBlue')
+      border: 1px solid $color('blue', 'medium')
+      font-size: 13px
+      padding: 0 15px
+
+    .export-pdf
+      position: absolute
+      right: 10px
+      top: 30px
+
+    .graphics
+      canvas
+        &.chart-pie
+          height: 220px !important
+          margin: 0 35px
+          width: 220px !important
+
+    .total-amount
+      color: $color('gray', 'pale')
+      margin: 15px 0
+      text-align: center
+
+      .amount
+        font-size: 25px
+
+      span
+        display: block
+
+      .txt-amount
+        font-size: 13px
+
+.row
+  &.portfolio
+    margin-top: 20px
+
+    label
+      display: block
+      font-size: 13px
+      margin-bottom: 5px
+
+.show-more-table
+  background-color: $color('white')
+  border: 1px solid $color('gray', 'whiteSmoke')
+  border-radius: 6px
+  bottom: -11px
+  display: inline-block
+  left: 50%
+  margin-left: -12px
+  padding: 5px 5px 0 5px
+  position: absolute
+
+  span
+    cursor: pointer
+
+    &.down
+      $icon-after('sorter', 12px, 12px)
+      &:after
+        background-position: -5px -5px
+        margin: 0
+
+      &.up
+        $icon-after('sorter', 12px, 12px)
+        &:after
+          background-position: -27px -5px
+
+.suggesting
+  border: 1px solid $color('gray', 'whiteSmoke')
+  border-radius: 5px
+  display: inline-block
+  font-size: 11px
+  margin-bottom: 10px
+  padding: 10px 10px 0
+  width: 100%
+
+  a
+    color: $color('blue', 'medium')
+    cursor: pointer
+
+    &:hover
+      text-decoration: underline
+
+  div
+    display: inline-block
+    margin-top: 5px
+
+    &.iconography
+      float: right
+      margin-top: 12px
+      text-align: right
+      /*width: 70px*/
+
+    &.lights
+      width: 800px
+
+  .round
+    border-radius: 50%
+    display: inline-block
+    height: 13px
+    margin: 3px 5px 0 0
+    vertical-align: middle
+    width: 13px
+
+  span
+    vertical-align: middle
+
+    &.title
+      font-size: 13px
+
+.title-portfolio
+  color: $color('blue')
+
+td
+  &.hasTooltip
+    white-space: normal
+
+  .traffic-light
+    border-radius: 50%
+    cursor: help
+    height: 15px
+    width: 15px
+
+    &.tooltip
+      .content
+        margin: -40px 0 0 -120px
+        width: 250px
+
+.detail-pdf-icon
+  margin: -15px 0px
+
+.performance-to
+  margin-top 40px
+
+i.burger {
+    background: url(../../../assets/icons/burger.png) no-repeat;
+    height: 25px;
+    width: 25px;
+    background-position: 0px -3px;
+    background-size: initial;
+}
+
+.tabs.portfolio
+  li
+    width 165px;
+
+.add
+  height 37px
+  .iconPlus
+    margin -27px 0px 0px 0px
+  .newPlus
+    margin 8px 0px 0px 0px
+  span
+    float: left
+  .tab-icon
+    float: right
+    i
+      float: right
+      margin-left: 10px
+      position: absolute
+
+    .tooltip
+      &.views
+        .content
+          margin: -41px 0 0 -68px
+          padding: 6px 5px
+          text-align: center
+          width 140px
+
+          &:after
+            margin-left: 22px
+
+          i
+            margin: 0 2px
+.m-12
+  margin 12px 10px
+.supBar
+  height 45px
+.barTitle
+  font-size 15px
+  font-weight bold
+.countdown
+.txtCount
+  word-spacing 4px
+  font-weight 500
+  font-size 18px
+.txtHour
+  word-spacing 24px
+.txtCenter
+  text-align center
+.fullWidth
+  width 100% !important
+.br-gray
+  border-right 1px solid #d8d8d8
+.txtGray
+  color: $color('gray', 'pale')
+.dBlock
+  display block
+.iconPos
+  position inherit
+.txtIcon a
+  color #009ee5
+  cursor pointer
+  font-size 11px
+.floatR
+  float right
+.h65
+  height 65px
+.fixedBar
+  position fixed
+  top 0px
+  z-index 999
+  width 1271px
+  background-color white
+  height 90px
+  margin-top 0px
+  padding 10px
+  box-shadow 0px 1px 10px 0px
+  border-bottom 5px solid #006ec1
+span
+  &.down
+    color: $color('magenta')
+  &.up
+    color: $color('green')
+.col-1fix
+  width: 4.333%;
+.overflowH
+  overflow hidden
+.coupnum
+  color $color('blue', 'medium')
+  float right
+.grayBackg
+  background-color $color('gray', 'light')
+  &:hover
+    background-color $color('gray', 'light')
