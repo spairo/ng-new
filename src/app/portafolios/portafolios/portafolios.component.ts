@@ -13,10 +13,21 @@ import { environment as env } from '@env/environment';
 })
 export class PortafoliosComponent implements OnInit {
 
-  constructor() { }
+  public briefcases;
+  public activeTab;
+
+  constructor(
+    private _briefcases: PortafoliosService
+  ) { }
 
   ngOnInit() {
 
+    this.activeTab = '000';
+
+    this._briefcases.getBriefcases('ResponseGetPortFolio').subscribe(data => {
+      this.briefcases = data;
+      console.log(this.briefcases);
+    });
   }
 
 }
