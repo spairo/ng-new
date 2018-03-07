@@ -6,6 +6,7 @@ import {  PortafoliosService } from './portafolios.service'
 import { environment as env } from '@env/environment';
 import { build$ } from 'protractor/built/element';
 
+
 @Component({
   selector: 'new-portafolios',
   templateUrl: './portafolios.component.html',
@@ -38,6 +39,7 @@ export class PortafoliosComponent implements OnInit {
       this.buildBriefcases(this.briefcases.structuredProductInformation);
     });
   }
+
 
   buildTabs(tabs) {
     this.tabs = tabs;

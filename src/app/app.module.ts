@@ -14,6 +14,8 @@ import { StaticModule } from './static';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { ChartsModule } from 'ng2-charts';
+
 @NgModule({
   imports: [
     // angular
@@ -32,7 +34,10 @@ import { AppComponent } from './app.component';
     PortafoliosModule,
 
     // app
-    AppRoutingModule
+    AppRoutingModule,
+
+    // libs
+    ChartsModule
   ],
   declarations: [AppComponent],
   providers: [],
