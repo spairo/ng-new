@@ -49,11 +49,10 @@ export class PortafoliosComponent implements OnInit {
 
   buildBriefcases(briefcases) {
     this.boxes = briefcases;
-    console.log(this.boxes);
   }
 
-  detail(){
-    alert('go to detail');
+  detail(id, serie){
+    alert('go to detail' + id + ' ' + serie);
   }
 
 }
