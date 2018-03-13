@@ -6,12 +6,13 @@ import { SharedModule } from '../shared';
 
 import { PortafoliosComponent } from './portafolios/portafolios.component';
 import { PortafoliosService } from './portafolios/portafolios.service';
+import { LateralComponent } from './lateral/lateral.component';
 
 @NgModule({
   imports: [
     SharedModule
   ],
-  declarations: [PortafoliosComponent],
+  declarations: [PortafoliosComponent, LateralComponent],
   providers: [PortafoliosService]
 })
 export class PortafoliosModule { }
