@@ -7,7 +7,7 @@ import { environment as env } from '@env/environment';
 import { ApibuilderService as api } from '@app/apibuilder'
 
 @Injectable()
-export class PortafoliosService {
+export class LateralService {
 
   public compleURL: string;
 

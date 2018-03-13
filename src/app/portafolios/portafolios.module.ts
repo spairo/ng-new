@@ -7,6 +7,7 @@ import { SharedModule } from '../shared';
 import { PortafoliosComponent } from './portafolios/portafolios.component';
 import { PortafoliosService } from './portafolios/portafolios.service';
 import { LateralComponent } from './lateral/lateral.component';
+import { LateralService } from './lateral/lateral.service';
 
 @NgModule({
   imports: [
