@@ -1,3 +1,72 @@
-<p>
-  lateral works!
-</p>
+<div class="col-3 lateral">
+  <div class="panel portfolio">
+    <h1>Estadísticas</h1>
+
+    <i class="export-pdf" (click)="viewPrint(tabCode)"></i>
+    <!--
+    <ul class="nav-graphics">
+      <li ng-class="{activeTab: main.activeTabHeader === $index}" ng-click="main.activeTabHeader = $index; main.buildPiechart(report.etiqueta, report.id);"
+        ng-init="main.activeTabHeader = 0;" ng-repeat="report in main.report.encabezados | filter:{visibleUsuario: true}">
+        <span>{{ report.propiedad }}</span>
+      </li>
+      <i class="select" ng-class="{'up': main.showSubmenu}" ng-click="main.showSubmenu = !main.showSubmenu;"></i>
+    </ul>
+    -->
+
+    <div class="nav-review" ng-show="showSubmenu">
+      <p>Solo puedes tener seleccionados hasta 3 resúmenes:</p>
+      <ul>
+        <li ng-class="{inactive : !report.visibleUsuario &amp;&amp; main.visibleResume.length === 3}" *ngFor = "let report of headerNames">
+          <input ng-click="$event.stopPropagation();" id="{{ report.etiqueta }}" name="{{ report.etiqueta }}" ng-change="main.checkVisibility(report);"
+            ng-disabled="!report.visibleUsuario &amp;&amp; main.visibleResume.length === 3" ng-model="report.visibleUsuario" type="checkbox" value="{{ report.etiqueta }}" />
+          <label class="checkbox" for="{{ report.etiqueta }}" (click)="$event.stopPropagation();"></label>
+          <label class="txt" for="{{ report.etiqueta }}">{{ report.description }}</label>
+        </li>
+      </ul>
+      <div class="row align-center">
+        <div class="col-12 pr-0">
+          <button class="btn-large" (click)="saveCustomize()">Guardar vista</button>
+        </div>
+      </div>
+      <div class="row mt-10 mb-15 align-center">
+        <div class="col-12 pr-0">
+          <button class="btn-large gray" (click)="showSubmenu = false;">Continuar sin guardar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="total-amount">
+      <span class="txt-amount">Monto vivo total de portafolio</span>
+      <span class="amount">{{amount | currency }} MXN</span>
+    </div>
+    <div class="graphics">
+
+    </div>
+    <!--
+    <div class="categories">
+      <div class="grid" ng-repeat="item in main.pies.colores">
+        <div class="square" ng-style="{'background-color': item}">
+          <span ng-click="main.showList = !main.showList" ng-if="main.pies.encabezados[$index] === 'Basket' || main.pies.encabezados[$index] === '_Multi_'">
+            <span ng-show="!main.showList">+</span>
+            <span class="less" ng-show="main.showList">-</span>
+          </span>
+        </div>
+        <span ng-if="main.pies.encabezados[$index] === '_Multi_'">Multiregión
+          <strong> - ({{ main.pies.valores[$index] }}%)</strong>
+        </span>
+        <span ng-if="main.pies.encabezados[$index] !== '_Multi_'">{{ main.pies.encabezados[$index] }}
+          <strong> - ({{ main.pies.valores[$index] }}%)</strong>
+        </span>
+        <table class="list" ng-if="main.showList &amp;&amp; (main.pies.encabezados[$index] === 'Basket' || main.pies.encabezados[$index] === '_Multi_')">
+          <tr ng-repeat="list in main.pies.encabezadosCanasta">
+            <td>{{ list }}</td>
+            <td>
+              <strong>{{main.pies.valoresCanasta[$index]}}%</strong>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    -->
+  </div>
+</div>
