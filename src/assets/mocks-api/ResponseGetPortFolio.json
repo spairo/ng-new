@@ -56,7 +56,36 @@
 		"status": "1",
 		"listPayOff": [],
 		"referenceAssets": [],
-		"prices": [],
+		"prices": [
+      {
+		    "price": "97.9964",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.209",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "94.6646",
+		    "date": "02-07-2019"
+      },
+      {
+		    "fhPrecio": "95.148",
+		    "imPrecio": "02-07-2019"
+      }
+    ],
 		"productIndicators": [],
 		"detailStructuredProducts": []
 	}, {
@@ -80,7 +109,36 @@
 		"status": "1",
 		"listPayOff": [],
 		"referenceAssets": [],
-		"prices": [],
+		"prices": [
+      {
+		    "price": "97.9964",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.209",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "94.6646",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.148",
+		    "date": "02-07-2019"
+      }
+    ],
 		"productIndicators": [],
 		"detailStructuredProducts": []
 	}, {
@@ -104,7 +162,36 @@
 		"status": "1",
 		"listPayOff": [],
 		"referenceAssets": [],
-		"prices": [],
+		"prices": [
+      {
+		    "price": "97.9964",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.209",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "94.6646",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.148",
+		    "date": "02-07-2019"
+      }
+    ],
 		"productIndicators": [],
 		"detailStructuredProducts": []
 	}, {
@@ -128,7 +215,36 @@
 		"status": "1",
 		"listPayOff": [],
 		"referenceAssets": [],
-		"prices": [],
+		"prices": [
+      {
+		    "price": "97.9964",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.209",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "94.6646",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.148",
+		    "date": "02-07-2019"
+      }
+    ],
 		"productIndicators": [],
 		"detailStructuredProducts": []
 	}, {
@@ -152,7 +268,34 @@
 		"status": "1",
 		"listPayOff": [],
 		"referenceAssets": [],
-		"prices": [],
+		"prices": [{
+		    "price": "97.9964",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.209",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "94.6646",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.148",
+		    "date": "02-07-2019"
+      }],
 		"productIndicators": [],
 		"detailStructuredProducts": []
 	}, {
@@ -176,7 +319,34 @@
 		"status": "1",
 		"listPayOff": [],
 		"referenceAssets": [],
-		"prices": [],
+		"prices": [{
+		    "price": "97.9964",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.209",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "94.6646",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.148",
+		    "date": "02-07-2019"
+      }],
 		"productIndicators": [],
 		"detailStructuredProducts": []
 	}, {
@@ -200,7 +370,34 @@
 		"status": "1",
 		"listPayOff": [],
 		"referenceAssets": [],
-		"prices": [],
+		"prices": [{
+		    "price": "97.9964",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.209",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "94.6646",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.148",
+		    "date": "02-07-2019"
+      }],
 		"productIndicators": [],
 		"detailStructuredProducts": []
 	}, {
@@ -248,7 +445,36 @@
 		"status": "1",
 		"listPayOff": [],
 		"referenceAssets": [],
-		"prices": [],
+		"prices": [
+      {
+		    "price": "97.9964",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.209",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "94.6646",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.148",
+		    "date": "02-07-2019"
+      }
+    ],
 		"productIndicators": [],
 		"detailStructuredProducts": []
 	}, {
@@ -272,7 +498,36 @@
 		"status": "1",
 		"listPayOff": [],
 		"referenceAssets": [],
-		"prices": [],
+		"prices": [
+      {
+		    "price": "97.9964",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "97.5857",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.209",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "94.6646",
+		    "date": "02-07-2019"
+      },
+      {
+		    "price": "95.148",
+		    "date": "02-07-2019"
+      }
+    ],
 		"productIndicators": [],
 		"detailStructuredProducts": []
 	}]

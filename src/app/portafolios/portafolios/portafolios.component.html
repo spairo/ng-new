@@ -28,18 +28,18 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <div class="box-portfolio" [ngClass]="{defeated: !box.stActivo}" *ngFor="let box of boxes " (click)="detail(box.id, box.series);">
+            <div class="box-portfolio" [ngClass]="{defeated: !box.stActivo}" *ngFor="let box of boxes" (click)="detail(box.id, box.series);">
               <div class="title-box">
                 <div class="traffic-light tooltip" *ngIf="box.estatus === 1 || box.estatus === 3 || box.estatus === 7" [ngStyle]="{'background-color': box.semaforo.color}">
                   <div class="content" *ngIf="box.semaforo.comentario !== null">
                     <span>{{ box.semaforo.comentario }}</span>
                   </div>
                 </div>
-                <span class="serie">{{ box.series }}</span>
-                <span class="inline payoff">{{ box.tpPayoff }}</span>
+                <span class="serie">1234{{ box.series }}</span>
+                <span class="inline payoff"> qwqweqw{{ box.tpPayoff }}</span>
                 <img src="./assets/img/plus.png" />
-                <span class="inline actives">{{ box.activos }}</span>
-                <span class="inline price">{{ box.activos }}</span>
+                <span class="inline actives">qw {{ box.activos }}</span>
+                <span class="inline price">wqe {{ box.activos }}</span>
                 <span class="inline price">123{{ box.activos }}%</span>
               </div>
               <div class="content-prices">
@@ -52,10 +52,19 @@
                     <span>{{ box.priceDifference.amount }}%</span>
                   </span>
                 </div>
-                <span class="date">Precio al {{ box.priceDate }}</span>
+                <span class="date">Precio al {{box.status}} {{ box.priceDate }}</span>
               </div>
               <div class="content-graphic">
-
+                <canvas baseChart width="800" height="800"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)">
+                </canvas>
               </div>
             </div>
           </div>
@@ -67,4 +76,3 @@
     </div>
   </div>
 </div>
-

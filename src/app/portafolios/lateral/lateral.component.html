@@ -1,9 +1,9 @@
-<div class="col-3 lateral">
+<div class="lateral">
   <div class="panel portfolio">
     <h1>Estadísticas</h1>
 
-    <i class="export-pdf" (click)="viewPrint(tabCode)"></i>
-    <!--
+    <i class="export-pdf" (click)="viewPrint()"></i>
+
     <ul class="nav-graphics">
       <li ng-class="{activeTab: main.activeTabHeader === $index}" ng-click="main.activeTabHeader = $index; main.buildPiechart(report.etiqueta, report.id);"
         ng-init="main.activeTabHeader = 0;" ng-repeat="report in main.report.encabezados | filter:{visibleUsuario: true}">
@@ -11,8 +11,8 @@
       </li>
       <i class="select" ng-class="{'up': main.showSubmenu}" ng-click="main.showSubmenu = !main.showSubmenu;"></i>
     </ul>
-    -->
 
+    <!--
     <div class="nav-review" ng-show="showSubmenu">
       <p>Solo puedes tener seleccionados hasta 3 resúmenes:</p>
       <ul>
@@ -34,6 +34,7 @@
         </div>
       </div>
     </div>
+    -->
 
     <div class="total-amount">
       <span class="txt-amount">Monto vivo total de portafolio</span>

@@ -33,11 +33,12 @@ import { ChartsModule } from 'ng2-charts';
     ProgramasModule,
     PortafoliosModule,
 
+    // libs
+    ChartsModule,
+
     // app
     AppRoutingModule,
 
-    // libs
-    ChartsModule
   ],
   declarations: [AppComponent],
   providers: [],
