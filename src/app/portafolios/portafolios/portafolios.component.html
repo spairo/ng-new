@@ -22,7 +22,7 @@
             </ul>
           </div>
           <div class="col-4 align-right pr-0 mr-10">
-            <i class="filter on mb-10 mr-10" (click)="main.filterPortfolio = !main.filterPortfolio;"></i>
+            <!--<i class="filter on mb-10 mr-10" (click)="main.filterPortfolio = !main.filterPortfolio;"></i>-->
             <i class="views" (click)="main.listed = !main.listed"></i>
           </div>
         </div>
@@ -35,12 +35,12 @@
                     <span>{{ box.semaforo.comentario }}</span>
                   </div>
                 </div>
-                <span class="serie">1234{{ box.series }}</span>
-                <span class="inline payoff"> qwqweqw{{ box.tpPayoff }}</span>
+                <span class="serie">{{ box.series }}</span>
+                <span class="inline payoff"> Call Spread {{ box.tpPayoff }}</span>
                 <img src="./assets/img/plus.png" />
-                <span class="inline actives">qw {{ box.activos }}</span>
-                <span class="inline price">wqe {{ box.activos }}</span>
-                <span class="inline price">123{{ box.activos }}%</span>
+                <span class="inline actives">Índice Eurostoxx 50® {{ box.activos }}</span>
+                <span class="inline price"> {{ box.activos }}</span>
+                <span class="inline price">100{{ box.activos }}%</span>
               </div>
               <div class="content-prices">
                 <div class="block">

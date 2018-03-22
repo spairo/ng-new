@@ -43,13 +43,12 @@
       <span class="amount">{{amount | currency }} MXN</span>
     </div>
     <div class="graphics">
-      <canvas baseChart width="800" height="800"
+      <canvas baseChart
         [datasets]="barChartData"
-        [labels]="lineChartLabels"
-        [options]="lineChartOptions"
-        [colors]="lineChartColors"
-        [legend]="lineChartLegend"
-        [chartType]="lineChartType"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"
         (chartHover)="chartHovered($event)"
         (chartClick)="chartClicked($event)">
       </canvas>
