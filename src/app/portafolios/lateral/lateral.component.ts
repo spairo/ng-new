@@ -18,17 +18,27 @@ export class LateralComponent implements OnInit {
   public amount: any;
   public headerNames: any;
   public showSubmenu: boolean;
+  public activeTabHeader: number;
+  public headerValues: any;
 
   constructor(
     private _detail: LateralService
   ) { }
 
   ngOnInit() {
+
+    this.activeTabHeader = 0;
+
     this._detail.getDetails('StructuredProduct').subscribe(data => {
       this.details = data;
       this.headerNames = this.details.headerNames;
       this.amount = this.details.portfolio.amountIssued.amount;
+      this.headerValues =  this.details.headerValues;
     });
+  }
+
+  buildPiechart(label, id) {
+    console.log('update lateral');
   }
 
   saveCustomize() {

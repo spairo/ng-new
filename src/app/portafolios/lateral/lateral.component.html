@@ -1,15 +1,14 @@
 <div class="lateral">
   <div class="panel portfolio">
-    <h1>Estadísticas</h1>
+    <h1>Estadísticas - {{showSubmenu}}</h1>
 
     <i class="export-pdf" (click)="viewPrint()"></i>
 
     <ul class="nav-graphics">
-      <li ng-class="{activeTab: main.activeTabHeader === $index}" ng-click="main.activeTabHeader = $index; main.buildPiechart(report.etiqueta, report.id);"
-        ng-init="main.activeTabHeader = 0;" ng-repeat="report in main.report.encabezados | filter:{visibleUsuario: true}">
-        <span>{{ report.propiedad }}</span>
+      <li [ngClass]="{activeTab: activeTabHeader === i}" (click)="activeTabHeader = i; buildPiechart(report.etiqueta, report.id);"  *ngFor = "let report of headerValues; let i = index"; >
+        <span>{{i}} {{ report.fieldValue }}</span>
       </li>
-      <i class="select" ng-class="{'up': main.showSubmenu}" ng-click="main.showSubmenu = !main.showSubmenu;"></i>
+      <i class="select" [ngClass]="{'up': showSubmenu}" (click)="showSubmenu = !showSubmenu;"></i>
     </ul>
 
     <!--

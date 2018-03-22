@@ -1,6 +1,5 @@
 {
-  "headerNames": [
-    {
+  "headerNames": [{
       "description": "Distribucion de vencimiento"
     },
     {
@@ -25,8 +24,7 @@
       "description": "Precio"
     }
   ],
-  "headerValues": [
-    {
+  "headerValues": [{
       "fieldValue": "ValorDistribucion de vencimiento9"
     },
     {
@@ -66,5 +64,5 @@
     "disclaimer": {
       "description": "La informacion contenida en el presente documento y, en su caso, en sus anexos (en adelante, el Documento) tiene caracter puramente ilustrativo y ha sido elaborada por BBVA Bancomer S.A."
     }
-  }
+ }
 }
