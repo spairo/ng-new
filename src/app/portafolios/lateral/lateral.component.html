@@ -1,19 +1,22 @@
 <div class="lateral">
   <div class="panel portfolio">
-    <h1>Estadísticas - {{showSubmenu}}</h1>
+    <h1>Estadísticas </h1>
 
     <i class="export-pdf" (click)="viewPrint()"></i>
 
     <ul class="nav-graphics">
-      <li [ngClass]="{activeTab: activeTabHeader === i}" (click)="activeTabHeader = i; buildPiechart(report.etiqueta, report.id);"  *ngFor = "let report of headerValues; let i = index"; >
-        <span>{{i}} {{ report.fieldValue }}</span>
+      <li [ngClass]="{activeTab: activeTabHeader === i}" (click)="activeTabHeader = i; buildPiechart(report.etiqueta, report.id);"  *ngFor = "let report of headerValues; let i = index;" >
+        <div *ngIf = "i < 3">
+          <span>{{ report.fieldValue }}</span>
+        </div>
       </li>
       <i class="select" [ngClass]="{'up': showSubmenu}" (click)="showSubmenu = !showSubmenu;"></i>
     </ul>
 
-    <!--
-    <div class="nav-review" ng-show="showSubmenu">
+
+    <div class="nav-review" [hidden]="showSubmenu">
       <p>Solo puedes tener seleccionados hasta 3 resúmenes:</p>
+
       <ul>
         <li ng-class="{inactive : !report.visibleUsuario &amp;&amp; main.visibleResume.length === 3}" *ngFor = "let report of headerNames">
           <input ng-click="$event.stopPropagation();" id="{{ report.etiqueta }}" name="{{ report.etiqueta }}" ng-change="main.checkVisibility(report);"
@@ -32,15 +35,24 @@
           <button class="btn-large gray" (click)="showSubmenu = false;">Continuar sin guardar</button>
         </div>
       </div>
+
     </div>
-    -->
 
     <div class="total-amount">
       <span class="txt-amount">Monto vivo total de portafolio</span>
       <span class="amount">{{amount | currency }} MXN</span>
     </div>
     <div class="graphics">
-
+      <canvas baseChart width="800" height="800"
+        [datasets]="barChartData"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [colors]="lineChartColors"
+        [legend]="lineChartLegend"
+        [chartType]="lineChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+      </canvas>
     </div>
     <!--
     <div class="categories">

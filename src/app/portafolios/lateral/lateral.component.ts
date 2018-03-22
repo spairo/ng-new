@@ -42,6 +42,7 @@ export class LateralComponent implements OnInit {
   }
 
   saveCustomize() {
+    alert('saveCustomize');
     console.log('saveCustomize');
   }
 

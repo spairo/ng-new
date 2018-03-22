@@ -24,29 +24,15 @@
       "description": "Precio"
     }
   ],
-  "headerValues": [{
-      "fieldValue": "ValorDistribucion de vencimiento9"
+  "headerValues": [
+    {
+      "fieldValue": "Distribucion de vencimiento"
     },
     {
-      "fieldValue": "ValorSubyacente9"
+      "fieldValue": "Subyacente"
     },
     {
-      "fieldValue": "ValorActivo de referencia9"
-    },
-    {
-      "fieldValue": "ValorTailor-made vs Campana9"
-    },
-    {
-      "fieldValue": "ValorPlazo9"
-    },
-    {
-      "fieldValue": "ValorGeografia9"
-    },
-    {
-      "fieldValue": "ValorDistribucion por perfil9"
-    },
-    {
-      "fieldValue": "ValorPrecio9"
+      "fieldValue": "Activo de referencia"
     }
   ],
   "basketValues": [{

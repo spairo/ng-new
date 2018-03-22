@@ -1,8 +1,11 @@
 @import '../styles/mixins/colors'
 @import '../styles/mixins/buttons'
-//@import '../styles/mixins/icons'
+@import '../styles/mixins/icons'
+@import '../styles/components/check'
+@import '../styles/components/icons'
 @import '../styles/components/tabs'
 @import '../styles/components/panel'
+@import '../styles/components/buttons'
 
 @import '../styles/includes/**'
 
@@ -195,7 +198,8 @@ i
   border-radius: 5px
   box-shadow 1px 0 18px 2px $color('gray', 'light')
   color: $color('gray')
-  margin-left: 70px
+  //margin-left: 70px
+  margin-left: 0px
   position: absolute
   width: 215px
 
@@ -223,6 +227,11 @@ i
 
 .panel
   h1
+    color: #094fa4
+    display: block
+    font: 16px 'Stag Sans Light'
+    font-weight: normal
+
     &.detail
       font-size: 18px
       font-weight: bold
