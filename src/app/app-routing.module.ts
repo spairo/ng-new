@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SettingsComponent } from './settings';
 import { ProgramasComponent } from './programas';
 import { PortafoliosComponent } from './portafolios';
+import { DetalleComponent } from './portafolios/detalle';
 
 const routes: Routes = [
   {
@@ -22,9 +23,23 @@ const routes: Routes = [
     path: 'portafolios',
     component: PortafoliosComponent,
     data: {
-      title: 'portafolios'
+      title: 'Portafolios Inversion'
     }
   },
+  /*
+  {
+    path: 'portafolios/detalle/:id', component: DetalleComponent
+  },
+  */
+  /*
+  '/portafolios-inversion/detalle/:serie/:id': {
+				deps: [
+					'app/seguimiento/portafolios-inversion/detalle-portafolio/detail-portafolio-controller.js',
+					'app/seguimiento/portafolios-inversion/detalle-portafolio/detail-portafolio-service.js'
+				],
+				templateUrl: 'app/seguimiento/portafolios-inversion/detalle-portafolio/main.html'
+			},
+  */
   {
     path: 'programas',
     component: ProgramasComponent,
