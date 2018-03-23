@@ -1,5 +1,6 @@
 <div class="lateral">
-  <div class="panel portfolio">
+  <!--
+  <div class="panel portfolio" style="border-left: none; border-top-left-radius: border-top-right-radius: 0px; border-top: 0px;">
     <h1>Estadísticas </h1>
 
     <i class="export-pdf" (click)="viewPrint()"></i>
@@ -12,8 +13,8 @@
       </li>
       <i class="select" [ngClass]="{'up': showSubmenu}" (click)="showSubmenu = !showSubmenu;"></i>
     </ul>
-
-
+  -->
+    <!--
     <div class="nav-review" [hidden]="showSubmenu">
       <p>Solo puedes tener seleccionados hasta 3 resúmenes:</p>
 
@@ -37,7 +38,8 @@
       </div>
 
     </div>
-
+    -->
+    <!--
     <div class="total-amount">
       <span class="txt-amount">Monto vivo total de portafolio</span>
       <span class="amount">{{amount | currency }} MXN</span>
@@ -53,6 +55,7 @@
         (chartClick)="chartClicked($event)">
       </canvas>
     </div>
+    -->
     <!--
     <div class="categories">
       <div class="grid" ng-repeat="item in main.pies.colores">
@@ -79,5 +82,6 @@
       </div>
     </div>
     -->
-  </div>
+    <!--
+  </div>-->
 </div>
