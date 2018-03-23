@@ -27,12 +27,6 @@
 	}, {
 		"code": "hijk",
 		"name": "Equity"
-	}, {
-		"code": "lmno",
-		"name": "Prueba RCC"
-	}, {
-		"code": "pqrs",
-		"name": "FX"
 	}],
 	"relatedContracts": ["350867", "351008", "351008", "353473", "353473", "363027", "366692", "366692", "366692", "367605"],
 	"structuredProductInformation": [{

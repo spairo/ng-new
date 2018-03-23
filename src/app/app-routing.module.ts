@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SettingsComponent } from './settings';
 import { ProgramasComponent } from './programas';
 import { PortafoliosComponent } from './portafolios';
-import { DetalleComponent } from './portafolios/detalle';
+import { DetalleComponent } from './portafolios/detalle/detalle.component';
 
 const routes: Routes = [
   {
@@ -26,11 +26,13 @@ const routes: Routes = [
       title: 'Portafolios Inversion'
     }
   },
-  /*
   {
-    path: 'portafolios/detalle/:id', component: DetalleComponent
+    path: 'portafolios/detalle/:serie/:id',
+    component: DetalleComponent,
+    data: {
+      title: 'Detalle Portafolio'
+    }
   },
-  */
   /*
   '/portafolios-inversion/detalle/:serie/:id': {
 				deps: [

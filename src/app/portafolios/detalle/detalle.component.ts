@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs/Subject';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ANIMATE_ON_ROUTE_ENTER } from '@app/core';
 
 import * as _ from 'lodash';
 
@@ -13,10 +15,18 @@ import { environment as env } from '@env/environment';
 })
 export class DetalleComponent implements OnInit {
 
-  constructor() { }
+  animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
+
+  // this.id = $routeParams.id;
+  // this.serie = $routeParams.serie;
 
   ngOnInit() {
-    alert('detalle');
+
   }
 
 }
