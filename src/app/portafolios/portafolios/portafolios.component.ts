@@ -30,6 +30,17 @@ export class PortafoliosComponent implements OnInit {
   public prices: any;
   public banquero: boolean;
   public tabCode: string;
+  public contracts: Array<string>;
+
+  public states: Array<any> = [
+    'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
+    'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
+    'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
+    'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico',
+    'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania',
+    'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+    'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+  ];
 
   // lineChart
   public lineChartData: Array<any> = [
@@ -80,6 +91,7 @@ export class PortafoliosComponent implements OnInit {
     this._briefcases.getBriefcases('ResponseGetPortFolio').subscribe(data => {
       this.briefcases = data;
       this.buildTabs(this.briefcases.productTabs);
+      this.buildContracts(this.briefcases.relatedContracts);
       this.buildsubjacents(this.briefcases.underlyingAssets);
       this.buildBriefcases(this.briefcases.structuredProductInformation);
       this.buildCharts(this.briefcases.structuredProductInformation);
@@ -90,6 +102,10 @@ export class PortafoliosComponent implements OnInit {
 
   buildTabs(tabs) {
     this.tabs = tabs;
+  }
+
+  buildContracts(relatedContracts) {
+    this.contracts = relatedContracts;
   }
 
   buildsubjacents(subjacents) {
