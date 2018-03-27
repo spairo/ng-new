@@ -21,17 +21,20 @@ export class LateralComponent implements OnInit {
   public activeTabHeader: number;
   public headerValues: any;
 
-  public barChartOptions:any = {
+  public barChartOptions: any = {
     scaleShowVerticalLines: false,
     responsive: false
   };
-  public barChartLabels:string[] = ['Multiregion', 'Mexico'];
-  public barChartType:string = 'bar';
-  public barChartLegend:boolean = true;
+
+  public barChartLabels: string[] = ['Multiregion', 'Mexico', 'Europa', 'Multiregion'];
+  public barChartType: string = 'bar';
+  public barChartLegend: boolean = false;
 
   public barChartData:any[] = [
     {data: [65, 59, 80, 81, 56, 55, 40], label: 'Multiregion'},
-    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Mexico'}
+    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Mexico'},
+    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Europa'},
+    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Multiregion'},
   ];
 
   constructor(
@@ -39,7 +42,7 @@ export class LateralComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    this.showSubmenu = true;
     this.activeTabHeader = 0;
 
     this._detail.getDetails('StructuredProduct').subscribe(data => {

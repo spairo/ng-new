@@ -1,5 +1,199 @@
 @import 'main'
 
+.box-portfolio
+  border: 1px solid $color('blue')
+  border-radius: 5px
+  cursor: pointer
+  display: inline-block
+  height: 220px
+  margin: 0 0 15px 15px
+  width: 210px
+
+  &.defeated
+    border: 1px solid $color('gray')
+
+    .title-box
+      background-color: $color('gray')
+
+  .title-box
+    background-color: $color('blue')
+    color: $color('white')a
+    height: 75px
+    padding: 8px 10px
+    position: relative
+
+    img
+      float: left
+      margin: 10px 1px 10px 0
+
+    span
+      display: block
+
+      &.actives
+      &.payoff
+        margin-bottom: -5px
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        width: 170px
+
+      &.inline
+        display: inline-block
+        margin-right: 10px
+
+      &.actives
+        width: 167px
+
+      &.actives
+      &.price
+        color: $color('gray', 'pale')
+
+      &.serie
+        font-size: 16px
+
+    .traffic-light
+      border-radius: 50%
+      cursor: help
+      height: 15px
+      position: absolute
+      right: 10px
+      width: 15px
+
+      &.tooltip
+        .content
+          margin: 25px 0 0 -165px
+          width: 190px
+
+          &:after
+            display: none
+
+          &:before
+            border-color: transparent transparent $color('white') transparent
+            border-style: solid
+            border-width: 8px
+            bottom: 100%
+            content: ' '
+            margin-left: -5px
+            position: absolute
+            right: 5%
+
+  .content-prices
+    height: 45px
+    padding: 5px 0
+    text-align: center
+
+    span
+      &.down
+        color: $color('magenta')
+      &.up
+        color: $color('green')
+
+    .currency
+      font-size: 12px
+      font-weight: bold
+      margin-left: 3px
+
+    .date
+      display: inline-block
+      font-size: 11px
+
+    .performance
+      font-size: 13px
+      margin-left: 10px
+
+    .price
+      font-size: 20px
+
+  .content-graphic
+    height: 70px
+
+    &.disabled
+      background-color: $color('gray', 'whiteSmoke')
+
+    canvas
+      height: 80px !important
+      width 200px !important
+      transform: scale(0.9, 0.9);
+
+  .footer
+    height: 30px
+    padding: 5px 0
+
+    .date
+      font-size: 10px
+      padding-right: 5px
+
+      &.expiration
+        color: $color('orange')
+
+    .icons
+      padding-left: 2px
+
+      span
+        color: transparent
+
+      .tooltip
+        cursor: help
+        position: relative
+
+        &.simple
+          &:hover
+            span
+              margin-top: -43px
+
+          &.sbpp
+            &:hover
+              &:after
+                top: -95%
+
+        &.triple
+          &:hover
+            span
+              margin-top: -70px
+
+        span
+          margin-left: -999em
+          position: absolute
+
+        &:hover
+          &:after
+            border-color: $color('white') transparent transparent transparent
+            border-style: solid
+            border-width: 8px
+            content: ' '
+            left: 50%
+            margin-left: -8px
+            position: absolute
+            top: -68%
+
+          span
+            background-color: $color('white')
+            border-radius: 5px
+            box-shadow 1px 0 18px 2px $color('gray', 'light')
+            color: $color('gray')
+            margin: -57px 0 0 -87px
+            padding: 8px
+            text-align: center
+            width: 155px
+
+            &.complex
+              color: $color('blue', 'medium')
+
+      img
+        height: 18px
+        width: 18px
+
+      .bpp
+        color: $color('gray', 'pale')
+        display: inline-block
+        font-size: 14px
+        font-weight: bold
+        margin: -12px 0 0 2px
+        vertical-align: middle
+
+    .inline
+      display: inline-block
+
 .content-briefcases
   border: 1px solid $color('gray', 'whiteSmoke')
   border-radius: 5px
@@ -134,15 +328,23 @@ i
 
 .content-tab
   border-right: none
+  border: 1px solid #d8d8d8
+  border-radius: 0 0 5px 5px
+  border-top: none
+  display: inline-block
+  font-size: 12px
+  padding: 20px 0
+  width: 100%
 
 .lateral
   padding-left: 10px
   position: relative
-  right: -15px
+  right: -11px
+  top: -21px
 
 .nav-graphics
   border-bottom: 2px solid $color('gray', 'whiteSmoke')
-  font-size: 11px
+  font-size: 10px
   margin-top: 20px
 
   li
@@ -189,8 +391,7 @@ i
   border-radius: 5px
   box-shadow 1px 0 18px 2px $color('gray', 'light')
   color: $color('gray')
-  //margin-left: 70px
-  margin-left: 0px
+  margin-left: 45px
   position: absolute
   width: 215px
 
@@ -217,12 +418,13 @@ i
           display: inline-block
 
 .panel
-  h1
-    color: #094fa4
-    display: block
-    font: 16px 'Stag Sans Light'
-    font-weight: normal
+  //border: 1px solid $color('gray', 'whiteSmoke')
+  border-radius: 0px
+  border-top-right-radius: 0px
+  margin-bottom: 20px
+  position: relative
 
+  h1
     &.detail
       font-size: 18px
       font-weight: bold
@@ -382,8 +584,8 @@ i
 
   &.portfolio
     background: $color('gray','degraded1')
-    border: 1px solid $color('gray', 'whiteSmoke')
     margin-bottom: 0
+    min-height: 500px
     max-height: 1378px
     padding: 10px
     position: relative
@@ -448,10 +650,7 @@ i
 
     .graphics
       canvas
-        &.chart-pie
-          height: 220px !important
-          margin: 0 35px
-          width: 220px !important
+        width: 100%
 
     .total-amount
       color: $color('gray', 'pale')
@@ -569,7 +768,7 @@ td
   margin-top 40px
 
 i.burger {
-    background: url(../../../assets/icons/burger.png) no-repeat;
+    background: url(/assets/icons/burger.png) no-repeat;
     height: 25px;
     width: 25px;
     background-position: 0px -3px;

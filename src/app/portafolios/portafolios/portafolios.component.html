@@ -49,7 +49,7 @@
         <div class="row mb-4">
           <div class="col-8">
             <ul class="nav-subjacents">
-              <li [ngClass]="{activeTab: subyacenteTab === 'TODO'}" (click)="subyacente = null; filterSubjacents();">TODO</li>
+              <li [ngClass]="{activeTab: subyacenteTab === 'TODO'}" (click)="subyacente = null;">TODO</li>
               <li *ngFor="let subjacent of subjacents; let i = index" (click)="subyacenteFilter = {subyacente: subjacent}; subyacente = subjacent; subyacenteTab = i;"
                 ng-class="{activeTab: main.subyacenteTab === i}">{{subjacent.name}}</li>
             </ul>
@@ -59,11 +59,11 @@
             <i class="filter mb-10 mr-10" ng-if="main.listed || main.portfolioT.length &gt; 20" ng-class="{on: main.filterPortfolio}"
               ng-click="main.filterPortfolio = !main.filterPortfolio;"></i>-->
 
-            <i class="views" ng-class="{list: main.listed}" ng-click="main.listed = !main.listed" ng-if="main.portfolioT.length &lt;= 20"></i>
+            <i class="views" [ngClass]="{list: listed}" (click)="listed = !listed" *ngIf="boxes?.length <= 20"></i>
           </div>
         </div>
 
-        <div class="row" style="background: pink;">
+        <div class="row">
           <div class="col-12">
             <div class="suggesting"><span class="title">Semáforo de sugerencias</span>
               <div class="lights">
@@ -76,33 +76,33 @@
           </div>
         </div>
 
-        <div class="row" style="background: green;">
-          <div class="col-12" style="background:;">
-            <div class="box-portfolio" [ngClass]="{defeated: !box.stActivo}" *ngFor="let box of boxes" (click)="detail(box.series, box.id);">
+        <div class="row">
+          <div class="col-12" *ngIf="!listed && boxes.length <= 20">
+            <div *ngFor="let box of boxes" class="box-portfolio" [ngClass]="{defeated: !box.stActivo}" (click)="detail(box.series, box.id);">
               <div class="title-box">
-                <div class="traffic-light tooltip" *ngIf="box.estatus === 1 || box.estatus === 3 || box.estatus === 7" [ngStyle]="{'background-color': box.semaforo.color}">
+                <div class="traffic-light tooltip" *ngIf="box.status === '1' || box.status === '3' || box.status === '7'" [ngStyle]="{'background-color': box.semaforo.color}">
                   <div class="content" *ngIf="box.semaforo.comentario !== null">
                     <span>{{ box.semaforo.comentario }}</span>
                   </div>
                 </div>
                 <span class="serie">{{ box.series }}</span>
                 <span class="inline payoff"> {{ box.paymentType }}</span>
-                <img src="./assets/img/plus.png" />
-                <span class="inline actives">Índice Eurostoxx 50® {{ box.activos }}</span>
-                <span class="inline price"> {{ box.activos }}</span>
-                <span class="inline price">100{{ box.activos }}%</span>
+                <img *ngIf="box.referenceAssets.length === 3" src="./assets/img/plus.png" />
+                <span class="inline actives">{{ box.referenceAssets[0].nbActivo }}</span>
+                <span class="inline price"> {{ box.referenceAssets[0].precioActivo }}</span>
+                <span class="inline price">{{ box.referenceAssets[0].diferencia }}%</span>
               </div>
               <div class="content-prices">
                 <div class="block">
-                  <i class="performance" ng-class="{down: box.diferencia &lt; 0}" *ngIf="box.diferencia"></i>
-                  <span class="price" [ngClass]="{down: box.diferencia &lt; 0, up: box.diferencia &gt; 0}">{{ box.imPrecio }}</span>
-                  <span class="currency" [ngClass]="{down: box.diferencia &lt; 0, up: box.diferencia &gt; 0}">{{ box.cdDivisa }}</span>
+                  <i class="performance" *ngIf="box.priceDifference.amount" [ngClass]="{down: box.priceDifference.amount < 0}"></i>
+                  <span class="price" [ngClass]="{down: box.priceDifference.amount < 0, up: box.priceDifference.amount > 0}">{{ box.priceDifference.amount }}</span>
+                  <span class="currency" [ngClass]="{down: box.priceDifference.amount < 0, up: box.priceDifference.amount > 0}">{{ box.currency.code }}</span>
                   <span class="performance">
-                    <span *ngIf="box.diferencia &gt; 0">+</span>
+                    <span *ngIf="box.priceDifference.amount > 0">+</span>
                     <span>{{ box.priceDifference.amount }}%</span>
                   </span>
                 </div>
-                <span class="date">Precio al {{box.status}} {{ box.priceDate }}</span>
+                <span class="date">Precio al {{ box.priceDate }}</span>
               </div>
               <div class="content-graphic">
                 <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
@@ -111,6 +111,11 @@
               </div>
             </div>
           </div>
+
+          <div class="col-12" *ngIf="listed || boxes.length > 20">
+
+          </div>
+
         </div>
       </div>
       <div class="col-3">

@@ -31,6 +31,7 @@ export class PortafoliosComponent implements OnInit {
   public banquero: boolean;
   public tabCode: string;
   public contracts: Array<string>;
+  public listed: any;
 
   // lineChart
   public lineChartData: Array<any> = [
