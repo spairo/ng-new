@@ -97,7 +97,7 @@
                   <i class="performance" *ngIf="box.priceDifference.amount" [ngClass]="{down: box.priceDifference.amount < 0}"></i>
                   <span class="price" [ngClass]="{down: box.priceDifference.amount < 0, up: box.priceDifference.amount > 0}">{{ box.priceDifference.amount }}</span>
                   <span class="currency" [ngClass]="{down: box.priceDifference.amount < 0, up: box.priceDifference.amount > 0}">{{ box.currency.code }}</span>
-                  <span class="performance">
+                  <span class="performance" [ngClass]="{down: box.priceDifference.amount < 0, up: box.priceDifference.amount > 0}">
                     <span *ngIf="box.priceDifference.amount > 0">+</span>
                     <span>{{ box.priceDifference.amount }}%</span>
                   </span>
