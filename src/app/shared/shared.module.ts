@@ -20,6 +20,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { BigInputComponent } from './big-input/big-input.component';
 import { BigInputActionComponent } from './big-input/big-input-action.component';
 import { ApibuildComponent } from './apibuild/apibuild.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 
 @NgModule({
@@ -42,7 +43,7 @@ import { ApibuildComponent } from './apibuild/apibuild.component';
     MatIconModule,
     MatTooltipModule
   ],
-  declarations: [BigInputComponent, BigInputActionComponent, ApibuildComponent],
+  declarations: [BigInputComponent, BigInputActionComponent, ApibuildComponent, BreadcrumbComponent],
   exports: [
     CommonModule,
     FormsModule,
@@ -63,7 +64,8 @@ import { ApibuildComponent } from './apibuild/apibuild.component';
     MatTooltipModule,
 
     BigInputComponent,
-    BigInputActionComponent
+    BigInputActionComponent,
+    BreadcrumbComponent
   ]
 })
 export class SharedModule {}

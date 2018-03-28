@@ -30,23 +30,16 @@ const routes: Routes = [
     path: 'portafolios/detalle/:serie/:id',
     component: DetalleComponent,
     data: {
-      title: 'Detalle Portafolio'
+      title: 'Detalle Portafolio',
+      breadcrumb: 'Detalle'
     }
   },
-  /*
-  '/portafolios-inversion/detalle/:serie/:id': {
-				deps: [
-					'app/seguimiento/portafolios-inversion/detalle-portafolio/detail-portafolio-controller.js',
-					'app/seguimiento/portafolios-inversion/detalle-portafolio/detail-portafolio-service.js'
-				],
-				templateUrl: 'app/seguimiento/portafolios-inversion/detalle-portafolio/main.html'
-			},
-  */
   {
     path: 'programas',
     component: ProgramasComponent,
     data: {
-      title: 'Programas'
+      title: 'Programas',
+      breadcrumb: 'Programas'
     }
   },
   {
