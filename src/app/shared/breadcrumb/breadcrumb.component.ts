@@ -19,6 +19,7 @@ import { BreadCrumb } from './breadcrumb';
 export class BreadcrumbComponent implements OnInit {
 
   public breadcrumbs$: any;
+  public foo: any;
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router) {
@@ -26,12 +27,20 @@ export class BreadcrumbComponent implements OnInit {
 
   ngOnInit() {
 
-    this.breadcrumbs$ = this.router.events
-      .filter(event => event instanceof NavigationEnd)
+    debugger;
+
+    console.log(this.activatedRoute.root);
+    this.foo = this.router.events
+    .filter(event => event instanceof NavigationEnd)
+    .map(event => this.buildBreadCrumb(this.activatedRoute.root));
+    console.log(this.foo);
+
+
+    this.breadcrumbs$ = this.router.events.filter(event => event instanceof NavigationEnd)
       // .pipe(distinctUntilChanged())
       .map(event => this.buildBreadCrumb(this.activatedRoute.root));
       // Build your breadcrumb starting with the root route of your current activated route
-    debugger;
+
     console.log(this.breadcrumbs$);
   }
 
