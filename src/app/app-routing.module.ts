@@ -10,7 +10,11 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'about',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    data: {
+      title: 'about',
+      breadcrumb: 'about'
+    }
   },
   {
     path: 'settings',
@@ -23,7 +27,8 @@ const routes: Routes = [
     path: 'portafolios',
     component: PortafoliosComponent,
     data: {
-      title: 'Portafolios Inversion'
+      title: 'Portafolios Inversion',
+      breadcrumb: 'Portafolios Inversion'
     }
   },
   {
@@ -31,7 +36,7 @@ const routes: Routes = [
     component: DetalleComponent,
     data: {
       title: 'Detalle Portafolio',
-      breadcrumb: 'Detalle'
+      breadcrumb: 'Detalle Portafolio'
     }
   },
   {
@@ -44,7 +49,7 @@ const routes: Routes = [
   },
   {
     path: 'examples',
-    loadChildren: 'app/examples/examples.module#ExamplesModule'
+    loadChildren: 'app/examples/examples.module#ExamplesModule',
   },
   {
     path: '**',

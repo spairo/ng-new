@@ -1,6 +1,8 @@
+<!--
 <div class="breadcrumb">
   <a nav="#!/">Home</a>
 </div>
+-->
 <new-breadcrumb></new-breadcrumb>
 <br />
 <div class="row">
@@ -59,8 +61,7 @@
             <!--
             <i class="filter mb-10 mr-10" ng-if="main.listed || main.portfolioT.length &gt; 20" ng-class="{on: main.filterPortfolio}"
               ng-click="main.filterPortfolio = !main.filterPortfolio;"></i>-->
-
-            <i class="views" [ngClass]="{list: listed}" (click)="listed = !listed" *ngIf="boxes?.length <= 20"></i>
+            <i class="views" [ngClass]="{list: listed}" (click)="listed = !listed" *ngIf="boxesgrid?.length <= 20"></i>
           </div>
         </div>
 
@@ -78,7 +79,7 @@
         </div>
 
         <div class="row">
-          <div class="col-12" *ngIf="!listed && boxes.length <= 20">
+          <div class="col-12" *ngIf="!listed && boxes?.length <= 20">
             <div *ngFor="let box of boxes" class="box-portfolio" [ngClass]="{defeated: !box.stActivo}" (click)="detail(box.series, box.id);">
               <div class="title-box">
                 <div class="traffic-light tooltip" *ngIf="box.status === '1' || box.status === '3' || box.status === '7'" [ngStyle]="{'background-color': box.semaforo.color}">
@@ -134,7 +135,7 @@
             </div>
           </div>
 
-          <div class="col-12" *ngIf="listed || boxes.length > 20">
+          <div class="col-12" *ngIf="listed">
 
           </div>
 

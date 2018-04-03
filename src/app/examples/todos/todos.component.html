@@ -51,7 +51,7 @@
       </h2>
       <mat-card *ngFor="let todo of filteredTodos" class="todo" [ngClass]="animateOnRouteEnter">
         <mat-checkbox class="todo-done" [checked]="todo.done" (change)="onToggleTodo(todo)"></mat-checkbox>
-        <span class="todo-label" (click)="onToggleTodo(todo)">{{todo.name}}</span>
+        <span class="todo-label" (click)="onToggleTodo(todo)">{{todo.name}} jjj</span>
       </mat-card>
       <br>
       <br>

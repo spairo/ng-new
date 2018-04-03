@@ -1,7 +1,7 @@
 <div class="lateral">
-  <div class="panel portfolio" style="">
+  <div class="panel portfolio" [ngClass]="animateOnRouteEnter">
     <h1>Estadísticas </h1>
-
+    <!--<mat-spinner *ngIf="!headerValues" style="margin:0 auto;" mode="indeterminate"></mat-spinner>-->
     <i class="export-pdf" (click)="viewPrint()"></i>
 
     <ul class="nav-graphics">

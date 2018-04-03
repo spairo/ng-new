@@ -27,6 +27,7 @@ export class PortafoliosComponent implements OnInit {
   public subjacents: any;
   public activeTab: any;
   public boxes: any;
+  public boxesgrid: any;
   public prices: any;
   public banquero: boolean;
   public tabCode: string;
@@ -105,6 +106,7 @@ export class PortafoliosComponent implements OnInit {
 
   buildBriefcases(briefcases) {
     this.boxes = briefcases;
+    this.boxesgrid = briefcases;
   }
 
   buildCharts(prices) {

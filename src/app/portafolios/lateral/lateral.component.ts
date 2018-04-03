@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs/Subject';
+import { ANIMATE_ON_ROUTE_ENTER } from '@app/core';
 
 import {  LateralService } from './lateral.service'
 import { environment as env } from '@env/environment';
@@ -13,6 +14,8 @@ import { environment as env } from '@env/environment';
   providers: [LateralService]
 })
 export class LateralComponent implements OnInit {
+
+  animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
 
   public details: any;
   public amount: any;
