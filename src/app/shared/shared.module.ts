@@ -17,6 +17,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material';
 
 import { BigInputComponent } from './big-input/big-input.component';
 import { BigInputActionComponent } from './big-input/big-input-action.component';
@@ -41,7 +42,8 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     MatMenuModule,
     MatIconModule,
     MatTooltipModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   declarations: [BigInputComponent, BigInputActionComponent, BreadcrumbComponent],
   exports: [
@@ -63,6 +65,7 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     MatIconModule,
     MatTooltipModule,
     MatDatepickerModule,
+    MatNativeDateModule,
 
     BigInputComponent,
     BigInputActionComponent,
