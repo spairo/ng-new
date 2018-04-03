@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs/Subject';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ANIMATE_ON_ROUTE_ENTER } from '@app/core';
+import { PushNotificationsService } from 'ng-push';
 
 import * as _ from 'lodash';
 
@@ -19,14 +20,18 @@ export class DetalleComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private _push: PushNotificationsService
   ) {}
 
-  // this.id = $routeParams.id;
-  // this.serie = $routeParams.serie;
-
   ngOnInit() {
-
+    this._push.requestPermission()
+  }
+  foo() {
+    this._push.create('Test', {body: 'something'}).subscribe(
+      res => console.log(res),
+      err => console.log(err)
+    )
   }
 
 }

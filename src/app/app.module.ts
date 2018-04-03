@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { SharedModule } from '@app/shared';
 import { ApibuilderModule } from '@app/apibuilder'
+import { PushNotificationsModule } from 'ng-push';
 import { CoreModule } from '@app/core';
 
 import { SettingsModule } from './settings';
@@ -14,7 +15,6 @@ import { StaticModule } from './static';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   imports: [
@@ -34,7 +34,7 @@ import { ChartsModule } from 'ng2-charts';
     PortafoliosModule,
 
     // libs
-    ChartsModule,
+    PushNotificationsModule,
 
     // app
     AppRoutingModule,

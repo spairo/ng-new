@@ -16,12 +16,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { BigInputComponent } from './big-input/big-input.component';
 import { BigInputActionComponent } from './big-input/big-input-action.component';
-import { ApibuildComponent } from './apibuild/apibuild.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
-
 
 @NgModule({
   imports: [
@@ -41,9 +40,10 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     MatListModule,
     MatMenuModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDatepickerModule
   ],
-  declarations: [BigInputComponent, BigInputActionComponent, ApibuildComponent, BreadcrumbComponent],
+  declarations: [BigInputComponent, BigInputActionComponent, BreadcrumbComponent],
   exports: [
     CommonModule,
     FormsModule,
@@ -62,6 +62,7 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     MatToolbarModule,
     MatIconModule,
     MatTooltipModule,
+    MatDatepickerModule,
 
     BigInputComponent,
     BigInputActionComponent,
