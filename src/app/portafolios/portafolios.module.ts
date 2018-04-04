@@ -11,13 +11,14 @@ import { LateralComponent } from './lateral/lateral.component';
 import { LateralService } from './lateral/lateral.service';
 import { DetalleComponent } from './detalle/detalle.component';
 import { DetalleService } from './detalle/detalle.service';
+import { DetalleCuponesChartComponent } from './detalle-cupones-chart/detalle-cupones-chart.component';
 
 @NgModule({
   imports: [
     SharedModule,
     ChartsModule
   ],
-  declarations: [PortafoliosComponent, LateralComponent, DetalleComponent],
+  declarations: [PortafoliosComponent, LateralComponent, DetalleComponent, DetalleCuponesChartComponent],
   providers: [PortafoliosService]
 })
 export class PortafoliosModule { }

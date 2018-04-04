@@ -1,23 +1,25 @@
 <div [ngClass]="animateOnRouteEnter">
-
+  <div class="breadcrumb">
+    <a routerLink="/portafolios">
+      <span routerLinkActive="selected" class="selected">Portafolios de inversión</span>
+    </a>
+  </div>
   <div class="panel mt-35 mb-10 pl-20 pr-20 pb-40">
     <div class="row">
       <div class="col-6"></div>
       <div class="col-6">
         <div class="row">
             <div class="col">
+              <!--
               <mat-form-field>
                 <input matInput [matDatepicker]="picker" placeholder="Fecha inicial">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
               </mat-form-field>
+            -->
             </div>
             <div class="col">
-              <mat-form-field>
-                <input matInput [matDatepicker]="picker2" placeholder="Fecha Final">
-                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-                <mat-datepicker #picker2></mat-datepicker>
-              </mat-form-field>
+
             </div>
         </div>
       </div>
@@ -28,20 +30,28 @@
     <div class="col-3">
       <div class="panel detail">
         <h1 class="detail">Detalle de la emisión</h1>
-        <p class="description">ssssssss</p>
-        <div class="traffic-light tooltip" ng-style="{'background-color': main.detail.detalleEstrategia.semaforo.color}">
+        <p class="description">-</p>
+        <div class="traffic-light tooltip" style="background-color: rgb(134, 200, 45);"  ng-style="{'background-color': main.detail.detalleEstrategia.semaforo.color}">
           <div class="content">
-            <span>comentarioooosss</span>
+            <span>comentarios</span>
           </div>
         </div>
-        <span ng-style="{'color': main.detail.detalleEstrategia.semaforo.color }">Sugerencia de {{ main.detail.detalleEstrategia.semaforo.nombreSemaforo }}</span>
+        <span style="color: rgb(134, 200, 45);" ng-style="{'color': main.detail.detalleEstrategia.semaforo.color }">Sugerencia de Conservación</span>
         <div class="mt-40">
           <div class="field" ng-hide="key &gt; 7" ng-if="field.id !== 90" ng-repeat="(key, field) in main.detail.detalleEstrategia.encabezados | orderBy:'ordenAlta'">
             <div class="row">
               <div class="col-6 pr-5">
-                <label for="{{ field.etiqueta }}">{{ field.propiedad }}:</label>
+                <!--<label for="{{ field.etiqueta }}">-{{ field.propiedad }}:</label>-->
+                <!-- //fake -->
+                <label for="">Vehículo:</label><br />
+                <label for="">Serie/Cve. pizarra:</label><br />
+                <label for="">Fecha Emisión:</label><br />
+                <label for="">Fecha Vencimiento:</label><br />
+                <label for="">Fecha Liquidación:</label><br />
+                <label for="">Plazo:</label><br />
               </div>
               <div class="col-6 pr-0">
+                <!--
                 <span ng-if="field.tipo === 'AREA' || field.tipo === 'TEXT' || field.tipo === 'NUMBER'">{{ main.detail.detalleEstrategia.datos[field.id] || "-" }}</span>
                 <div ng-if="field.tipo === 'SELECT'">
                   <span ng-if="main.detail.detalleEstrategia.datos[field.id].txCatalogo === ''">-</span>
@@ -60,6 +70,7 @@
                     </label>
                   </div>
                 </div>
+                -->
               </div>
             </div>
             <div class="field" ng-show="key === 7">
@@ -68,19 +79,19 @@
                   <label class="mt-10" for="termsheet">Termsheet/DICI:</label>
                 </div>
                 <div class="col-6 pr-0">
-                  <a class="file" href="{{global.server}}/archivo?id={{main.id}}&amp;categoria=53" target="_blank">
+                  <a class="file" href="#" target="_blank">
                     <i class="pdf"></i>
                   </a>
                 </div>
               </div>
-              <div class="row mt-10" ng-show="!main.showInvisible">
+              <div class="row mt-10" *ngIf="!showInvisible">
                 <div class="col-12 align-center pr-0">
-                  <a class="see-more" ng-click="main.showInvisible = true;">Ver más</a>
+                  <a class="see-more" (click)="showInvisible = true;">Ver más</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="field mt-5" ng-class="{'mt-40': key === 8}" ng-show="key &gt; 7 &amp;&amp; main.showInvisible" ng-if="field.id !== 90"
+          <div class="field mt-5" ng-class="{'mt-40': key === 8}" *ngIf="showInvisible" ng-if="field.id !== 90"
             ng-repeat="(key, field) in main.detail.detalleEstrategia.encabezados | orderBy:'ordenAlta'">
             <div class="row">
               <div class="col-6 pr-0">
@@ -108,10 +119,10 @@
               </div>
             </div>
           </div>
-          <div class="field" ng-show="main.showInvisible">
+          <div class="field" *ngIf="showInvisible">
             <div class="row mt-5">
               <div class="col-12 align-center pr-0">
-                <a class="see-more" ng-click="main.showInvisible = false;">Ver menos</a>
+                <a class="see-more" (click)="showInvisible = false;">Ver menos</a>
               </div>
             </div>
           </div>
@@ -125,30 +136,28 @@
         <h1 class="detail">Información del activo</h1>
         <div class="row">
             <div class="col-4">
-              <div class="col-6">
-                <div class="row">
-                  <label>Precio inicial</label>
+              <div class="row">
+                <div class="col-6">
+                  <div class="row">
+                    <label>Precio inicial</label>
+                  </div>
+                  <div class="row">
+                    <label>Precio actual</label>
+                  </div>
+                  <div class="row">
+                    <label>Rendimiento</label>
+                  </div>
                 </div>
-                <div class="row">
-                  <label>Precio actual</label>
-                </div>
-                <div class="row">
-                  <label>Rendimiento</label>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="row">
-                  <label class="amount" ng-if="!field.esIndice">{{ main.actives["0"].precioInicial | currency:undefined:registro[encabezado.id].countDecimals() }}</label>
-                  <label
-                    class="amount" ng-if="field.esIndice">{{ main.actives["0"].precioInicial | number : 1 }}</label>
-                </div>
-                <div class="row">
-                  <label class="amount" ng-if="!field.esIndice">{{ main.actives["0"].precioFinal | currency:undefined:registro[encabezado.id].countDecimals() }}</label>
-                  <label
-                    class="amount" ng-if="field.esIndice">{{ main.actives["0"].precioFinal | number : 1 }}</label>
-                </div>
-                <div class="row">
-                  <label>{{ main.actives["0"].rendimiento }} %</label>
+                <div class="col-6">
+                  <div class="row">
+                    <label class="amount" ng-if="!field.esIndice">$37.28</label>
+                  </div>
+                  <div class="row">
+                    <label class="amount" ng-if="!field.esIndice">$36.25</label>
+                  </div>
+                  <div class="row">
+                    <label>-2.76 %</label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -163,18 +172,22 @@
                   </thead>
                   <tbody>
                     <tr class="no-hover" ng-if="$index === 0" ng-repeat="field in main.actives track by $index">
-                      <td>{{ field.nombre }}</td>
-                      <td>{{ field.geografia }}</td>
+                      <td>iShares Euro Stoxx50 UCITS(INC)</td>
+                      <td>Europa</td>
                     </tr>
+                    <!--
                     <tr class="no-hover" ng-if="$index &gt; 0 &amp;&amp; main.showMoreTable" ng-repeat="field in main.actives track by $index">
                       <td>{{ field.nombre }}</td>
                       <td>{{ field.geografia }}</td>
                     </tr>
+                    -->
                   </tbody>
                 </table>
+                <!--
                 <div class="show-more-table" ng-if="main.actives.length &gt; 1">
                   <span class="down" ng-class="{up: main.showMoreTable}" ng-click="main.showMoreTable = !main.showMoreTable;"></span>
                 </div>
+                -->
               </div>
             </div>
         </div>
@@ -185,13 +198,15 @@
           <div class="col-6">
             <div class="panel">
               <div class="title wrapper">Cupones</div>
-              <canvas class="chart-bar" id="bar" chart-colors="main.detail.graficaCupones.colores" chart-data="main.detail.graficaCupones.datos"
-                chart-labels="main.detail.graficaCupones.titulos" chart-options="main.optionsCoupons" height="250" width="230"></canvas>
+              <div class="chart-bar">
+                <new-detalle-cupones-chart></new-detalle-cupones-chart>
+              </div>
+
               <div class="categories">
-                <div class="grid" ng-repeat="item in main.detail.graficaCupones.colores  | limitTo:3">
-                  <div class="square" ng-style="{'background-color': item}"></div>
-                  <span>{{ main.detail.graficaCupones.titulos[$index] }}:</span>
-                  <span class="coupnum">{{ main.detail.graficaCupones.datos[$index] }}</span>
+                <div class="grid">
+                  <div class="square" style="background-color: rgb(137, 209, 243);"></div>
+                  <span>Cupones totales:</span>
+                  <span class="coupnum">25</span>
                 </div>
               </div>
             </div>
@@ -204,7 +219,7 @@
               </div>
               <div class="col-6">
                 <span ng-if="main.detail.detalleCupon.plazoCupon === null">-</span>
-                <span ng-if="main.detail.detalleCupon.plazoCupon !== null">{{ main.detail.detalleCupon.plazoCupon }} días</span>
+                <span ng-if="main.detail.detalleCupon.plazoCupon !== null"></span>
               </div>
             </div>
             <div class="row">
@@ -213,7 +228,7 @@
               </div>
               <div class="col-6">
                 <span ng-if="main.detail.detalleCupon.cuponActual === null">-</span>
-                <span ng-if="main.detail.detalleCupon.cuponActual !== null">{{ main.detail.detalleCupon.cuponActual }}%</span>
+                <span ng-if="main.detail.detalleCupon.cuponActual !== null">%</span>
               </div>
             </div>
             <div class="row">
@@ -222,7 +237,7 @@
               </div>
               <div class="col-6">
                 <span ng-if="main.detail.detalleCupon.fhCuponActual === null">-</span>
-                <span ng-if="main.detail.detalleCupon.fhCuponActual !== null">{{ main.detail.detalleCupon.fhCuponActual | date:'dd/MM/yyyy' }}</span>
+                <span ng-if="main.detail.detalleCupon.fhCuponActual !== null"></span>
               </div>
             </div>
             <div class="row">
@@ -231,7 +246,7 @@
               </div>
               <div class="col-6">
                 <span ng-if="main.detail.detalleCupon.fhSigCupon === null">-</span>
-                <span ng-if="main.detail.detalleCupon.fhSigCupon !== null">{{ main.detail.detalleCupon.fhSigCupon | date:'dd/MM/yyyy' }}</span>
+                <span ng-if="main.detail.detalleCupon.fhSigCupon !== null"></span>
               </div>
             </div>
             <div class="row">
@@ -240,10 +255,10 @@
               </div>
               <div class="col-6">
                 <span ng-if="main.detail.detalleCupon.cuponPromedio === null">-</span>
-                <span ng-if="main.detail.detalleCupon.cuponPromedio !== null">{{ main.detail.detalleCupon.cuponPromedio }}</span>
+                <span ng-if="main.detail.detalleCupon.cuponPromedio !== null"></span>
               </div>
             </div>
-            <a class="link" ng-click="main.showDataModal(1); main.couponsHistory.open();">Ver histórico</a>
+            <a class="link" (click)="main.showDataModal(1); main.couponsHistory.open();">Ver histórico</a>
           </div>
           <div class="col-3 pl-10 pr-20">
             <h3>Resumen de rendimientos</h3>
@@ -253,7 +268,7 @@
               </div>
               <div class="col-5">
                 <span class="amount" ng-if="main.detail.detalleResumenRendimientos.sumaCupones === null">-</span>
-                <span class="amount" ng-if="main.detail.detalleResumenRendimientos.sumaCupones !== null">{{ main.detail.detalleResumenRendimientos.sumaCupones | currency }}</span>
+                <span class="amount" ng-if="main.detail.detalleResumenRendimientos.sumaCupones !== null"></span>
               </div>
             </div>
             <div class="row">
@@ -262,13 +277,13 @@
               </div>
               <div class="col-5">
                 <span class="amount" ng-if="main.detail.detalleResumenRendimientos.valmer === null">-</span>
-                <span class="amount" ng-if="main.detail.detalleResumenRendimientos.valmer !== null">{{ main.detail.detalleResumenRendimientos.valmer | currency }}</span>
+                <span class="amount" ng-if="main.detail.detalleResumenRendimientos.valmer !== null"></span>
               </div>
             </div>
             <div class="total-performance">
               <label>Rendimiento total</label>
               <span ng-if="main.detail.detalleResumenRendimientos.rendimientoTotal === null">-</span>
-              <span ng-if="main.detail.detalleResumenRendimientos.rendimientoTotal !== null">{{ main.detail.detalleResumenRendimientos.rendimientoTotal | currency }} MXN</span>
+              <span ng-if="main.detail.detalleResumenRendimientos.rendimientoTotal !== null"></span>
             </div>
             <div class="row border-top">
               <div class="col-6">
@@ -276,13 +291,14 @@
               </div>
               <div class="col-6">
                 <span ng-if="main.detail.detalleResumenRendimientos.benchmark === null">-</span>
-                <span ng-if="main.detail.detalleResumenRendimientos.benchmark !== null">{{ main.detail.detalleResumenRendimientos.benchmark }}%</span>
+                <span ng-if="main.detail.detalleResumenRendimientos.benchmark !== null"></span>
               </div>
             </div>
             <div class="performance-to">
-              <label>Rendimiento al {{ main.detail.detalleResumenRendimientos.fhRendimiento | date:'dd/MM/yyyy' }}</label>
+              <label>Rendimiento al </label>
               <span ng-if="main.detail.detalleResumenRendimientos.rendimientoDia === null">-</span>
-              <span ng-if="main.detail.detalleResumenRendimientos.rendimientoDia !== null">{{ main.detail.detalleResumenRendimientos.rendimientoDia }}%</span>
+              <span ng-if="main.detail.detalleResumenRendimientos.rendimientoDia !== null"></span>
+              <br />
               <a class="link" ng-click="main.showDataModal(0); main.yieldsHistory.open();">Ver detalle</a>
             </div>
           </div>

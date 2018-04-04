@@ -19,6 +19,7 @@ export class DetalleComponent implements OnInit {
   animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
   public param1: string;
   public param2: string;
+  public showInvisible: boolean;
 
 
   constructor(
@@ -34,6 +35,7 @@ export class DetalleComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.showInvisible = false;
     this._push.requestPermission()
   }
 
