@@ -17,18 +17,31 @@ import { environment as env } from '@env/environment';
 export class DetalleComponent implements OnInit {
 
   animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
+  public param1: string;
+  public param2: string;
+
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private _push: PushNotificationsService
-  ) {}
+  ) {
+    console.log('Called Constructor');
+    this.route.queryParams.subscribe(params => {
+        this.param1 = params['serie'];
+        this.param2 = params['id'];
+    });
+  }
 
   ngOnInit() {
     this._push.requestPermission()
   }
+
   foo() {
-    this._push.create('Test', {body: 'something'}).subscribe(
+    this._push.create('New - Test', {
+      body: 'Do you like my body?',
+      icon: '/assets/icons/info.png',
+    }).subscribe(
       res => console.log(res),
       err => console.log(err)
     )

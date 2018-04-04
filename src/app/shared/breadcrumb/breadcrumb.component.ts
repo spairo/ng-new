@@ -27,7 +27,6 @@ export class BreadcrumbComponent implements OnInit {
 
   ngOnInit() {
 
-    debugger;
 
     console.log(this.activatedRoute.root);
     this.foo = this.router.events

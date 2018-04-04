@@ -1,10 +1,9 @@
-<!--
 <div class="breadcrumb">
-  <a nav="#!/">Home</a>
+  <a routerLink="/portafolios">
+    <span routerLinkActive="selected" class="selected">Portafolios de inversión</span>
+  </a>
 </div>
--->
-<new-breadcrumb></new-breadcrumb>
-<br />
+<br>
 <div class="row">
   <div class="col-12">
     <ul class="tabs portfolio">
@@ -30,7 +29,7 @@
       </li>
     </ul>
     <div *ngIf="activeTab === 'banquero'" class="content-tab">
-      <div class="col-9">
+      <div class="col-9" style="background: gray;">
 
         <div class="row">
           <div class="col-5">
@@ -67,13 +66,17 @@
 
         <div class="row">
           <div class="col-12">
-            <div class="suggesting"><span class="title">Semáforo de sugerencias</span>
+            <div class="suggesting">
+              <span class="title">Semáforo de sugerencias</span>
               <div class="lights">
                 <div class="col-2 mb-10">
-                  <div class="round"></div><span></span>
+                  <div class="round"></div>
+                  <span></span>
                 </div>
               </div>
-              <div class="iconography"><a>Iconografía</a></div>
+              <div class="iconography">
+                <a>Iconografía</a>
+              </div>
             </div>
           </div>
         </div>
@@ -107,8 +110,8 @@
                 <span class="date">Precio al {{ box.priceDate }}</span>
               </div>
               <div class="content-graphic">
-                <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
-                  [legend]="lineChartLegend" [chartType]="lineChartType">
+                <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [legend]="lineChartLegend"
+                  [chartType]="lineChartType">
                 </canvas>
               </div>
 
@@ -141,12 +144,10 @@
 
         </div>
       </div>
-      <div class="col-3">
-        <new-lateral></new-lateral>
+      <div class="col-3" style="background: red;">
+        <!--<new-lateral></new-lateral>-->
       </div>
-
     </div>
-
   </div>
 </div>
 

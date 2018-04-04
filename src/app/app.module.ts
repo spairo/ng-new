@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared';
 import { ApibuilderModule } from '@app/apibuilder'
 import { PushNotificationsModule } from 'ng-push';
+import { NvD3Module } from 'ng2-nvd3';
 import { CoreModule } from '@app/core';
 
 import { SettingsModule } from './settings';
@@ -15,6 +16,8 @@ import { StaticModule } from './static';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import 'd3';
+import 'nvd3';
 
 @NgModule({
   imports: [
@@ -35,6 +38,7 @@ import { AppComponent } from './app.component';
 
     // libs
     PushNotificationsModule,
+    NvD3Module,
 
     // app
     AppRoutingModule,
