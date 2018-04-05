@@ -12,13 +12,14 @@ import { LateralService } from './lateral/lateral.service';
 import { DetalleComponent } from './detalle/detalle.component';
 import { DetalleService } from './detalle/detalle.service';
 import { DetalleCuponesChartComponent } from './detalle-cupones-chart/detalle-cupones-chart.component';
+import { PortafoliosMosaicComponent } from './portafolios-mosaic/portafolios-mosaic.component';
 
 @NgModule({
   imports: [
     SharedModule,
     ChartsModule
   ],
-  declarations: [PortafoliosComponent, LateralComponent, DetalleComponent, DetalleCuponesChartComponent],
+  declarations: [PortafoliosComponent, LateralComponent, DetalleComponent, DetalleCuponesChartComponent, PortafoliosMosaicComponent],
   providers: [PortafoliosService]
 })
 export class PortafoliosModule { }

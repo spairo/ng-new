@@ -34,39 +34,6 @@ export class PortafoliosComponent implements OnInit {
   public contracts: Array<string>;
   public listed: any;
 
-  // lineChart
-  public lineChartData: Array<any> = [
-    {data: ['97.9964', '97.5857', '96.873', '95.5325', '95.209', '94.6646', '95.148'], label: 'Series A'}
-  ];
-
-  public lineChartLabels: Array<any> = ['02-07-2019', '02-08-2019', '02-09-2019', '02-10-2019', '02-11-2019', '02-12-2019', '02-13-2019'];
-
-  public lineChartOptions: any = {
-    responsive: true,
-    scales: {
-      xAxes: [{
-        gridLines: {
-          display: false
-        },
-        ticks: {
-          display: false
-        }
-      }],
-      yAxes: [{
-        id: 'y-axis-1',
-        type: 'linear',
-        display: true,
-        position: 'left',
-        gridLines: {
-          display: false
-        }
-      }]
-    }
-  };
-
-  public lineChartLegend: boolean = false;
-  public lineChartType: string = 'line';
-
   constructor(
     private _briefcases: PortafoliosService,
     private route: ActivatedRoute,
@@ -111,13 +78,9 @@ export class PortafoliosComponent implements OnInit {
 
   buildCharts(prices) {
     this.prices = prices;
-    var foo = _.map(this.prices, 'prices');
+    // var foo = _.map(this.prices, 'prices');
     // console.log(foo);
-    var arr = _.map(foo, 'price');
-  }
-
-  detail(serie: string, id: number) {
-    this.router.navigate(['portafolios/detalle', serie, id]);
+    // var arr = _.map(foo, 'price');
   }
 
 }

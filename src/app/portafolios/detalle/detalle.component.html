@@ -1,30 +1,34 @@
-<div [ngClass]="animateOnRouteEnter">
+<div>
   <div class="breadcrumb">
     <a routerLink="/portafolios">
       <span routerLinkActive="selected" class="selected">Portafolios de inversión</span>
     </a>
   </div>
-  <div class="panel mt-35 mb-10 pl-20 pr-20 pb-40">
+  <div class="panel mt-20 pl-20 pr-20 pb-20">
     <div class="row">
       <div class="col-6"></div>
       <div class="col-6">
         <div class="row">
             <div class="col">
-              <!--
               <mat-form-field>
                 <input matInput [matDatepicker]="picker" placeholder="Fecha inicial">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
               </mat-form-field>
-            -->
             </div>
             <div class="col">
-
+              <mat-form-field>
+                <input matInput [matDatepicker]="picker2" placeholder="Fecha Final">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+              </mat-form-field>
             </div>
         </div>
       </div>
     </div>
-    <div class="content-graphic-detail"></div>
+    <div class="content-graphic-detail">
+
+    </div>
   </div>
   <div class="row">
     <div class="col-3">
@@ -201,7 +205,6 @@
               <div class="chart-bar">
                 <new-detalle-cupones-chart></new-detalle-cupones-chart>
               </div>
-
               <div class="categories">
                 <div class="grid">
                   <div class="square" style="background-color: rgb(137, 209, 243);"></div>

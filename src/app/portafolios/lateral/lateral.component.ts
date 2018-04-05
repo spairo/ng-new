@@ -26,19 +26,22 @@ export class LateralComponent implements OnInit {
 
   public barChartOptions: any = {
     scaleShowVerticalLines: false,
-    responsive: false
+    responsive: false,
+    layout: {
+      padding: {
+        left: 32,
+        right: 40,
+        top: 0,
+        bottom: 1
+      }
+    }
   };
 
-  public barChartLabels: string[] = ['Multiregion', 'Mexico', 'Europa', 'Multiregion'];
+  public barChartLabels: string[] = ['Multiregión', 'Mexico', 'Europa', '_Multi_'];
   public barChartType: string = 'bar';
   public barChartLegend: boolean = false;
-
-  public barChartData:any[] = [
-    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Multiregion'},
-    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Mexico'},
-    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Europa'},
-    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Multiregion'},
-  ];
+  public barChartColors: any[] = [{ backgroundColor: ['#89D1F3', '#009EE5', '#094fa4', '#86C82D']}];
+  public barChartData:any[] = [{data: [6.67, 46.67, 26.67, 20]}];
 
   constructor(
     private _detail: LateralService

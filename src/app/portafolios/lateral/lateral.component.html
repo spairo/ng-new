@@ -1,5 +1,5 @@
 <div class="lateral">
-  <div class="panel portfolio" [ngClass]="animateOnRouteEnter">
+  <div class="panel portfolio">
     <h1>Estadísticas </h1>
     <!--<mat-spinner *ngIf="!headerValues" style="margin:0 auto;" mode="indeterminate"></mat-spinner>-->
     <i class="export-pdf" (click)="viewPrint()"></i>
@@ -25,6 +25,7 @@
           <label class="txt" for="{{ report.etiqueta }}">{{ report.description }}</label>
         </li>
       </ul>
+      <br>
       <div class="row align-center">
         <div class="col-12 pr-0">
           <button class="btn-large" (click)="saveCustomize()">Guardar vista</button>
@@ -44,10 +45,12 @@
       <span class="amount">{{amount | currency }} MXN</span>
     </div>
     <div class="graphics">
-      <canvas baseChart
+      <canvas
+        baseChart
         [datasets]="barChartData"
         [labels]="barChartLabels"
         [options]="barChartOptions"
+        [colors]="barChartColors"
         [legend]="barChartLegend"
         [chartType]="barChartType">
       </canvas>
