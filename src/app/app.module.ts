@@ -3,21 +3,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { SharedModule } from '@app/shared';
-import { ApibuilderModule } from '@app/apibuilder'
-import { PushNotificationsModule } from 'ng-push';
-import { NvD3Module } from 'ng2-nvd3';
 import { CoreModule } from '@app/core';
 
-import { SettingsModule } from './settings';
-import { ProgramasModule } from './programas';
-import { PortafoliosModule } from './portafolios';
-import { StaticModule } from './static';
+import { ApibuilderModule } from '@app/apibuilder'
+import { SettingsModule } from '@app/settings';
+import { ProgramasModule } from '@app/programas';
+import { PortafoliosModule } from '@app/portafolios';
+import { StaticModule } from '@app/static';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { PushNotificationsModule } from 'ng-push';
 
-import 'd3';
-import 'nvd3';
+import { AppRoutingModule } from '@app/app-routing.module';
+import { AppComponent } from '@app/app.component';
 
 @NgModule({
   imports: [
@@ -38,7 +35,6 @@ import 'nvd3';
 
     // libs
     PushNotificationsModule,
-    NvD3Module,
 
     // app
     AppRoutingModule,

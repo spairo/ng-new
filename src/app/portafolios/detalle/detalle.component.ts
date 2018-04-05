@@ -1,13 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs/Subject';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ANIMATE_ON_ROUTE_ENTER } from '@app/core';
 import { PushNotificationsService } from 'ng-push';
-
-import * as _ from 'lodash';
-
-import { environment as env } from '@env/environment';
 
 @Component({
   selector: 'new-detalle',
@@ -21,13 +17,11 @@ export class DetalleComponent implements OnInit {
   public param2: string;
   public showInvisible: boolean;
 
-
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private _push: PushNotificationsService
   ) {
-    console.log('Called Constructor');
     this.route.queryParams.subscribe(params => {
         this.param1 = params['serie'];
         this.param2 = params['id'];
@@ -36,7 +30,7 @@ export class DetalleComponent implements OnInit {
 
   ngOnInit() {
     this.showInvisible = false;
-    this._push.requestPermission()
+    this._push.requestPermission();
   }
 
   foo() {

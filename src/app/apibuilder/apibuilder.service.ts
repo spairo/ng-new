@@ -6,7 +6,7 @@ import { environment as env } from '@env/environment';
 @Injectable()
 export class ApibuilderService {
 
-  public apiURL:string;
+  public apiURL: string;
 
   constructor(private _http: HttpClient) {}
 
