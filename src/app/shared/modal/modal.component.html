@@ -1,7 +1,0 @@
-<div [@dialog] *ngIf="visible" class="modal">
-	<div *ngIf="visible" class="overlay" (click)="close()"></div>
-	<div class="modal-box" [ngClass]="size">
-    <i class="close" (click)="close()"></i>
-    <ng-content class="modal-content"></ng-content>
-	</div>
-</div>

@@ -3,7 +3,6 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
 @Component({
   selector: 'new-modal',
-  // templateUrl: './modal.component.html',
   template: `
   <div [@dialog] *ngIf="visible" class="modal">
     <div *ngIf="visible" class="overlay" (click)="close()"></div>
