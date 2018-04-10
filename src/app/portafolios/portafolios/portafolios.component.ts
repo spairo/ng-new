@@ -33,6 +33,7 @@ export class PortafoliosComponent implements OnInit {
   public tabCode: string;
   public contracts: Array<string>;
   public listed: any;
+  public showView: string;
 
   constructor(
     private _briefcases: PortafoliosService,
@@ -46,6 +47,7 @@ export class PortafoliosComponent implements OnInit {
     this.subyacenteTab = 'TODO';
     this.activeTab = 'banquero';
     this.tabCode = 'B000';
+    this.showView = 'mosaic';
 
     this._briefcases.getBriefcases('ResponseGetPortFolio').subscribe(data => {
       this.briefcases = data;

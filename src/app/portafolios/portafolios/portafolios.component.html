@@ -13,14 +13,23 @@
       <li (click)="activeTab = 'default'; tabCode = '0000';" [ngClass]="{current: activeTab === 'default'}">
         <span>Cierres recientes</span>
       </li>
-      <li class="add" *ngFor="let tab of tabs; let i = index;" (click)="activeTab = i; tabCode = tab.codigo;">
-        {{tab.name}}
+
+      <li class="add" *ngFor="let tab of tabs; let i = index;" (click)="activeTab = i; tabCode = tab.codigo;" [ngClass]="{current: activeTab === i}">
+        <span>{{tab.name}}</span>
+        <i class="burger tooltip iconPlus" [ngClass]="{'simple on': showView === 'simple', 'double on': showView === 'double', 'mosaic on': showView === 'mosaic'}">
+          <div class="content" style="width: 140px; margin:-35px 0px 0px -60px;">
+            <i class="delete simple" style="margin-top:0px;" [ngClass]="{on: showView === 'simple'}" (click)="showView = 'simple'; $event.stopPropagation(); main.deletePortfolio.open(); codigoTab = tab.codigo;"></i>
+						<i class="copy simple" style="margin-top:0px;" [ngClass]="{on: showView === 'simple'}" (click)="showView = 'simple'; main.clonePortfolio(tab.codigo)"></i>
+						<i class="edit simple" style="margin-top:0px;" [ngClass]="{on: showView === 'simple'}" (click)="showView = 'simple'; $event.stopPropagation(); main.goEdition(tab.codigo)"></i>
+          </div>
+        </i>
       </li>
+
       <li class="add" style="background-color: #B3B3B3;">
         <span>Crear portafolio</span>
         <i class="plus tooltip newPlus"></i>
       </li>
-      <li class="last" *ngIf="banquero" style="">
+      <li class="last" *ngIf="banquero">
         <i class="traffic-loading tooltip">
           <div class="content">
             <div class="txt">Registro de semáforos</div>
@@ -86,7 +95,9 @@
             <div class="col-12" *ngIf="!listed && boxes?.length <= 20">
               <new-portafolios-mosaic [boxes]="boxes"></new-portafolios-mosaic>
             </div>
-            <div class="col-12" *ngIf="listed"></div>
+            <div class="col-12" *ngIf="listed">
+
+            </div>
           </div>
         </div>
         <div class="col-3">

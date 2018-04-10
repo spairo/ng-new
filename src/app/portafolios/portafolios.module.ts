@@ -33,6 +33,7 @@ import { DetalleMultichartComponent } from './detalle-multichart/detalle-multich
     PortafoliosMosaicComponent,
     DetalleMultichartComponent
   ],
-  providers: [PortafoliosService]
+  providers: [PortafoliosService],
+  entryComponents: []
 })
 export class PortafoliosModule { }

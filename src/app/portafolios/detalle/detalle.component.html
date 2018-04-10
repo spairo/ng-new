@@ -10,10 +10,10 @@
       <div class="col-6">
         <div class="row">
             <div class="col">
-              <mat-form-field>
-                <input matInput [matDatepicker]="picker" placeholder="Fecha inicial">
+              <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="picker" placeholder="Fecha Inicial">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
+                <mat-datepicker touchUi="true" #picker></mat-datepicker>
               </mat-form-field>
             </div>
             <div class="col">
@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="content-graphic-detail">
-      <new-detalle-multichart></new-detalle-multichart>
+      <!--<new-detalle-multichart></new-detalle-multichart>-->
     </div>
   </div>
   <div class="row">
@@ -311,6 +311,20 @@
     </div>
 
   </div>
+  <ol>
+    <li>
+      <mat-form-field>
+        <input matInput [(ngModel)]="name" placeholder="What's your name?">
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
+    </li>
+    <li *ngIf="animal">
+      You chose: <i>{{animal}}</i>
+    </li>
+  </ol>
+
   <div class="row">
     <div class="col-12">
       <div class="disclaimer">

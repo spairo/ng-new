@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Inject } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs/Subject';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ANIMATE_ON_ROUTE_ENTER } from '@app/core';
 import { PushNotificationsService } from 'ng-push';
@@ -16,11 +17,14 @@ export class DetalleComponent implements OnInit {
   public param1: string;
   public param2: string;
   public showInvisible: boolean;
+  public animal: string;
+  public name: string;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private _push: PushNotificationsService
+    private _push: PushNotificationsService,
+    public dialog: MatDialog
   ) {
     this.route.queryParams.subscribe(params => {
         this.param1 = params['serie'];
@@ -31,6 +35,29 @@ export class DetalleComponent implements OnInit {
   ngOnInit() {
     this.showInvisible = false;
     this._push.requestPermission();
+  }
+
+  openDialog(): void {
+    /*
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+      width: '450px',
+      data: { name: this.name, animal: this.animal }
+    });*/
+
+    /*
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+      height: '400px',
+      width: '600px',
+    });
+    */
+
+
+    /*
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+    */
   }
 
   foo() {
@@ -44,3 +71,21 @@ export class DetalleComponent implements OnInit {
   }
 
 }
+/*
+
+@Component({
+  selector: 'new-dialog-overview-example-dialog',
+  templateUrl: 'detalle.modal.component.html',
+})
+export class DialogOverviewExampleDialog {
+
+  constructor(
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+}
+*/
