@@ -24,6 +24,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BigInputComponent } from './big-input/big-input.component';
 import { BigInputActionComponent } from './big-input/big-input-action.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   imports: [
@@ -48,7 +49,7 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     MatNativeDateModule,
     MatDialogModule
   ],
-  declarations: [BigInputComponent, BigInputActionComponent, BreadcrumbComponent],
+  declarations: [BigInputComponent, BigInputActionComponent, BreadcrumbComponent, ModalComponent],
   exports: [
     CommonModule,
     FormsModule,
@@ -73,7 +74,8 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
     BigInputComponent,
     BigInputActionComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    ModalComponent
   ]
 })
 export class SharedModule {}

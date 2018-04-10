@@ -311,19 +311,14 @@
     </div>
 
   </div>
-  <ol>
-    <li>
-      <mat-form-field>
-        <input matInput [(ngModel)]="name" placeholder="What's your name?">
-      </mat-form-field>
-    </li>
-    <li>
-      <button mat-raised-button (click)="openDialog()">Pick one</button>
-    </li>
-    <li *ngIf="animal">
-      You chose: <i>{{animal}}</i>
-    </li>
-  </ol>
+  <div class="row">
+    <button (click)="showDialog = !showDialog" class="btn">Open</button>
+
+    <new-modal [(visible)]="showDialog">
+      <h1>Hello World</h1>
+      <button (click)="showDialog = !showDialog" class="btn">Close</button>
+    </new-modal>
+  </div>
 
   <div class="row">
     <div class="col-12">
