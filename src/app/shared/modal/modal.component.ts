@@ -3,12 +3,21 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
 @Component({
   selector: 'new-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss'],
+  // templateUrl: './modal.component.html',
+  template: `
+  <div [@dialog] *ngIf="visible" class="modal">
+    <div *ngIf="visible" class="overlay" (click)="close()"></div>
+    <div class="modal-box" [ngClass]="size">
+      <i class="close" (click)="close()"></i>
+      <ng-content class="modal-content"></ng-content>
+    </div>
+  </div>
+  `,
+  styleUrls: ['./modal.component.styl'],
   animations: [
     trigger('dialog', [
       transition('void => *', [
-        style({ transform: 'scale3d(.3, .3, .3)' }),
+        style({ transform: 'scale3d(.5, .5, .5)' }),
         animate(100)
       ]),
       transition('* => void', [
@@ -21,6 +30,7 @@ export class ModalComponent implements OnInit {
 
   @Input() closable = true;
   @Input() visible: boolean;
+  @Input() size: string;
   @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }

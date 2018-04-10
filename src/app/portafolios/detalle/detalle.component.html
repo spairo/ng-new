@@ -302,7 +302,7 @@
               <span ng-if="main.detail.detalleResumenRendimientos.rendimientoDia === null">-</span>
               <span ng-if="main.detail.detalleResumenRendimientos.rendimientoDia !== null"></span>
               <br />
-              <a class="link" ng-click="main.showDataModal(0); main.yieldsHistory.open();">Ver detalle</a>
+              <a class="link" (click)="showDialog = !showDialog">Ver detalle</a>
             </div>
           </div>
         </div>
@@ -310,14 +310,6 @@
 
     </div>
 
-  </div>
-  <div class="row">
-    <button (click)="showDialog = !showDialog" class="btn">Open</button>
-
-    <new-modal [(visible)]="showDialog">
-      <h1>Hello World</h1>
-      <button (click)="showDialog = !showDialog" class="btn">Close</button>
-    </new-modal>
   </div>
 
   <div class="row">
@@ -330,6 +322,12 @@
       </div>
     </div>
   </div>
+
+  <!--Rendimientos modal-->
+  <new-modal [(visible)]="showDialog" [size]="'medium-large'">
+    <h1>Hello World</h1>
+    <button (click)="showDialog = !showDialog" class="btn">Close</button>
+  </new-modal>
 
 </div>
 
