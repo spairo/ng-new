@@ -214,7 +214,7 @@
               </div>
             </div>
           </div>
-          <div class="col-3 pl-15 pr-0" >
+          <div class="col-3 pl-15 pr-0 detail-coupons" >
             <h3>Detalle de cupones</h3>
             <div class="row">
               <div class="col-6">
@@ -261,7 +261,7 @@
                 <span ng-if="main.detail.detalleCupon.cuponPromedio !== null"></span>
               </div>
             </div>
-            <a class="link" (click)="main.showDataModal(1); main.couponsHistory.open();">Ver histórico</a>
+            <a class="link" (click)="showCoupons = !showCoupons;">Ver histórico</a>
           </div>
           <div class="col-3 pl-10 pr-20">
             <h3>Resumen de rendimientos</h3>
@@ -302,14 +302,12 @@
               <span ng-if="main.detail.detalleResumenRendimientos.rendimientoDia === null">-</span>
               <span ng-if="main.detail.detalleResumenRendimientos.rendimientoDia !== null"></span>
               <br />
-              <a class="link" (click)="showDialog = !showDialog">Ver detalle</a>
+              <a class="link" (click)="showYields = !showYields; foo();">Ver detalle</a>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-
   </div>
 
   <div class="row">
@@ -323,10 +321,51 @@
     </div>
   </div>
 
-  <!--Rendimientos modal-->
-  <new-modal [(visible)]="showDialog" [size]="'medium-large'">
-    <h1>Hello {{animal}}</h1>
-    <button (click)="foo();" class="btn">foo</button>
+
+  <new-modal [(visible)]="showYields" [size]="'medium-small-tiny'">
+    <h1>Rendimientos al </h1>
+    <div class="col-4 float-right mb-20"></div>
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Diario</th>
+          <th>Acumulado Mes</th>
+          <th>Acumulado Año</th>
+          <th>Acumulado Vida del Instrumento</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <br>
+    <a class="file" *ngIf="banquero" href="/archivo?id={{id}}&amp;categoria=resumenRendimiento&amp;banquero={{banquero}}" target="_blank">
+      <button class="btn btn btn-alert btn-large">Descargar Historial</button>
+    </a>
+  </new-modal>
+
+
+  <new-modal [(visible)]="showCoupons" [size]="'medium-small'">
+    <h1>Historial de cupones</h1>
+    <a class="file" href="/archivo?id={{id}}&amp;categoria=resumenCupon&amp;banquero={{banquero}}" target="_blank"><i class="excel modal"></i></a>
+    <div class="scroll-vertical-small size-350 mt-20">
+      <table>
+        <thead>
+          <tr>
+            <th>Número de cupón</th>
+            <th>Fecha de cupón</th>
+            <th>Cupón pagado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </new-modal>
 
 </div>

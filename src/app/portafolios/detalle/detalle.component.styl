@@ -1,412 +1,5 @@
 @import 'main'
 
-.box-portfolio
-  border: 1px solid $color('blue')
-  border-radius: 5px
-  cursor: pointer
-  display: inline-block
-  height: 220px
-  margin: 0 0 15px 15px
-  width: 210px
-
-  &.defeated
-    border: 1px solid $color('gray')
-
-    .title-box
-      background-color: $color('gray')
-
-  .title-box
-    background-color: $color('blue')
-    color: $color('white')
-    height: 75px
-    padding: 8px 10px
-    position: relative
-
-    img
-      float: left
-      margin: 10px 1px 10px 0
-
-    span
-      display: block
-
-      &.actives
-      &.payoff
-        margin-bottom: -5px
-        overflow: hidden
-        text-overflow: ellipsis
-        white-space: nowrap
-        width: 170px
-
-      &.inline
-        display: inline-block
-        margin-right: 10px
-
-      &.actives
-        width: 167px
-
-      &.actives
-      &.price
-        color: $color('gray', 'pale')
-
-      &.serie
-        font-size: 16px
-
-    .traffic-light
-      border-radius: 50%
-      cursor: help
-      height: 15px
-      position: absolute
-      right: 10px
-      width: 15px
-
-      &.tooltip
-        .content
-          margin: 25px 0 0 -165px
-          width: 190px
-
-          &:after
-            display: none
-
-          &:before
-            border-color: transparent transparent $color('white') transparent
-            border-style: solid
-            border-width: 8px
-            bottom: 100%
-            content: ' '
-            margin-left: -5px
-            position: absolute
-            right: 5%
-
-  .content-prices
-    height: 45px
-    padding: 5px 0
-    text-align: center
-
-    span
-      &.down
-        color: $color('magenta')
-      &.up
-        color: $color('green')
-
-    .currency
-      font-size: 12px
-      font-weight: bold
-      margin-left: 3px
-
-    .date
-      display: inline-block
-      font-size: 11px
-
-    .performance
-      font-size: 13px
-      margin-left: 10px
-
-    .price
-      font-size: 20px
-
-  .content-graphic
-    height: 70px
-
-    &.disabled
-      background-color: $color('gray', 'whiteSmoke')
-
-    canvas
-      height: 80px !important
-      width 200px !important
-      transform: scale(0.9, 0.9);
-
-  .footer
-    height: 30px
-    padding: 5px 0
-
-    .date
-      font-size: 10px
-      padding-right: 5px
-
-      &.expiration
-        color: $color('orange')
-
-    .icons
-      padding-left: 2px
-
-      span
-        color: transparent
-
-      .tooltip
-        cursor: help
-        position: relative
-
-        &.simple
-          &:hover
-            span
-              margin-top: -43px
-
-          &.sbpp
-            &:hover
-              &:after
-                top: -95%
-
-        &.triple
-          &:hover
-            span
-              margin-top: -70px
-
-        span
-          margin-left: -999em
-          position: absolute
-
-        &:hover
-          &:after
-            border-color: $color('white') transparent transparent transparent
-            border-style: solid
-            border-width: 8px
-            content: ' '
-            left: 50%
-            margin-left: -8px
-            position: absolute
-            top: -68%
-
-          span
-            background-color: $color('white')
-            border-radius: 5px
-            box-shadow 1px 0 18px 2px $color('gray', 'light')
-            color: $color('gray')
-            margin: -57px 0 0 -87px
-            padding: 8px
-            text-align: center
-            width: 155px
-
-            &.complex
-              color: $color('blue', 'medium')
-
-      img
-        height: 18px
-        width: 18px
-
-      .bpp
-        color: $color('gray', 'pale')
-        display: inline-block
-        font-size: 14px
-        font-weight: bold
-        margin: -12px 0 0 2px
-        vertical-align: middle
-
-    .inline
-      display: inline-block
-
-.content-briefcases
-  border: 1px solid $color('gray', 'whiteSmoke')
-  border-radius: 5px
-  float: left
-  height: 160px
-  margin: 5px
-  padding: 10px
-  width: 48%
-
-  a
-    text-decoration: none
-
-  .btn-add
-    display: block
-    margin: 30px auto 10px
-
-  h4
-    border-bottom: 1px solid $color('gray', 'light')
-    color: $color('blue')
-    font-weight: normal
-    margin: 0
-    padding-bottom: 10px
-    position: relative
-
-    i
-      position: absolute
-      top: 0
-
-      &.copy
-        right: 30px
-
-      &.edit
-        right: 0
-
-    span
-      display: block
-      overflow: hidden
-      text-overflow: ellipsis
-      white-space: nowrap
-      width: 210px
-
-  .overflow
-    height: 119px
-    overflow: auto
-
-    span
-      display: inline-block
-      font-size: 11px
-      margin: 10px 5px 0
-      table-layout: fixed
-      vertical-align: middle
-      width: 29%
-      word-wrap: break-word
-
-  .txt-button
-    color: $color('gray', 'pale')
-    text-align: center
-
-.checks-graphics
-  label
-    color: $color('gray', 'pale')
-    display: inline-block
-    font-size: 14px
-    float: left
-    margin-right: 10px
-
-.content-graphic-detail
-  width: 100%
-
-.disclaimer
-  float: left
-  font-size: 13px
-  margin-bottom: 20px
-  padding-right: 10px
-  width: 100%
-
-  .txt
-    background: $color('gray', 'degraded1')
-    border: 1px solid $color('gray', 'light')
-    border-radius: 5px
-    float: left
-    margin: 10px 0
-    padding: 0 10px 10px 10px
-    width: 100%
-
-    .strong
-      font-weight: bold
-
-.follow
-  font-size: 13px
-  margin: 10px
-  text-align: right
-
-i
-  &.excel
-    &.modal
-      left: 575px
-      position: absolute
-      top: 30px
-
-.icons-mosaic
-  position: absolute
-  right: 40px
-  top: 20px
-
-  .bpp
-    color: $color('gray', 'pale')
-    float: right
-    font-size: 26px
-    margin: 2px 0 0 8px
-
-  img
-    height: 32px
-    margin: 0 5px
-    width: 32px
-
-.icons-mosaic-pdf
-  position: absolute
-  right: 50px
-  top: 20px
-
-  .bpp
-    color: $color('gray', 'pale')
-    float: right
-    font-size: 26px
-    margin: 2px 0 0 8px
-
-  img
-    height: 32px
-    margin: 0 5px
-    width: 32px
-
-.content-tab
-  border-right: none
-
-.lateral
-  position: relative
-
-.nav-graphics
-  border-bottom: 2px solid $color('gray', 'whiteSmoke')
-  font-size: 11px
-  margin-top: 20px
-
-  li
-    border-right: 1px solid $color('gray', 'whiteSmoke')
-    cursor: pointer
-    display: inline-block
-    height: 25px
-    margin: 5px 0
-    text-align: center
-    vertical-align: middle
-    width: 30%
-
-    &.activeTab
-      span
-        color: $color('blue', 'medium')
-
-    &:hover
-      color: $color('blue', 'medium')
-
-.nav-subjacents
-  color: $color('gray', 'pale')
-  font-size: 11px
-  margin-top: 0
-
-  li
-    border-right: 1px solid $color('gray', 'whiteSmoke')
-    cursor: pointer
-    display: inline-block
-    height: 25px
-    line-height: 25px
-    margin: 5px 0
-    text-align: center
-    vertical-align: middle
-    width: 14%
-
-    &.activeTab
-      color: $color('blue', 'medium')
-
-    &:hover
-      color: $color('blue', 'medium')
-
-.nav-review
-  background-color: $color('white')
-  border-radius: 5px
-  box-shadow 1px 0 18px 2px $color('gray', 'light')
-  color: $color('gray')
-  margin-left: 70px
-  position: absolute
-  width: 215px
-
-  p
-    font-size: 12px
-    font-weight: bold
-    margin: 10px 10px 0
-
-  ul
-    font-size: 13px
-    max-height: 240px
-    overflow: auto
-    padding: 5px 0
-
-    li
-      margin: 7px 5px 7px 10px
-
-      &.inactive
-        color: $color('gray', 'pale')
-
-      label
-        &.txt
-          cursor: pointer
-          display: inline-block
-
 .panel
   h1
     &.detail
@@ -423,6 +16,11 @@ i
 
     .amount
       color: $color('blue', 'medium')
+
+  .detail-coupons
+    .link
+      color: $color('blue', 'medium')
+      cursor: pointer
 
   &.detail
     font-size: 13px
@@ -538,6 +136,10 @@ i
       border-right: 3px solid $color('green')
       margin-bottom: 20px
       text-align: center
+      .link
+        color: $color('blue', 'medium')
+        cursor: pointer
+
 
     .performance-to-detail
       border-left: 3px solid $color('green')
@@ -687,49 +289,6 @@ i
         &:after
           background-position: -27px -5px
 
-.suggesting
-  border: 1px solid $color('gray', 'whiteSmoke')
-  border-radius: 5px
-  display: inline-block
-  font-size: 11px
-  margin-bottom: 10px
-  padding: 10px 10px 0
-  width: 100%
-
-  a
-    color: $color('blue', 'medium')
-    cursor: pointer
-
-    &:hover
-      text-decoration: underline
-
-  div
-    display: inline-block
-    margin-top: 5px
-
-    &.iconography
-      float: right
-      margin-top: 12px
-      text-align: right
-      /*width: 70px*/
-
-    &.lights
-      width: 800px
-
-  .round
-    border-radius: 50%
-    display: inline-block
-    height: 13px
-    margin: 3px 5px 0 0
-    vertical-align: middle
-    width: 13px
-
-  span
-    vertical-align: middle
-
-    &.title
-      font-size: 13px
-
 .title-portfolio
   color: $color('blue')
 
@@ -762,38 +321,6 @@ i.burger {
     background-size: initial;
 }
 
-.tabs.portfolio
-  li
-    width 165px;
-
-.add
-  height 37px
-  .iconPlus
-    margin -27px 0px 0px 0px
-  .newPlus
-    margin 8px 0px 0px 0px
-  span
-    float: left
-  .tab-icon
-    float: right
-    i
-      float: right
-      margin-left: 10px
-      position: absolute
-
-    .tooltip
-      &.views
-        .content
-          margin: -41px 0 0 -68px
-          padding: 6px 5px
-          text-align: center
-          width 140px
-
-          &:after
-            margin-left: 22px
-
-          i
-            margin: 0 2px
 .m-12
   margin 12px 10px
 .supBar
@@ -856,4 +383,21 @@ span
   &:hover
     background-color $color('gray', 'light')
 
+.disclaimer
+  float: left
+  font-size: 13px
+  margin-bottom: 20px
+  padding-right: 10px
+  width: 100%
 
+  .txt
+    background: $color('gray', 'degraded1')
+    border: 1px solid $color('gray', 'light')
+    border-radius: 5px
+    float: left
+    margin: 10px 0
+    padding: 0 10px 10px 10px
+    width: 100%
+
+    .strong
+      font-weight: bold

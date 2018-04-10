@@ -13,31 +13,29 @@ import { PushNotificationsService } from 'ng-push';
 export class DetalleComponent implements OnInit {
 
   animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
-  public param1: string;
-  public param2: string;
+  public serie: string;
+  public id: string;
   public showInvisible: boolean;
-  public animal: string;
+  public banquero: boolean;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private _push: PushNotificationsService,
   ) {
-    this.route.queryParams.subscribe(params => {
-        this.param1 = params['serie'];
-        this.param2 = params['id'];
-    });
+    this.serie = this.route.snapshot.params.serie;
+    this.id = this.route.snapshot.params.id;
   }
 
   ngOnInit() {
-    this.animal = 'cebolla';
+    this.banquero = true;
     this.showInvisible = false;
     this._push.requestPermission();
   }
 
   foo() {
-    this._push.create('New - Test', {
-      body: 'Do you like my body?',
+    this._push.create('New', {
+      body: 'Rendimientos',
       icon: '/assets/icons/info.png',
     }).subscribe(
       res => console.log(res),
