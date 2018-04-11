@@ -10956,7 +10956,8 @@ export class DetalleMultichartComponent implements OnInit {
           y: d[1]
         };*/
       //});
-      return series;
+      //return series;
+      return [];
     });
   }
 

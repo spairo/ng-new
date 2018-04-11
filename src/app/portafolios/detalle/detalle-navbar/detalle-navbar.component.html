@@ -1,0 +1,80 @@
+<div class="container-fluid supBar fixed-top">
+  <div class="row">
+    <div class="col-3 br-gray">
+      <div class="row m-t-10">
+        <h1 class="barTitle txt-15">WA Prog. 2014  / Serie C8016</h1>
+      </div>
+      <div class="row m-t-20"><span class="txt11">Monto  vivo</span></div>
+      <div class="row"><span class="txtGray txt13">$95,420,000 MXN</span></div>
+    </div>
+    <div class="col-2 br-gray h65">
+      <span class="txt11">Precio al -</span>
+      <div class="content-prices mt-10">
+        <div class="block"><i class="performance" ng-class="{down: main.detail.detallePrecio.rendimiento &lt; 0}" ng-if="main.detail.detallePrecio.rendimiento"></i><span class="price txt22" ng-class="{down: main.detail.detallePrecio.rendimiento &lt; 0, up: main.detail.detallePrecio.rendimiento &gt; 0}">-</span>
+          <span class="currency txt11" ng-class="{down: main.detail.detallePrecio.rendimiento &lt; 0, up: main.detail.detallePrecio.rendimiento &gt; 0}">&nbsp; -</span><span class="performance" ng-class="{down: main.detail.detallePrecio.rendimiento &lt; 0, up: main.detail.detallePrecio.rendimiento &gt; 0}"><span ng-if="main.detail.detallePrecio.rendimiento &gt; 0">&nbsp; +</span>
+            <span ng-if="main.detail.detallePrecio.rendimiento &lt; 0">&nbsp;</span><span class="txt13">-%</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-6"></div>
+    <div class="col-1">
+      <div class="align-right detail-pdf-icon mt-20"><i class="export-pdf"></i></div>
+    </div>
+  </div>
+
+  <!--
+  <div class="col-2" style="display:none;">
+    <div class="row"><span class="txt11 txtCenter">Tiempo restante para solicitar Amortización</span></div>
+    <div class="row txtCount ml-45"><span class="mt-10"></span></div>
+    <div class="row ml-45 txt11 mb-15 txtHour"><span>hrs  min  seg</span></div>
+  </div>
+  <div class="col-2" style="display:none;">
+    <div class="row"><button class="btn btn-large mb-5 fullWidth">Amortización Anticipada</button></div>
+    <div class="row"><button class="btn btn-copy fullWidth">Anunciar Cruce</button></div>
+  </div>
+  -->
+  <!--
+  <div class="col-6">
+    <div class="row br-gray mr-15 pt-15 floatR h65">
+      <div class="iconography txtIcon mt-10"><a ng-click="main.meaningIcons.open()">Iconografía</a></div>
+
+
+
+      <div class="icons-mosaic iconPos"><img alt="Deuda / Alta complejidad / Largo Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DEU' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'A' &amp;&amp; main.detail.detallePayOff.plazo === 'LP'" src="./assets/icons/caracteristicas/ico_lp_alta_deuda.svg"
+        /><img alt="Deuda / Alta complejidad / Corto Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DEU' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'A' &amp;&amp; main.detail.detallePayOff.plazo === 'CP'" src="./assets/icons/caracteristicas/ico_cp_alta_deuda.svg"
+        /><img alt="Divisas / Alta complejidad / Largo Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DIV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'A' &amp;&amp; main.detail.detallePayOff.plazo === 'LP'" src="./assets/icons/caracteristicas/ico_lp_alta_divisas.svg"
+        /><img alt="Divisas / Alta complejidad / Corto Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DIV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'A' &amp;&amp; main.detail.detallePayOff.plazo === 'CP'" src="./assets/icons/caracteristicas/ico_cp_alta_divisas.svg"
+        /><img alt="Renta / Alta complejidad / Largo Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'RV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'A' &amp;&amp; main.detail.detallePayOff.plazo === 'LP'" src="./assets/icons/caracteristicas/ico_lp_alta_renta.svg"
+        /><img alt="Renta / Alta complejidad / Corto Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'RV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'A' &amp;&amp; main.detail.detallePayOff.plazo === 'CP'" src="./assets/icons/caracteristicas/ico_cp_alta_renta.svg"
+        /><img alt="Deuda / Mediana complejidad / Largo Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DEU' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'M' &amp;&amp; main.detail.detallePayOff.plazo === 'LP'" src="./assets/icons/caracteristicas/ico_lp_media_deuda.svg"
+        /><img alt="Deuda / Mediana complejidad / Corto Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DEU' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'M' &amp;&amp; main.detail.detallePayOff.plazo === 'CP'" src="./assets/icons/caracteristicas/ico_cp_media_deuda.svg"
+        /><img alt="Divisas / Mediana complejidad / Largo Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DIV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'M' &amp;&amp; main.detail.detallePayOff.plazo === 'LP'" src="./assets/icons/caracteristicas/ico_lp_media_divisas.svg"
+        /><img alt="Divisas / Mediana complejidad / Corto Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DIV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'M' &amp;&amp; main.detail.detallePayOff.plazo === 'CP'" src="./assets/icons/caracteristicas/ico_cp_media_divisas.svg"
+        /><img alt="Renta / Mediana complejidad / Largo Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'RV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'M' &amp;&amp; main.detail.detallePayOff.plazo === 'LP'" src="./assets/icons/caracteristicas/ico_lp_media_renta.svg"
+        /><img alt="Renta / Mediana complejidad / Corto Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'RV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'M' &amp;&amp; main.detail.detallePayOff.plazo === 'CP'" src="./assets/icons/caracteristicas/ico_cp_media_renta.svg"
+        /><img alt="Deuda / Baja complejidad / Largo Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DEU' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'B' &amp;&amp; main.detail.detallePayOff.plazo === 'LP'" src="./assets/icons/caracteristicas/ico_lp_baja_deuda.svg"
+        /><img alt="Deuda / Baja complejidad / Corto Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DEU' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'B' &amp;&amp; main.detail.detallePayOff.plazo === 'CP'" src="./assets/icons/caracteristicas/ico_cp_baja_deuda.svg"
+        /><img alt="Divisas / Baja complejidad / Largo Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DIV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'B' &amp;&amp; main.detail.detallePayOff.plazo === 'LP'" src="./assets/icons/caracteristicas/ico_lp_baja_divisas.svg"
+        /><img alt="Divisas / Baja complejidad / Corto Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DIV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'B' &amp;&amp; main.detail.detallePayOff.plazo === 'CP'" src="./assets/icons/caracteristicas/ico_cp_baja_divisas.svg"
+        /><img alt="Renta / Baja complejidad / Largo Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'RV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'B' &amp;&amp; main.detail.detallePayOff.plazo === 'LP'" src="./assets/icons/caracteristicas/ico_lp_baja_renta.svg"
+        /><img alt="Renta / Baja complejidad / Corto Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'RV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'B' &amp;&amp; main.detail.detallePayOff.plazo === 'CP'" src="./assets/icons/caracteristicas/ico_cp_baja_renta.svg"
+        /><img alt="Deuda / Muy baja complejidad / Largo Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DEU' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'MB' &amp;&amp; main.detail.detallePayOff.plazo === 'LP'" src="./assets/icons/caracteristicas/ico_lp_muybaja_deuda.svg"
+        /><img alt="Deuda / Muy baja complejidad / Corto Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DEU' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'MB' &amp;&amp; main.detail.detallePayOff.plazo === 'CP'" src="./assets/icons/caracteristicas/ico_cp_muybaja_deuda.svg"
+        /><img alt="Divisas / Muy baja complejidad / Largo Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DIV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'MB' &amp;&amp; main.detail.detallePayOff.plazo === 'LP'" src="./assets/icons/caracteristicas/ico_lp_muybaja_divisas.svg"
+        /><img alt="Divisas / Muy baja complejidad / Corto Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'DIV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'MB' &amp;&amp; main.detail.detallePayOff.plazo === 'CP'" src="./assets/icons/caracteristicas/ico_cp_muybaja_divisas.svg"
+        /><img alt="Renta / Muy baja complejidad / Largo Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'RV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'MB' &amp;&amp; main.detail.detallePayOff.plazo === 'LP'" src="./assets/icons/caracteristicas/ico_lp_muybaja_renta.svg"
+        /><img alt="Renta / Muy baja complejidad / Corto Plazo" ng-if="main.detail.detalleSubyacente.cdCatalogo === 'RV' &amp;&amp; main.detail.detallePayOff.cdComplejidad === 'MB' &amp;&amp; main.detail.detallePayOff.plazo === 'CP'" src="./assets/icons/caracteristicas/ico_cp_muybaja_renta.svg"
+        /><img alt="Protección Capital" ng-if="main.detail.detallePayOff.capitalProtegido === 100" src="./assets/icons/caracteristicas/ico_capitalvencimiento.svg" /><img alt="Protección Capital" ng-if="main.detail.detallePayOff.capitalProtegido &lt; 100"
+          src="./assets/icons/caracteristicas/ico_capitalprotegido.svg" /><img alt="Volatilidad" ng-if="main.detail.detallePayOff.volatilidad" src="./assets/icons/caracteristicas/ico_volatilidad.svg" /><img alt="Liquidez" ng-if="main.detail.detallePayOff.liquidez"
+          src="./assets/icons/caracteristicas/ico_liquidez.svg" /><span class="bpp" ng-if="main.detail.detallePayOff.cdCaracteristicaBpp === 'GF'">GF</span><span class="bpp" ng-if="main.detail.detallePayOff.cdCaracteristicaBpp === 'C'">C</span><span class="bpp"
+          ng-if="main.detail.detallePayOff.cdCaracteristicaBpp === 'PC'">PC</span></div>
+
+    </div>
+  </div>
+  -->
+  <!--
+  <div class="col-1 col-1fix">
+    <div class="align-right detail-pdf-icon mt-20"><i class="export-pdf" ng-click="main.getCheckCookie();"></i></div>
+  </div>
+  -->
+</div>
