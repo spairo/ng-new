@@ -11,13 +11,13 @@ import 'nvd3';
 
 import { PortafoliosComponent } from './portafolios/portafolios.component';
 import { PortafoliosService } from './portafolios/portafolios.service';
+import { PortafoliosMosaicComponent } from './portafolios/portafolios-mosaic/portafolios-mosaic.component';
 import { LateralComponent } from './lateral/lateral.component';
 import { LateralService } from './lateral/lateral.service';
 import { DetalleComponent } from './detalle/detalle.component';
 import { DetalleService } from './detalle/detalle.service';
-import { DetalleCuponesChartComponent } from './detalle-cupones-chart/detalle-cupones-chart.component';
-import { PortafoliosMosaicComponent } from './portafolios-mosaic/portafolios-mosaic.component';
-import { DetalleMultichartComponent } from './detalle-multichart/detalle-multichart.component';
+import { DetalleCuponesChartComponent } from './detalle/detalle-cupones-chart/detalle-cupones-chart.component';
+import { DetalleMultichartComponent } from './detalle/detalle-multichart/detalle-multichart.component';
 import { DetalleNavbarComponent } from './detalle/detalle-navbar/detalle-navbar.component';
 
 @NgModule({

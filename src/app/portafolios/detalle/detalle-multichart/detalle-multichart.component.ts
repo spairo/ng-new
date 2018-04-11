@@ -6,7 +6,7 @@ declare let d3: any;
 @Component({
   selector: 'new-detalle-multichart',
   template: `<nvd3 [options]='options' [data]='data'></nvd3>`,
-  styleUrls: ['../../../../node_modules/nvd3/build/nv.d3.min.css'],
+  styleUrls: ['../../../../../node_modules/nvd3/build/nv.d3.min.css'],
   encapsulation: ViewEncapsulation.None
 })
 
