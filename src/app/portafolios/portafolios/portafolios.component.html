@@ -1,5 +1,5 @@
 <div class="breadcrumb">
-  <a routerLink="/portafolios">
+  <a routerLink="/about">
     <span routerLinkActive="selected" class="selected">Portafolios de inversión</span>
   </a>
 </div>
@@ -16,7 +16,7 @@
 
       <li class="add" *ngFor="let tab of tabs; let i = index;" (click)="activeTab = i; tabCode = tab.codigo;" [ngClass]="{current: activeTab === i}">
         <span>{{tab.name}}</span>
-        <i class="burger tooltip iconPlus" [ngClass]="{'simple on': showView === 'simple', 'double on': showView === 'double', 'mosaic on': showView === 'mosaic'}">
+        <i class="burger tooltip iconPlus" [ngClass]="{'simple on': showView === 'simple', 'double on': showView === 'double', 'mosaic on': showView === 'mosaic'}" style="margin-top: 0px;">
           <div class="content" style="width: 140px; margin:-35px 0px 0px -60px;">
             <i class="delete simple" style="margin-top:0px;" [ngClass]="{on: showView === 'simple'}" (click)="showView = 'simple'; $event.stopPropagation(); main.deletePortfolio.open(); codigoTab = tab.codigo;"></i>
 						<i class="copy simple" style="margin-top:0px;" [ngClass]="{on: showView === 'simple'}" (click)="showView = 'simple'; main.clonePortfolio(tab.codigo)"></i>
@@ -107,4 +107,3 @@
     </div>
   </div>
 </div>
-
