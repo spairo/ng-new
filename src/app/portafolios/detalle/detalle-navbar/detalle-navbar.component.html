@@ -1,4 +1,4 @@
-<div class="container-fluid supBar fixed-top">
+<div class="container-fluid supBar">
   <div class="row">
     <div class="col-3 br-gray">
       <div class="row m-t-10">
@@ -8,11 +8,17 @@
       <div class="row"><span class="txtGray txt13">$95,420,000 MXN</span></div>
     </div>
     <div class="col-2 br-gray h65">
-      <span class="txt11">Precio al -</span>
+      <span class="txt11">Precio al 30/05/2017</span>
       <div class="content-prices mt-10">
-        <div class="block"><i class="performance" ng-class="{down: main.detail.detallePrecio.rendimiento &lt; 0}" ng-if="main.detail.detallePrecio.rendimiento"></i><span class="price txt22" ng-class="{down: main.detail.detallePrecio.rendimiento &lt; 0, up: main.detail.detallePrecio.rendimiento &gt; 0}">-</span>
-          <span class="currency txt11" ng-class="{down: main.detail.detallePrecio.rendimiento &lt; 0, up: main.detail.detallePrecio.rendimiento &gt; 0}">&nbsp; -</span><span class="performance" ng-class="{down: main.detail.detallePrecio.rendimiento &lt; 0, up: main.detail.detallePrecio.rendimiento &gt; 0}"><span ng-if="main.detail.detallePrecio.rendimiento &gt; 0">&nbsp; +</span>
-            <span ng-if="main.detail.detallePrecio.rendimiento &lt; 0">&nbsp;</span><span class="txt13">-%</span></span>
+        <div class="block">
+          <i class="performance" ng-class="{down: main.detail.detallePrecio.rendimiento &lt; 0}" ng-if="main.detail.detallePrecio.rendimiento"></i>
+          <span class="price txt22 up" ng-class="{down: main.detail.detallePrecio.rendimiento &lt; 0, up: main.detail.detallePrecio.rendimiento &gt; 0}">93.8033</span>
+          <span class="currency txt11" ng-class="{down: main.detail.detallePrecio.rendimiento &lt; 0, up: main.detail.detallePrecio.rendimiento &gt; 0}">&nbsp;</span>
+          <span class="performance" ng-class="{down: main.detail.detallePrecio.rendimiento &lt; 0, up: main.detail.detallePrecio.rendimiento &gt; 0}">
+            <span ng-if="main.detail.detallePrecio.rendimiento &gt; 0">&nbsp;</span>
+            <span ng-if="main.detail.detallePrecio.rendimiento &lt; 0">&nbsp;</span>
+            <span class="txt13 up">+1.89%</span>
+          </span>
         </div>
       </div>
     </div>
@@ -70,11 +76,6 @@
           ng-if="main.detail.detallePayOff.cdCaracteristicaBpp === 'PC'">PC</span></div>
 
     </div>
-  </div>
-  -->
-  <!--
-  <div class="col-1 col-1fix">
-    <div class="align-right detail-pdf-icon mt-20"><i class="export-pdf" ng-click="main.getCheckCookie();"></i></div>
   </div>
   -->
 </div>
