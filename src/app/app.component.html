@@ -1,13 +1,17 @@
-<div class="container-fluid">
-  <header ng-if="global.session"><img class="logo" alt="BBVA Bancomer" src="assets/img/logo.gif">
-    <div class="corporate"><span>CORPORATE &</span><span>INVESTMENT BANKING</span></div>
+<div class="container">
+  <header>
+    <img class="logo" alt="BBVA Bancomer" src="assets/img/logo.gif">
+    <div class="corporate">
+      <span>CORPORATE &</span>
+      <span>INVESTMENT BANKING</span></div>
     <div class="info-container">
       <div class="info"><span class="user">Dol sit amet | Lorem Ipsum</span>
-        <button class="btn-delete" ng-click="global.logout()">Salir</button><span class="title">Sistema de Notas Estructuradas y Warrants</span><span class="date"></span>
+        <button class="btn-delete" ng-click="global.logout()">Salir</button>
+        <span class="title">Sistema de Notas Estructuradas y Warrants</span>
+        <span class="date"></span>
       </div>
     </div>
   </header>
-
   <nav>
     <li><a class="home"></a></li>
     <li routerLinkActive="active"><a class="briefcase">Portafolios de Inversi&oacute;n</a>
@@ -19,7 +23,6 @@
     <li><a class="briefcase">Comercializaci&oacute;n</a></li>
     <li><a class="briefcase">Venta Digital</a></li>
   </nav>
-
   <div class="content" [@routerTransition]="o.isActivated && o.activatedRoute.routeConfig.path">
     <router-outlet #o="outlet"></router-outlet>
   </div>

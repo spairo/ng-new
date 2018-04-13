@@ -8,8 +8,7 @@ import {
   constants
 } from 'http2';
 
-declare
-let d3: any;
+declare let d3: any;
 
 @Component({
   selector: 'new-detalle-multichart',
@@ -10958,14 +10957,14 @@ export class DetalleMultichartComponent implements OnInit {
         'bar': false
       }
     ].map(function (series) {
-      let series.values = series.values.map(function (d) {
+      /*let series.values = series.values.map(function (d) {
         return {
           x: d[0],
           y: d[1]
         };
       });
-      return series;
-      //return [];
+      return series;*/
+      return [];
     });
   }
 
