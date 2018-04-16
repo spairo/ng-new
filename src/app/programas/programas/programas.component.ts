@@ -15,7 +15,9 @@ import { environment as env } from '@env/environment';
 })
 export class ProgramasComponent implements OnInit {
 
-  public programs;
+  public programs: any;
+  public st: string;
+  public sd: 'fo';
 
   constructor(
     private _programs: ProgramasService,
@@ -23,12 +25,18 @@ export class ProgramasComponent implements OnInit {
 
   ngOnInit() {
 
-    this._programs.getPrograms('programas').subscribe(data => {
+    this.st = 'XMZ4160';
+
+    this._programs.getPrograms({
+      module : 'programas',
+      method : 'get',
+      params: {
+        userId: 'MB79547'
+      }
+    }).subscribe(data => {
       this.programs = data;
-      console.log(this.programs);
     });
 
   }
 
 }
-

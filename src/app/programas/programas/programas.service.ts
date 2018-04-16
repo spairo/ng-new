@@ -9,21 +9,33 @@ import { ApibuilderService } from '@app/apibuilder'
 @Injectable()
 export class ProgramasService {
 
-  public compleURL: string;
-
+  public apiRoot: any;
+  public method: string;
   constructor(
     private _http: HttpClient,
     private _apibuilder: ApibuilderService
   ) {}
 
-  getPrograms(service) {
+  getPrograms(service : any) {
+    //service.method = 'get';
 
-    this.compleURL = this._apibuilder.buildURL(service);
 
-    return this._http.get(this.compleURL).map(res => res);
+    //this.apiRoot = this._apibuilder.buildURL(service);
+
+
+    //  module : 'users/' + this.st + '/portfolioGraphicData',
+    // method: 'get',
+
+    return this._apibuilder.buildURL(service);
+
+    //console.log(this.apiRoot);
+
+
+    //return this._http.get(this.apiRoot, {params: service.params}).map(res => res);
+
   }
 
-  getPrueba() { return 'Hola mundo desde el servicio.'; }
+  //getPrueba() { return 'Hola mundo desde el servicio.'; }
 
 
 
