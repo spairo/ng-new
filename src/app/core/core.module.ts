@@ -9,6 +9,7 @@ import { environment } from '@env/environment';
 import { debug } from './meta-reducers/debug.reducer';
 import { initStateFromLocalStorage } from './meta-reducers/init-state-from-local-storage.reducer';
 import { LocalStorageService } from './local-storage/local-storage.service';
+import { ApibuilderService } from './api-builder/api-builder.service';
 import { authReducer } from './auth/auth.reducer';
 import { AuthEffects } from './auth/auth.effects';
 
@@ -34,7 +35,7 @@ if (!environment.production) {
     EffectsModule.forRoot([AuthEffects])
   ],
   declarations: [],
-  providers: [LocalStorageService]
+  providers: [LocalStorageService, ApibuilderService]
 })
 export class CoreModule {
   constructor(
