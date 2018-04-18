@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Subject } from 'rxjs/Subject';
-
-import {  ProgramasService } from './programas.service'
-
 import { SharedModule } from '@app/shared';
-import { environment as env } from '@env/environment';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
+import { ProgramasService } from './programas.service';
 
 @Component({
   selector: 'new-programas',
@@ -15,9 +12,7 @@ import { environment as env } from '@env/environment';
 })
 export class ProgramasComponent implements OnInit {
 
-  public programs: any;
-  public st: string;
-  public sd: 'fo';
+  public programs: Observable<any[]>;
 
   constructor(
     private _programs: ProgramasService,
@@ -25,16 +20,14 @@ export class ProgramasComponent implements OnInit {
 
   ngOnInit() {
 
-    this.st = 'XMZ4160';
-
     this._programs.getPrograms({
       module : 'programas',
       method : 'get',
       params: {
-        userId: 'MB79547'
-      }
-    }).subscribe(data => {
-      this.programs = data;
+				idEstrategia: '1234'
+			}
+    }).subscribe(programs => {
+      this.programs = of(programs)
     });
 
   }

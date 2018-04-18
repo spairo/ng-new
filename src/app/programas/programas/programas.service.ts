@@ -1,23 +1,20 @@
 import {Injectable} from '@angular/core';
-import 'rxjs/add/operator/map';
-import {Observable} from 'rxjs/Observable';
-
 import { ApibuilderService } from '@app/core';
-
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ProgramasService {
 
-  public method: string;
-
   constructor(
-    private _apibuilder: ApibuilderService
+    private _api: ApibuilderService
   ) {}
 
-  getPrograms(service : any) {
-    return this._apibuilder.buildURL(service);
+  getPrueba() {
+    return 'lorem ipsum dol sit amet';
   }
 
-  getPrueba() { return 'Hola mundo desde el servicio'; }
-
+  getPrograms(service : any): Observable<any> {
+    return this._api.Build(service);
+  }
 }

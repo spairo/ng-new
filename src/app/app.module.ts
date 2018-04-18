@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared';
 import { CoreModule } from '@app/core';
 
-import { ApibuilderModule } from '@app/apibuilder'
 import { SettingsModule } from '@app/settings';
 import { ProgramasModule } from '@app/programas';
 import { PortafoliosModule } from '@app/portafolios';
@@ -25,7 +24,6 @@ import { AppComponent } from '@app/app.component';
     // core & shared
     CoreModule,
     SharedModule,
-    ApibuilderModule,
 
     // features
     StaticModule,

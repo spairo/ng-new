@@ -11,7 +11,7 @@
         <button class="btn-add" (click)="main.registerModal.meta = main.modalMeta.create; main.request = global.copy(main.newProgram); main.registerModal.open();">+</button>
       </div>
     </div>
-    <div class="box-programs" [ngClass]="animateOnRouteEnter" [ngStyle]="{'inactive': program.stActivo === false}" *ngFor="let program of programs"
+    <div class="box-programs" [ngClass]="animateOnRouteEnter" [ngStyle]="{'inactive': program.stActivo === false}" *ngFor="let program of programs | async"
       [ngStyle]="{'font-style': styleExp}">
       <div class="title-program" [ngStyle]="{'background-color': program.nbColor}">
         <span>{{ program.nbVehiculo }}</span>
@@ -33,4 +33,3 @@
 
   </div>
 </div>
-

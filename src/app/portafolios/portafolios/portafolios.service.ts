@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Observable';
 
 import { environment as env } from '@env/environment';
-import { ApibuilderService as api } from '@app/apibuilder'
+import { ApibuilderService } from '@app/core';
 
 @Injectable()
 export class PortafoliosService {
@@ -13,16 +13,11 @@ export class PortafoliosService {
 
   constructor(
     private _http: HttpClient,
-    private _apibuilder: api
+    private _api: ApibuilderService
   ) { }
 
   getBriefcases(service) {
-
-    this.compleURL = this._apibuilder.buildURL(service);
-
+    this.compleURL = this._api.Build(service);
     return this._http.get(this.compleURL).map(res => res);
   }
-
-  //https://150.250.140.226:8700/structuredProduct/V01/users/MB23972/portfolioGraphicData?fieldCode=NU_NEGOCIO&portfolioId=0000&contractNumber=7160593&underlyingType=CURR&queryType=1
-
 }

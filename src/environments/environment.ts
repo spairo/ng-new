@@ -10,9 +10,9 @@ export const environment = {
   envName: 'DEV',
   production: false,
   hostname: 'http://localhost:4200',
-  dynPath: '/assets/structuredProduct/v1/',
+  dynPath: '/assets/',
   platform: 'structuredProduct',
-  apiVersion: 'V1',
+  apiVersion: 'v1',
   versions: {
     app: packageJson.version,
     angular: packageJson.dependencies['@angular/core'],
