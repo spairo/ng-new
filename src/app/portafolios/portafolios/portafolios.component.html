@@ -7,15 +7,15 @@
 <div class="row">
   <div class="col-12">
     <ul class="tabs portfolio">
-      <li (click)="activeTab = 'banquero'; tabCode = 'B000';" [ngClass]="{current: activeTab === 'banquero'}">
+      <li (click)="activeTab = 'banquero'; tabCode = 'B000'; bankersPortfolio();" [ngClass]="{current: activeTab === 'banquero'}">
         <span>Mi Portafolio</span>
       </li>
-      <li (click)="activeTab = 'default'; tabCode = '0000';" [ngClass]="{current: activeTab === 'default'}">
+      <li (click)="activeTab = 'default'; tabCode = '0000'; RecentClosures();" [ngClass]="{current: activeTab === 'default'}">
         <span>Cierres recientes</span>
       </li>
-
-      <li class="add" *ngFor="let tab of tabs; let i = index;" (click)="activeTab = i; tabCode = tab.codigo;" [ngClass]="{current: activeTab === i}">
+      <li class="add" *ngFor="let tab of tabs | async; let i = index;" (click)="activeTab = i; tabCode = tab.code; PortfolioTab(tab.code);" [ngClass]="{current: activeTab === i}">
         <span>{{tab.name}}</span>
+        <!--
         <i class="burger tooltip iconPlus" [ngClass]="{'simple on': showView === 'simple', 'double on': showView === 'double', 'mosaic on': showView === 'mosaic'}" style="margin-top: 0px;">
           <div class="content" style="width: 140px; margin:-35px 0px 0px -60px;">
             <i class="delete simple" style="margin-top:0px;" [ngClass]="{on: showView === 'simple'}" (click)="showView = 'simple'; $event.stopPropagation(); main.deletePortfolio.open(); codigoTab = tab.codigo;"></i>
@@ -23,87 +23,102 @@
 						<i class="edit simple" style="margin-top:0px;" [ngClass]="{on: showView === 'simple'}" (click)="showView = 'simple'; $event.stopPropagation(); main.goEdition(tab.codigo)"></i>
           </div>
         </i>
+        -->
       </li>
 
       <li class="add" style="background-color: #B3B3B3;">
         <span>Crear portafolio</span>
         <i class="plus tooltip newPlus"></i>
       </li>
-      <li class="last" *ngIf="banquero">
+      <li class="last" *ngIf="banquero" style="width:calc(100% - (165 * {{4 + 3}}px))">
+        <!--
         <i class="traffic-loading tooltip">
           <div class="content">
             <div class="txt">Registro de semáforos</div>
           </div>
         </i>
+        -->
       </li>
     </ul>
-    <div *ngIf="activeTab === 'banquero'" class="content-tab">
-      <div class="row">
-        <div class="col-9">
+    <ng-template [ngIf]="activeTab === 'banquero'">
+      <div class="content-tab">
+        <div class="row">
+          <div class="col-9">
 
-          <div class="row">
-            <div class="col-5">
-              <h1 class="ml-3">Listado de emisiones</h1>
+            <div class="row">
+              <div class="col-5">
+                <h1 class="ml-5">Listado de emisiones</h1>
+              </div>
+              <div class="col-4 align-right">
+                <h1>Cliente/Contrato</h1>
+              </div>
+              <div class="col-3 mt-1">
+                <mat-form-field>
+                  <mat-select placeholder="Contrato">
+                    <mat-option>-</mat-option>
+                    <mat-option *ngFor="let state of contracts | async" [value]="state">{{state}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
             </div>
-            <div class="col-4 align-right">
-              <h1>Cliente/Contrato</h1>
-            </div>
-            <div class="col-3 mt-1">
-              <mat-form-field>
-                <mat-select placeholder="Contrato">
-                  <mat-option>-</mat-option>
-                  <mat-option *ngFor="let state of contracts" [value]="state">{{state}}</mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-          </div>
 
-          <div class="row mb-4">
-            <div class="col-8">
-              <ul class="nav-subjacents">
-                <li [ngClass]="{activeTab: subyacenteTab === 'TODO'}" (click)="subyacente = null;">TODO</li>
-                <li *ngFor="let subjacent of subjacents; let i = index" (click)="subyacenteFilter = {subyacente: subjacent}; subyacente = subjacent; subyacenteTab = i;"
-                  ng-class="{activeTab: main.subyacenteTab === i}">{{subjacent.name}}</li>
-              </ul>
+            <div class="row mb-4">
+              <div class="col-8">
+                <ul class="nav-subjacents">
+                  <li [ngClass]="{activeTab: subyacenteTab === 'TODO'}" (click)="subyacente = null;">TODO</li>
+                  <li *ngFor="let subjacent of subjacents | async; let i = index" (click)="subyacenteFilter = {subyacente: subjacent}; subyacente = subjacent; subyacenteTab = i;"
+                    ng-class="{activeTab: main.subyacenteTab === i}">{{subjacent.name}}</li>
+                </ul>
+              </div>
+              <div class="col-4 align-right">
+                <!--
+                <i class="filter mb-10 mr-10" ng-if="listed || main.portfolioT.length &gt; 20" ng-class="{on: main.filterPortfolio}"
+                  ng-click="main.filterPortfolio = !main.filterPortfolio;"></i>-->
+                <i class="views" [ngClass]="{list: listed}" (click)="listed = !listed" *ngIf="boxesgrid?.length <= 20"></i>
+              </div>
             </div>
-            <div class="col-4 align-right">
-              <!--
-              <i class="filter mb-10 mr-10" ng-if="listed || main.portfolioT.length &gt; 20" ng-class="{on: main.filterPortfolio}"
-                ng-click="main.filterPortfolio = !main.filterPortfolio;"></i>-->
-              <i class="views" [ngClass]="{list: listed}" (click)="listed = !listed" *ngIf="boxesgrid?.length <= 20"></i>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-12">
-              <div class="suggesting">
-                <span class="title">Semáforo de sugerencias</span>
-                <div class="lights">
-                  <div class="col-2 mb-10">
-                    <div class="round"></div>
-                    <span></span>
+            <div class="row">
+              <div class="col-12">
+                <div class="suggesting">
+                  <span class="title">Semáforo de sugerencias</span>
+                  <div class="lights">
+                    <div class="col-2 mb-10">
+                      <div class="round"></div>
+                      <span></span>
+                    </div>
                   </div>
-                </div>
-                <div class="iconography">
-                  <a>Iconografía</a>
+                  <div class="iconography">
+                    <a>Iconografía</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="row">
-            <div class="col-12" *ngIf="!listed && boxes?.length <= 20">
-              <new-portafolios-mosaic [boxes]="boxes"></new-portafolios-mosaic>
-            </div>
-            <div class="col-12" *ngIf="listed">
+            <div class="row">
+              <!--<div class="col-12" *ngIf="!listed && boxes?.length <= 20">-->
+              <div class="col-12">
+                <new-portafolios-mosaic [boxes]="boxes"></new-portafolios-mosaic>
+              </div>
+              <div class="col-12" *ngIf="listed">
 
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-3">
-          <new-lateral></new-lateral>
+          <div class="col-3">
+            <!--<new-lateral></new-lateral>-->
+          </div>
         </div>
       </div>
+    </ng-template>
+
+    <ng-template [ngIf]="activeTab === 'default'" class="content-tab">
+      Soy default
+    </ng-template>
+
+    <div *ngFor="let contentab of tabw | async; let c = index;">
+      Soy dinamico
     </div>
+
   </div>
 </div>

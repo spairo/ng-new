@@ -1,4 +1,4 @@
-<div *ngFor="let box of boxes" class="box-portfolio" [ngClass]="{defeated: !box.stActivo}" (click)="gotoDetail(box.series, box.id);">
+<div *ngFor="let box of boxes | async" class="box-portfolio" [ngClass]="{defeated: !box.stActivo}" (click)="gotoDetail(box.series, box.id);">
   <div class="title-box">
     <div class="traffic-light tooltip" *ngIf="box.status === '1' || box.status === '3' || box.status === '7'" [ngStyle]="{'background-color': box.semaforo.color}">
       <div class="content" *ngIf="box.semaforo.comentario !== null">

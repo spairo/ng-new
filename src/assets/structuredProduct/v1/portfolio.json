@@ -20,13 +20,13 @@
   }],
   "productTabs": [{
     "code": "abcd",
-    "name": "Cierres recientes"
+    "name": "creado por mi 1"
   }, {
     "code": "defg",
-    "name": "TIEE"
+    "name": "test port"
   }, {
     "code": "hijk",
-    "name": "Equity"
+    "name": "test 2 port"
   }],
   "relatedContracts": ["350867", "351008", "351008", "353473", "353473", "363027", "366692", "366692", "366692", "367605"],
   "structuredProductInformation": [{
@@ -629,4 +629,3 @@
 		}
   }]
 }
-

@@ -4,7 +4,7 @@ export const environment = {
   appName: 'NEW',
   envName: 'PROD',
   production: true,
-  hostname: '',
+  hostname: 'https://150.250.140.226:8700',
   dynPath: 'New',
   versions: {
     app: packageJson.version,

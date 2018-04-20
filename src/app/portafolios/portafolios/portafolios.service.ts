@@ -1,15 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/map';
-import {Observable} from 'rxjs/Observable';
-
-import { environment as env } from '@env/environment';
 import { ApibuilderService } from '@app/core';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class PortafoliosService {
-
-  public compleURL: string;
 
   constructor(
     private _http: HttpClient,
@@ -17,7 +13,7 @@ export class PortafoliosService {
   ) { }
 
   getBriefcases(service) {
-    this.compleURL = this._api.Build(service);
-    return this._http.get(this.compleURL).map(res => res);
+    return this._api.Build(service);
   }
+
 }
