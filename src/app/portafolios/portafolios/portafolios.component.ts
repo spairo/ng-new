@@ -32,6 +32,7 @@ export class PortafoliosComponent implements OnInit {
   public contracts: Observable <any[]>;
   public listed: any;
   public showView: string;
+  public Selectedcontract: string;
 
   constructor(
     private _briefcases: PortafoliosService,
@@ -51,15 +52,15 @@ export class PortafoliosComponent implements OnInit {
     // ?portfolioId=000&queryType=1&contractNumber=1012568&underlyingType=EQD
 
     this._briefcases.getBriefcases({
-      module : 'portfolio', //users/XMZ4160/portfolio
+      module : 'portfolio',
       method : 'get',
       params: {
         portfolioId: '0000',
         queryType: 1,
         contractNumber: 4564,
         underlyingType: 'EQD',
-				idEstrategia: '1234'
-			}
+        idEstrategia: '1234'
+      }
     }).subscribe(portfolios => {
 
       this.buildTabs(portfolios.productTabs);
@@ -97,10 +98,10 @@ export class PortafoliosComponent implements OnInit {
   }
 
 
-  //Do actions
+  // Do actions
 
   bankersPortfolio(){
-    alert(this.tabCode);
+    alert(this.tabCode + '/' +  this.Selectedcontract);
   }
 
   RecentClosures(){

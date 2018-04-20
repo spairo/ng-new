@@ -15,7 +15,6 @@
       </li>
       <li class="add" *ngFor="let tab of tabs | async; let i = index;" (click)="activeTab = i; tabCode = tab.code; PortfolioTab(tab.code);" [ngClass]="{current: activeTab === i}">
         <span>{{tab.name}}</span>
-        <!--
         <i class="burger tooltip iconPlus" [ngClass]="{'simple on': showView === 'simple', 'double on': showView === 'double', 'mosaic on': showView === 'mosaic'}" style="margin-top: 0px;">
           <div class="content" style="width: 140px; margin:-35px 0px 0px -60px;">
             <i class="delete simple" style="margin-top:0px;" [ngClass]="{on: showView === 'simple'}" (click)="showView = 'simple'; $event.stopPropagation(); main.deletePortfolio.open(); codigoTab = tab.codigo;"></i>
@@ -23,7 +22,6 @@
 						<i class="edit simple" style="margin-top:0px;" [ngClass]="{on: showView === 'simple'}" (click)="showView = 'simple'; $event.stopPropagation(); main.goEdition(tab.codigo)"></i>
           </div>
         </i>
-        -->
       </li>
       <li class="add" style="background-color: #B3B3B3;">
         <span>Crear portafolio</span>
@@ -49,13 +47,13 @@
                 <h1 class="ml-5">Listado de emisiones</h1>
               </div>
               <div class="col-4 align-right">
-                <h1>Cliente/Contrato</h1>
+                <h1>Cliente/Contrato {{Selectedcontract}} </h1>
               </div>
               <div class="col-3 mt-1">
                 <mat-form-field>
-                  <mat-select placeholder="Contrato">
+                  <mat-select placeholder="Contrato" [(ngModel)]="Selectedcontract">
                     <mat-option>-</mat-option>
-                    <mat-option *ngFor="let state of contracts | async" [value]="state">{{state}}</mat-option>
+                    <mat-option *ngFor="let contract of contracts | async" [value]="contract"></mat-option>
                   </mat-select>
                 </mat-form-field>
               </div>
