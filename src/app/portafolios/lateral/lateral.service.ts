@@ -20,7 +20,7 @@ export class LateralService {
 
     this.compleURL = this._apibuilder.Build(service);
 
-    return this._http.get(this.compleURL).map(res => res);
+    //return this._http.get(this.compleURL).map(res => res);
   }
 
 }

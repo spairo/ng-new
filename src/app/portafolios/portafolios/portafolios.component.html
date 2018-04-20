@@ -25,12 +25,11 @@
         </i>
         -->
       </li>
-
       <li class="add" style="background-color: #B3B3B3;">
         <span>Crear portafolio</span>
         <i class="plus tooltip newPlus"></i>
       </li>
-      <li class="last" *ngIf="banquero" style="width:calc(100% - (165 * {{4 + 3}}px))">
+      <li class="last" *ngIf="banquero" style="">
         <!--
         <i class="traffic-loading tooltip">
           <div class="content">
@@ -112,13 +111,17 @@
       </div>
     </ng-template>
 
-    <ng-template [ngIf]="activeTab === 'default'" class="content-tab">
-      Soy default
+    <ng-template [ngIf]="activeTab === 'default'">
+      <div class="content-tab">
+
+      </div>
     </ng-template>
 
-    <div *ngFor="let contentab of tabw | async; let c = index;">
-      Soy dinamico
-    </div>
+    <ng-template *ngFor="let contentab of tabw | async; let i = index;" [ngIf]="activeTab === i">
+      <div class="content-tab">
+
+      </div>
+    </ng-template>
 
   </div>
 </div>
