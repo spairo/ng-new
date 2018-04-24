@@ -29,7 +29,7 @@ export class PortafoliosComponent implements OnInit {
   public banquero: boolean;
   public userId: string ;
   public tabCode: string;
-  public contracts: Observable <any[]>;
+  public contracts: any;
   public listed: any;
   public showView: string;
   public Selectedcontract: string;
@@ -41,16 +41,14 @@ export class PortafoliosComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    this.subyacenteTab = 'TODO';
     this.userId = 'MB79547';
     this.banquero = true;
-    this.subyacenteTab = 'TODO';
     this.activeTab = 'banquero';
     this.tabCode = 'B000';
     this.showView = 'mosaic';
 
     // ?portfolioId=000&queryType=1&contractNumber=1012568&underlyingType=EQD
-
     this._briefcases.getBriefcases({
       module : 'portfolio',
       method : 'get',
@@ -58,8 +56,7 @@ export class PortafoliosComponent implements OnInit {
         portfolioId: '0000',
         queryType: 1,
         contractNumber: 4564,
-        underlyingType: 'EQD',
-        idEstrategia: '1234'
+        underlyingType: this.subyacenteTab
       }
     }).subscribe(portfolios => {
 
@@ -79,7 +76,7 @@ export class PortafoliosComponent implements OnInit {
   }
 
   buildContracts(relatedContracts) {
-    this.contracts = of(relatedContracts);
+    this.contracts = relatedContracts;
   }
 
   buildsubjacents(subjacents) {
@@ -97,18 +94,76 @@ export class PortafoliosComponent implements OnInit {
     // var arr = _.map(foo, 'price');
   }
 
+  foo(){
+    alert("ddd");
+  };
 
   // Do actions
 
   bankersPortfolio(){
-    alert(this.tabCode + '/' +  this.Selectedcontract);
+
+    this._briefcases.getBriefcases({
+      module : 'portfolio',
+      method : 'get',
+      params: {
+        portfolioId: this.tabCode,
+        queryType: 0,
+        contractNumber: 4564,
+        underlyingType: 'EQD'
+      }
+    }).subscribe(portfolios => {
+
+      this.buildTabs(portfolios.productTabs);
+      this.buildContracts(portfolios.relatedContracts);
+      this.buildsubjacents(portfolios.underlyingAssets);
+      this.buildBriefcases(portfolios.structuredProductInformation);
+      this.buildCharts(portfolios.structuredProductInformation);
+
+    });
   }
 
   RecentClosures(){
-    alert(this.tabCode);
+
+    this._briefcases.getBriefcases({
+      module : 'portfolio',
+      method : 'get',
+      params: {
+        portfolioId: this.tabCode,
+        queryType: 1,
+        contractNumber: 4564,
+        underlyingType: 'EQD'
+      }
+    }).subscribe(portfolios => {
+
+      this.buildTabs(portfolios.productTabs);
+      this.buildContracts(portfolios.relatedContracts);
+      this.buildsubjacents(portfolios.underlyingAssets);
+      this.buildBriefcases(portfolios.structuredProductInformation);
+      this.buildCharts(portfolios.structuredProductInformation);
+
+    });
   }
 
-  PortfolioTab(code){
-    alert(code + this.tabCode);
+  PortfolioTab(){
+
+    this._briefcases.getBriefcases({
+      module : 'portfolio',
+      method : 'get',
+      params: {
+        portfolioId: this.tabCode,
+        queryType: 1,
+        contractNumber: null,
+        underlyingType: 'EQD'
+      }
+    }).subscribe(portfolios => {
+
+      this.buildTabs(portfolios.productTabs);
+      this.buildContracts(portfolios.relatedContracts);
+      this.buildsubjacents(portfolios.underlyingAssets);
+      this.buildBriefcases(portfolios.structuredProductInformation);
+      this.buildCharts(portfolios.structuredProductInformation);
+
+    });
   }
+
 }

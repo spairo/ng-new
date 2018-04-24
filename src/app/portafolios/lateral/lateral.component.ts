@@ -50,13 +50,14 @@ export class LateralComponent implements OnInit {
   ngOnInit() {
     this.showSubmenu = true;
     this.activeTabHeader = 0;
-
+    /*
     this._detail.getDetails('StructuredProduct').subscribe(data => {
       this.details = data;
       this.headerNames = this.details.headerNames;
       this.amount = this.details.portfolio.amountIssued.amount;
       this.headerValues =  this.details.headerValues;
     });
+    */
   }
 
   buildPiechart(label, id) {

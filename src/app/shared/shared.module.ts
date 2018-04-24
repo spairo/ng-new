@@ -20,11 +20,11 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
 
-
 import { BigInputComponent } from './big-input/big-input.component';
 import { BigInputActionComponent } from './big-input/big-input-action.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ModalComponent } from './modal/modal.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 
 @NgModule({
   imports: [
@@ -49,7 +49,7 @@ import { ModalComponent } from './modal/modal.component';
     MatNativeDateModule,
     MatDialogModule
   ],
-  declarations: [BigInputComponent, BigInputActionComponent, BreadcrumbComponent, ModalComponent],
+  declarations: [BigInputComponent, BigInputActionComponent, BreadcrumbComponent, ModalComponent, DropdownComponent],
   exports: [
     CommonModule,
     FormsModule,
@@ -75,7 +75,8 @@ import { ModalComponent } from './modal/modal.component';
     BigInputComponent,
     BigInputActionComponent,
     BreadcrumbComponent,
-    ModalComponent
+    ModalComponent,
+    DropdownComponent
   ]
 })
 export class SharedModule {}
