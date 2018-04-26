@@ -14,14 +14,9 @@
   </header>
   <nav>
     <li><a class="home"></a></li>
-    <li routerLinkActive="active"><a class="briefcase">Portafolios de Inversi&oacute;n</a>
-      <ul>
-        <div class="title">Inversi&oacute;n</div>
-        <li routerLinkActive="active"><a routerLink="/portafolios">Portafolios de inversi&oacute;n</a></li>
-      </ul>
+    <li routerLinkActive="active">
+      <a class="briefcase" routerLink="/portafolios">Portafolios de Inversi&oacute;n</a>
     </li>
-    <li><a class="briefcase">Comercializaci&oacute;n</a></li>
-    <li><a class="briefcase">Venta Digital</a></li>
   </nav>
   <div class="content" [@routerTransition]="o.isActivated && o.activatedRoute.routeConfig.path">
     <router-outlet #o="outlet"></router-outlet>

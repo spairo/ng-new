@@ -9,6 +9,8 @@
   margin: 0 0 15px 15px
   width: 213px
 
+  &:hover
+    box-shadow: 0 0 10px $color('gray')
   &.defeated
     //border: 1px solid $color('gray')
 
@@ -21,8 +23,11 @@
     border-top-right-radius: 5px
     color: $color('white')
     height: 75px
-    padding: 8px 10px
+    padding: 15px 10px
     position: relative
+
+    &:hover
+      background-color $color('blue', 'dark')
 
     img
       float: left
@@ -52,7 +57,7 @@
       &.price
         color: $color('gray', 'pale')
       &.serie
-        font-size: 16px
+        font: 16px 'Stag Sans medium'
 
     .traffic-light
       border-radius: 50%
@@ -363,6 +368,7 @@ i
     &.activeTab
       span
         color: $color('blue', 'medium')
+        font-weight: bold
 
     &:hover
       color: $color('blue', 'medium')
@@ -385,6 +391,7 @@ i
 
     &.activeTab
       color: $color('blue', 'medium')
+      font-weight bold
 
     &:hover
       color: $color('blue', 'medium')

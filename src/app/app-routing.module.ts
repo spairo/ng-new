@@ -9,11 +9,11 @@ import { DetalleComponent } from './portafolios/detalle/detalle.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'about',
+    redirectTo: 'portafolios',
     pathMatch: 'full',
     data: {
-      title: 'about',
-      breadcrumb: 'about'
+      title: 'Portafolios Inversion',
+      breadcrumb: 'Portafolios Inversion'
     }
   },
   {
@@ -53,7 +53,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'about'
+    redirectTo: 'portafolios'
   }
 ];
 
