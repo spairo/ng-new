@@ -13,12 +13,12 @@ export class LateralService {
 
   constructor(
     private _http: HttpClient,
-    private _apibuilder: ApibuilderService
+    private _api: ApibuilderService
   ) { }
 
   getDetails(service) {
 
-    this.compleURL = this._apibuilder.Build(service);
+    this.compleURL = this._api.Build(service);
 
     //return this._http.get(this.compleURL).map(res => res);
   }

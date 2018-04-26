@@ -28,7 +28,7 @@
                 <h1>Listado de emisiones</h1>
               </div>
               <div class="col-7 align-right">
-                <h1>Cliente/Contrato</h1>
+                <label>Cliente/Contrato</label>
               </div>
               <div class="col-2 align-right pr-0 m-12">
                 <new-dropdown [options]="contracts" [label]="Contratos" (onUpdate)="foo"></new-dropdown>
@@ -44,10 +44,10 @@
                 </ul>
               </div>
               <div class="col-4 align-right pr-0 mr-10">
-                <!--
+
                 <i class="filter mb-10 mr-10 on" *ngIf="listed || boxesgrid > 20" [ngClass]="{on: filterPortfolio}"
                   (click)="filterPortfolio = !filterPortfolio;"></i>
-                -->
+
                 <i class="views" [ngClass]="{list: listed}" (click)="listed = !listed" *ngIf="boxesgrid <= 20"></i>
               </div>
             </div>
