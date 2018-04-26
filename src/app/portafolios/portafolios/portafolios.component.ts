@@ -47,7 +47,6 @@ export class PortafoliosComponent implements OnInit {
     this.tabCode = 'B000';
     this.showView = 'mosaic';
 
-    // ?portfolioId=000&queryType=1&contractNumber=1012568&underlyingType=EQD
     this._briefcases.getBriefcases({
       module : 'portfolio',
       method : 'get',

@@ -4,8 +4,6 @@ import { Subject } from 'rxjs/Subject';
 import { ANIMATE_ON_ROUTE_ENTER } from '@app/core';
 
 import {  LateralService } from './lateral.service'
-import { environment as env } from '@env/environment';
-
 
 @Component({
   selector: 'new-lateral',
@@ -50,6 +48,18 @@ export class LateralComponent implements OnInit {
   ngOnInit() {
     this.showSubmenu = true;
     this.activeTabHeader = 0;
+
+    this._detail.getDetails({
+      module : 'portfolio',
+      method : 'get',
+      params: {
+        portfolioId: '0000',
+        queryType: 1,
+        contractNumber: 4564,
+        //underlyingType: this.subyacenteTab
+      }
+    });
+
     /*
     this._detail.getDetails('StructuredProduct').subscribe(data => {
       this.details = data;

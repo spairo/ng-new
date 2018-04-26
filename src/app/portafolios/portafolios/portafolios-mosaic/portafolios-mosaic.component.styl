@@ -1,22 +1,24 @@
 @import 'main'
 
 .box-portfolio
-  border: 1px solid $color('blue')
+  box-shadow: 0 0 7px $color('gray')
   border-radius: 5px
   cursor: pointer
   display: inline-block
   height: 220px
   margin: 0 0 15px 15px
-  width: 210px
+  width: 213px
 
   &.defeated
-    border: 1px solid $color('gray')
+    //border: 1px solid $color('gray')
 
     .title-box
       background-color: $color('gray')
 
   .title-box
     background-color: $color('blue')
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
     color: $color('white')
     height: 75px
     padding: 8px 10px

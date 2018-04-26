@@ -77,7 +77,7 @@
 
           </div>
           <div class="col-3">
-            <!--<new-lateral></new-lateral>-->
+            <new-lateral></new-lateral>
           </div>
         </div>
       </div>
@@ -87,32 +87,30 @@
       <div class="content-tab">
         <div class="row">
           <div class="col-9">
+
             <div class="row">
-              <div class="col-5">
-                <h1 class="ml-5">Listado de emisiones 2</h1>
-              </div>
-              <div class="col-4 align-right">
-                <h1>Cliente/Contrato {{Selectedcontract}} </h1>
-              </div>
-              <div class="col-3 mt-1">
-                <new-dropdown [options]="contracts" [label]="Contratos" (onUpdate)="foo"></new-dropdown>
+              <div class="col-3 ml-15">
+                <h1>Listado de emisiones</h1>
               </div>
             </div>
-            <div class="row mb-4">
-              <div class="col-8">
+
+            <div class="row">
+              <div class="col-8 align-left pr-0">
                 <ul class="nav-subjacents">
                   <li [ngClass]="{activeTab: subyacenteTab === 'TODO'}" (click)="subyacente = null;">TODO</li>
                   <li *ngFor="let subjacent of subjacents | async; let i = index" (click)="subyacenteFilter = {subyacente: subjacent}; subyacente = subjacent; subyacenteTab = i;"
-                    ng-class="{activeTab: main.subyacenteTab === i}">{{subjacent.name}}</li>
+                    [ngClass]="{activeTab: subyacenteTab === i}">{{subjacent.name}}</li>
                 </ul>
               </div>
-              <div class="col-4 align-right">
+              <div class="col-4 align-right pr-0 mr-10">
                 <!--
-                <i class="filter mb-10 mr-10" ng-if="listed || main.portfolioT.length &gt; 20" ng-class="{on: main.filterPortfolio}"
-                  ng-click="main.filterPortfolio = !main.filterPortfolio;"></i>-->
-                <i class="views" [ngClass]="{list: listed}" (click)="listed = !listed" *ngIf="boxesgrid?.length <= 20"></i>
+                <i class="filter mb-10 mr-10 on" *ngIf="listed || boxesgrid > 20" [ngClass]="{on: filterPortfolio}"
+                  (click)="filterPortfolio = !filterPortfolio;"></i>
+                -->
+                <i class="views" [ngClass]="{list: listed}" (click)="listed = !listed" *ngIf="boxesgrid <= 20"></i>
               </div>
             </div>
+
             <div class="row">
               <div class="col-12">
                 <div class="suggesting">
@@ -123,19 +121,19 @@
                       <span></span>
                     </div>
                   </div>
-                  <div class="iconography">
-                    <a>Iconografía</a>
-                  </div>
                 </div>
               </div>
             </div>
+
             <div class="row">
-              <!--<div class="col-12" *ngIf="!listed && boxes?.length <= 20">-->
-              <div class="col-12">
+              <div class="col-12 pr-0" *ngIf="!listed && boxesgrid <= 20">
                 <new-portafolios-mosaic [boxes]="boxes"></new-portafolios-mosaic>
               </div>
-              <div class="col-12" *ngIf="listed"></div>
+              <div class="col-12" *ngIf="listed || boxesgrid > 20">
+
+              </div>
             </div>
+
           </div>
           <div class="col-3">
             <!--<new-lateral></new-lateral>-->
