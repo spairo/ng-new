@@ -20,7 +20,6 @@ export class PortafoliosComponent implements OnInit {
   public subyacenteTab: string;
   public briefcases: Observable <any[]>;
   public tabs: Observable <any[]>;
-  public tabw: Observable <any[]>;
   public subjacents: any;
   public activeTab: any;
   public boxes: Observable <any[]>;
@@ -60,19 +59,12 @@ export class PortafoliosComponent implements OnInit {
       }
     }).subscribe(portfolios => {
 
-      this.buildTabs(portfolios.productTabs);
       this.buildContracts(portfolios.relatedContracts);
       this.buildsubjacents(portfolios.underlyingAssets);
       this.buildBriefcases(portfolios.structuredProductInformation);
       this.buildCharts(portfolios.structuredProductInformation);
 
     });
-  }
-
-  buildTabs(tabs) {
-    this.tabs = of(tabs);
-    this.tabw = of(tabs);
-
   }
 
   buildContracts(relatedContracts) {
@@ -85,7 +77,7 @@ export class PortafoliosComponent implements OnInit {
 
   buildBriefcases(briefcases) {
     this.boxes = of(briefcases);
-    this.boxesgrid = briefcases;
+    this.boxesgrid = briefcases.length;
   }
 
   buildCharts(prices) {
@@ -93,10 +85,6 @@ export class PortafoliosComponent implements OnInit {
     // var foo = _.map(this.prices, 'prices');
     // var arr = _.map(foo, 'price');
   }
-
-  foo(){
-    alert("ddd");
-  };
 
   // Do actions
 
@@ -113,7 +101,6 @@ export class PortafoliosComponent implements OnInit {
       }
     }).subscribe(portfolios => {
 
-      this.buildTabs(portfolios.productTabs);
       this.buildContracts(portfolios.relatedContracts);
       this.buildsubjacents(portfolios.underlyingAssets);
       this.buildBriefcases(portfolios.structuredProductInformation);
@@ -135,29 +122,6 @@ export class PortafoliosComponent implements OnInit {
       }
     }).subscribe(portfolios => {
 
-      this.buildTabs(portfolios.productTabs);
-      this.buildContracts(portfolios.relatedContracts);
-      this.buildsubjacents(portfolios.underlyingAssets);
-      this.buildBriefcases(portfolios.structuredProductInformation);
-      this.buildCharts(portfolios.structuredProductInformation);
-
-    });
-  }
-
-  PortfolioTab(){
-
-    this._briefcases.getBriefcases({
-      module : 'portfolio',
-      method : 'get',
-      params: {
-        portfolioId: this.tabCode,
-        queryType: 1,
-        contractNumber: null,
-        underlyingType: 'EQD'
-      }
-    }).subscribe(portfolios => {
-
-      this.buildTabs(portfolios.productTabs);
       this.buildContracts(portfolios.relatedContracts);
       this.buildsubjacents(portfolios.underlyingAssets);
       this.buildBriefcases(portfolios.structuredProductInformation);
