@@ -32,7 +32,9 @@ export class StockMarketComponent implements OnInit, OnDestroy {
         if (!this.initialized) {
           this.initialized = true;
           this.store.dispatch(
-            new ActionStockMarketRetrieve({ symbol: stocks.symbol })
+            new ActionStockMarketRetrieve({
+              symbol: 'stocks.symbol'
+            })
           );
         }
       });

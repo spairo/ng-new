@@ -6,7 +6,6 @@ import { SharedModule } from '@app/shared';
 import { CoreModule } from '@app/core';
 
 import { PortafoliosModule } from '@app/portafolios';
-import { SettingsModule } from '@app/settings';
 import { StaticModule } from '@app/static';
 
 import { PushNotificationsModule } from 'ng-push';
@@ -25,9 +24,8 @@ import { AppComponent } from '@app/app.component';
     SharedModule,
 
     // features
-    StaticModule,
-    SettingsModule,
     PortafoliosModule,
+    StaticModule,
 
     // libs
     PushNotificationsModule,

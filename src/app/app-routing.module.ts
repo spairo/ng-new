@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SettingsComponent } from './settings';
-import { ProgramasComponent } from './programas';
 import { PortafoliosComponent } from './portafolios';
 import { DetalleComponent } from './portafolios/detalle/detalle.component';
 
@@ -12,39 +10,21 @@ const routes: Routes = [
     redirectTo: 'portafolios',
     pathMatch: 'full',
     data: {
-      title: 'Portafolios Inversion',
-      breadcrumb: 'Portafolios Inversion'
-    }
-  },
-  {
-    path: 'settings',
-    component: SettingsComponent,
-    data: {
-      title: 'Settings'
+      title: 'Portafolios Inversion'
     }
   },
   {
     path: 'portafolios',
     component: PortafoliosComponent,
     data: {
-      title: 'Portafolios Inversion',
-      breadcrumb: 'Portafolios Inversion'
+      title: 'Portafolios Inversion'
     }
   },
   {
     path: 'portafolios/detalle/:serie/:id',
     component: DetalleComponent,
     data: {
-      title: 'Detalle Portafolio',
-      breadcrumb: 'Detalle Portafolio'
-    }
-  },
-  {
-    path: 'programas',
-    component: ProgramasComponent,
-    data: {
-      title: 'Programas',
-      breadcrumb: 'Programas'
+      title: 'Detalle Portafolio'
     }
   },
   {

@@ -13,9 +13,8 @@ import {
   selectorAuth,
   routerTransition
 } from '@app/core';
-import { environment as env } from '@env/environment';
 
-import { NIGHT_MODE_THEME, selectorSettings } from './settings';
+import { environment as env } from '@env/environment';
 
 @Component({
   selector: 'new-root',
@@ -35,9 +34,7 @@ export class AppComponent implements OnInit, OnDestroy {
   logo = require('../assets/logo.png');
 
   navigation = [
-    { link: 'about', label: 'test' },
     { link: 'portafolios', label: 'Portafolios'},
-    { link: 'programas', label: 'Programas'},
     { link: 'features', label: 'Features' },
     { link: 'examples', label: 'Examples' }
   ];
@@ -56,24 +53,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.store
-      .select(selectorSettings)
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe(settings => {
-        const { theme, autoNightMode } = settings;
-        const hours = new Date().getHours();
-        const effectiveTheme = (autoNightMode && (hours >= 20 || hours <= 6)
-          ? NIGHT_MODE_THEME
-          : theme
-        ).toLowerCase();
-        this.componentCssClass = effectiveTheme;
-        const classList = this.overlayContainer.getContainerElement().classList;
-        const toRemove = Array.from(classList).filter((item: string) =>
-          item.includes('-theme')
-        );
-        classList.remove(...toRemove);
-        classList.add(effectiveTheme);
-      });
+
     this.store
       .select(selectorAuth)
       .pipe(takeUntil(this.unsubscribe$))
