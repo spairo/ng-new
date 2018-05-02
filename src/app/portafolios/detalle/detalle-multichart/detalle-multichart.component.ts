@@ -1,12 +1,5 @@
-import {
-  Component,
-  OnInit,
-  ViewEncapsulation
-} from '@angular/core';
-
-import {
-  constants
-} from 'http2';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { constants } from 'http2';
 
 declare let d3: any;
 
@@ -40,7 +33,6 @@ export class DetalleMultichartComponent implements OnInit {
       'shortMonths': ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic']
     };
     const es = d3.locale(spanish);
-
 
     this.options = {
       chart: {
@@ -10957,7 +10949,7 @@ export class DetalleMultichartComponent implements OnInit {
         'bar': false
       }
     ].map(function (series) {
-      /*let series.values = series.values.map(function (d) {
+      /*series.values = series.values.map(function (d) {
         return {
           x: d[0],
           y: d[1]
