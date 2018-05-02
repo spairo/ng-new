@@ -22,7 +22,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { BigInputComponent } from './big-input/big-input.component';
 import { BigInputActionComponent } from './big-input/big-input-action.component';
-import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { ModalComponent } from './modal/modal.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 
@@ -49,7 +48,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     MatNativeDateModule,
     MatDialogModule
   ],
-  declarations: [BigInputComponent, BigInputActionComponent, BreadcrumbComponent, ModalComponent, DropdownComponent],
+  declarations: [BigInputComponent, BigInputActionComponent, ModalComponent, DropdownComponent],
   exports: [
     CommonModule,
     FormsModule,
@@ -74,7 +73,6 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 
     BigInputComponent,
     BigInputActionComponent,
-    BreadcrumbComponent,
     ModalComponent,
     DropdownComponent
   ]

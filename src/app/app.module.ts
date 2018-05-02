@@ -5,9 +5,8 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '@app/shared';
 import { CoreModule } from '@app/core';
 
-import { SettingsModule } from '@app/settings';
-import { ProgramasModule } from '@app/programas';
 import { PortafoliosModule } from '@app/portafolios';
+import { SettingsModule } from '@app/settings';
 import { StaticModule } from '@app/static';
 
 import { PushNotificationsModule } from 'ng-push';
@@ -28,7 +27,6 @@ import { AppComponent } from '@app/app.component';
     // features
     StaticModule,
     SettingsModule,
-    ProgramasModule,
     PortafoliosModule,
 
     // libs
