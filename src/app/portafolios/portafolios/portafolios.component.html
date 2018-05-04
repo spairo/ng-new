@@ -24,41 +24,92 @@
           <div class="col-9">
 
             <div class="row">
-              <div class="col-4  ml-15">
+              <div class="col-8 ml-15">
                 <h1>Listado de emisiones</h1>
               </div>
-              <div class="col-4"></div>
-              <div class="col-4 align-left">
-                <label>Cliente/Contrato</label>
+              <div class="col-2">
+                <label class="contract-label">Cliente/Contrato</label>
               </div>
+              <div class="col-2"></div>
             </div>
 
             <div class="row">
-              <div class="col-3 ml-15">
-                <h1>Listado de emisiones</h1>
-              </div>
-              <div class="col-7 align-right">
-                <label>Cliente/Contrato</label>
-              </div>
-              <div class="col-2 align-right pr-0 m-12">
-                <new-dropdown [options]="contracts" [label]="Contratos" (onUpdate)="foo"></new-dropdown>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-8 align-left pr-0">
+              <div class="col-8">
                 <ul class="nav-subjacents">
                   <li [ngClass]="{activeTab: subyacenteTab === 'TODO'}" (click)="subyacente = null;">TODO</li>
                   <li *ngFor="let subjacent of subjacents | async; let i = index" (click)="subyacenteFilter = {subyacente: subjacent}; subyacente = subjacent; subyacenteTab = i;"
                     [ngClass]="{activeTab: subyacenteTab === i}">{{subjacent.name}}</li>
                 </ul>
               </div>
-              <div class="col-4 align-right pr-0 mr-10">
-
+              <div class="col-2 align-right">
+                <new-dropdown [options]="contracts" [label]="Contratos" (onUpdate)="foo" style="position: relative; left: 50px;"></new-dropdown>
+              </div>
+              <div class="col-2 align-right">
                 <i class="filter mb-10 mr-10 on" *ngIf="listed || boxesgrid > 20" [ngClass]="{on: filterPortfolio}"
                   (click)="filterPortfolio = !filterPortfolio;"></i>
+                <i class="views list" [ngClass]="{list: listed}" (click)="listed = !listed" *ngIf="boxesgrid <= 20" style="position: relative; right: 10px; top: 5px;"></i>
+              </div>
+            </div>
 
-                <i class="views" [ngClass]="{list: listed}" (click)="listed = !listed" *ngIf="boxesgrid <= 20"></i>
+            <div class="row">
+              <div class="col-12">
+                <div class="suggesting">
+                  <span class="title">Semáforo de sugerencias</span>
+                  <div class="lights">
+                    <div class="col-2 mb-10">
+                      <div class="round"></div>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 pr-0" *ngIf="!listed && boxesgrid <= 20">
+                <new-portafolios-mosaic [boxes]="boxes"></new-portafolios-mosaic>
+              </div>
+              <div class="col-12" *ngIf="listed || boxesgrid > 20"></div>
+            </div>
+
+          </div>
+          <div class="col-3">
+            <new-lateral></new-lateral>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template [ngIf]="activeTab === 'default'">
+      <div class="content-tab">
+        <div class="row">
+          <div class="col-9">
+
+            <div class="row">
+              <div class="col-8 ml-15">
+                <h1>Listado de emisiones</h1>
+              </div>
+              <div class="col-2">
+                <label class="contract-label">Cliente/Contrato</label>
+              </div>
+              <div class="col-2"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-8">
+                <ul class="nav-subjacents">
+                  <li [ngClass]="{activeTab: subyacenteTab === 'TODO'}" (click)="subyacente = null;">TODO</li>
+                  <li *ngFor="let subjacent of subjacents | async; let i = index" (click)="subyacenteFilter = {subyacente: subjacent}; subyacente = subjacent; subyacenteTab = i;"
+                    [ngClass]="{activeTab: subyacenteTab === i}">{{subjacent.name}}</li>
+                </ul>
+              </div>
+              <div class="col-2 align-right">
+                <new-dropdown [options]="contracts" [label]="Contratos" (onUpdate)="foo" style="position: relative; left: 50px;"></new-dropdown>
+              </div>
+              <div class="col-2 align-right">
+                <i class="filter mb-10 mr-10 on" *ngIf="listed || boxesgrid > 20" [ngClass]="{on: filterPortfolio}"
+                  (click)="filterPortfolio = !filterPortfolio;"></i>
+                <i class="views" [ngClass]="{list: listed}" (click)="listed = !listed" *ngIf="boxesgrid <= 20" style="position: relative; right: 10px; top: 5px;"></i>
               </div>
             </div>
 
@@ -88,65 +139,6 @@
           </div>
           <div class="col-3">
             <new-lateral></new-lateral>
-          </div>
-        </div>
-      </div>
-    </ng-template>
-
-    <ng-template [ngIf]="activeTab === 'default'">
-      <div class="content-tab">
-        <div class="row">
-          <div class="col-9">
-
-            <div class="row">
-              <div class="col-3 ml-15">
-                <h1>Listado de emisiones</h1>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-8 align-left pr-0">
-                <ul class="nav-subjacents">
-                  <li [ngClass]="{activeTab: subyacenteTab === 'TODO'}" (click)="subyacente = null;">TODO</li>
-                  <li *ngFor="let subjacent of subjacents | async; let i = index" (click)="subyacenteFilter = {subyacente: subjacent}; subyacente = subjacent; subyacenteTab = i;"
-                    [ngClass]="{activeTab: subyacenteTab === i}">{{subjacent.name}}</li>
-                </ul>
-              </div>
-              <div class="col-4 align-right pr-0 mr-10">
-                <!--
-                <i class="filter mb-10 mr-10 on" *ngIf="listed || boxesgrid > 20" [ngClass]="{on: filterPortfolio}"
-                  (click)="filterPortfolio = !filterPortfolio;"></i>
-                -->
-                <i class="views" [ngClass]="{list: listed}" (click)="listed = !listed" *ngIf="boxesgrid <= 20"></i>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-12">
-                <div class="suggesting">
-                  <span class="title">Semáforo de sugerencias</span>
-                  <div class="lights">
-                    <div class="col-2 mb-10">
-                      <div class="round"></div>
-                      <span></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-12 pr-0" *ngIf="!listed && boxesgrid <= 20">
-                <new-portafolios-mosaic [boxes]="boxes"></new-portafolios-mosaic>
-              </div>
-              <div class="col-12" *ngIf="listed || boxesgrid > 20">
-
-              </div>
-            </div>
-
-          </div>
-          <div class="col-3">
-            <!--<new-lateral></new-lateral>-->
           </div>
         </div>
       </div>

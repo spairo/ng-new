@@ -49,8 +49,8 @@ export class LateralComponent implements OnInit {
     this.showSubmenu = true;
     this.activeTabHeader = 0;
 
-    this._detail.getDetails({
-      module : 'portfolio',
+    this._detail.getLateral({
+      module : 'portfolio_lat',
       method : 'get',
       params: {
         portfolioId: '0000',
@@ -58,16 +58,12 @@ export class LateralComponent implements OnInit {
         contractNumber: 4564,
         //underlyingType: this.subyacenteTab
       }
-    });
-
-    /*
-    this._detail.getDetails('StructuredProduct').subscribe(data => {
+    }).subscribe(data => {
       this.details = data;
       this.headerNames = this.details.headerNames;
       this.amount = this.details.portfolio.amountIssued.amount;
       this.headerValues =  this.details.headerValues;
     });
-    */
   }
 
   buildPiechart(label, id) {
