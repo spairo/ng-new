@@ -4,6 +4,10 @@
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
 
+  mat-snack-bar-container {
+    background: red;
+  }
+
   mat-sidenav-container {
     mat-toolbar {
       button {

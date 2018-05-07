@@ -8,7 +8,7 @@ const packageJson = require('../../package.json');
 export const environment = {
   appName: 'NEW',
   envName: 'DEV',
-  production: true,
+  production: false,
   hostname: 'http://localhost:4200',
   dynPath: '/assets/',
   platform: 'structuredProduct',

@@ -17,6 +17,8 @@ export class DetalleComponent implements OnInit {
   public id: string;
   public showInvisible: boolean;
   public banquero: boolean;
+  public showYields: any;
+  public showCoupons: any;
 
   constructor(
     private route: ActivatedRoute,

@@ -10,6 +10,8 @@ export class DropdownComponent implements OnInit {
 
   public opened: boolean = true;
   public foo: string;
+  public disabled: any;
+
   @Input() options: any;
   @Input() label: string;
   @Output() public onUpdate: EventEmitter<any> = new EventEmitter();

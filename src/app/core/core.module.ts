@@ -24,7 +24,6 @@ if (!environment.production) {
     // angular
     CommonModule,
     HttpClientModule,
-
     // ngrx
     StoreModule.forRoot(
       {

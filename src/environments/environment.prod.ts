@@ -6,6 +6,8 @@ export const environment = {
   production: true,
   hostname: 'https://150.250.140.226:8700',
   dynPath: 'New',
+  platform: 'structuredProduct',
+  apiVersion: 'v1',
   versions: {
     app: packageJson.version,
     angular: packageJson.dependencies['@angular/core'],

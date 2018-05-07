@@ -19,6 +19,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { BigInputComponent } from './big-input/big-input.component';
 import { BigInputActionComponent } from './big-input/big-input-action.component';
@@ -46,7 +47,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     MatTooltipModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
   ],
   declarations: [BigInputComponent, BigInputActionComponent, ModalComponent, DropdownComponent],
   exports: [
@@ -70,6 +72,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModule,
+    MatSnackBarModule,
 
     BigInputComponent,
     BigInputActionComponent,
