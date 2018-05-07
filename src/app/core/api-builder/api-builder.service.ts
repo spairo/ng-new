@@ -34,6 +34,6 @@ export class ApibuilderService {
     }
   }
   ErrorHandler(error: any): void {
-    let snackBarRef = this.snackBar.open('Error ' + error.status + ' -  ' + error.message);
+    let snackBarRef = this.snackBar.open('Error ' + error.status + ' -  ' + error.message, 'Cerrar');
   }
 }

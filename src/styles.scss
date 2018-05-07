@@ -4,6 +4,7 @@
 //@import '../node_modules/bootstrap/scss/bootstrap-grid';
 //@import '../node_modules/bootstrap/scss/utilities';
 
+@import "../node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css";
 @import '../node_modules/font-awesome/scss/font-awesome';
 
 @import 'styles-reset';
@@ -17,7 +18,7 @@
 @import 'black-theme.scss';
 
 @import 'styles-reset.scss-theme';
-@import 'app/app.component.scss-theme';
+
 @import 'app/shared/big-input/big-input.component.scss-theme';
 @import 'app/examples/todos/todos.component.scss-theme';
 @import 'app/examples/stock-market/stock-market.component.scss-theme';
@@ -28,7 +29,6 @@
 
 @mixin custom-components-theme($theme) {
   @include new-styles-reset-theme($theme);
-  @include new-app-component-theme($theme);
   @include new-big-input-component-theme($theme);
   @include new-todos-component-theme($theme);
   @include new-examples-component-theme($theme);
