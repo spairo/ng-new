@@ -9,13 +9,13 @@
     <ul class="tabs portfolio">
       <li (click)="activeTab = 'banquero'; tabCode = 'B000'; bankersPortfolio();" [ngClass]="{current: activeTab === 'banquero'}">
         <span>Mi Portafolio</span>
-        <!--<i class="plus mosaic"></i>-->
+        <i class="lock" style="margin-top: -30px;"></i>
       </li>
       <li (click)="activeTab = 'default'; tabCode = '0000'; RecentClosures();" [ngClass]="{current: activeTab === 'default'}">
         <span>Cierres recientes</span>
-        <!--<i class="plus mosaic"></i>-->
+        <i class="lock" style="margin-top: -30px; "></i>
       </li>
-      <li class="last" *ngIf="banquero" style="width:calc(100% - (165 * 2px))"></li>
+      <li class="last" style="width:calc(100% - (165 * 2px))"></li>
     </ul>
 
     <ng-template [ngIf]="activeTab === 'banquero'">
