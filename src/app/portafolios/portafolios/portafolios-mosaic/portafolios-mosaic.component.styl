@@ -11,8 +11,15 @@
 
   &:hover
     box-shadow: 0 0 10px $color('gray')
+
+    .title-box
+      background-color $color('blue', 'dark')
+
   &.defeated
-    //border: 1px solid $color('gray')
+    box-shadow: 0 0 10px $color('gray')
+
+    &:hover
+      box-shadow: 0 0 11px $color('gray')
 
     .title-box
       background-color: $color('gray')
@@ -25,9 +32,6 @@
     height: 75px
     padding: 15px 10px
     position: relative
-
-    &:hover
-      background-color $color('blue', 'dark')
 
     img
       float: left
