@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import * as _ from 'lodash';
+
 @Component({
   selector: 'new-portafolios-mosaic',
   templateUrl: './portafolios-mosaic.component.html',
@@ -12,11 +14,13 @@ export class PortafoliosMosaicComponent implements OnInit {
   @Input() boxes = [];
 
   // lineChart
-  public lineChartData: Array<any> = [{data: ['97.9964', '97.5857', '96.873', '95.5325', '95.209', '94.6646', '95.148'], label: 'Precio'}];
-  public lineChartLabels: Array<any> = ['02-07-2019', '02-08-2019', '02-09-2019', '02-10-2019', '02-11-2019', '02-12-2019', '02-13-2019'];
   public lineChartcolors: any[] = [
     { backgroundColor: ['#e6f0f4']}
   ];
+
+  public lineChartData: Array<any> = [{data: ['97.9964', '97.5857', '96.873'], label: 'Precio'}];
+  public lineChartLabels: Array<any> = ['02-07-2019', '02-08-2019', '02-09-2019'];
+
   public lineChartLegend: boolean = false;
   public lineChartType: string = 'line';
   public lineChartOptions: any = {
@@ -48,6 +52,8 @@ export class PortafoliosMosaicComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    //console.log(this.boxes.value["0"].prices);
+    //date
   }
 
   gotoDetail(serie: string, id: number) {
