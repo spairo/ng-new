@@ -1,8 +1,11 @@
 <div class="select">
-	<a [ngClass]="{'disabled': disabled, 'open': opened, 'selected': foo}"
-	  (click)="opened = !opened;" tabindex="0"></a>
-	<ul (click)="opened = false;" [hidden]="opened && !disabled">
+	<a [innerHtml]="picked || label || 'Selecciona'"
+		[ngClass]="{'disabled': disabled, 'open': opened, 'selected': picked}"
+		(click)="opened = !opened;"
+		tabindex="0">
+	</a>
+	<ul (click)="opened = false;" [hidden]="opened &amp;&amp; !disabled">
     <input [hidden]="options?.length >= 10" type="search" />
-		<li *ngFor="let option of options" (click)="foo = option;">{{option}}</li>
+		<li *ngFor="let option of options" (click)="foo = option; selected(option);"> {{option}}</li>
 	</ul>
 </div>

@@ -42,7 +42,7 @@
                 </ul>
               </div>
               <div class="col-2 align-right">
-                <new-dropdown [options]="contracts" [label]="Contratos" (onUpdate)="foo" style="position: relative; left: 50px;"></new-dropdown>
+                <new-dropdown [options]="contracts" [label]="'Contratos'" style="position: relative; left: 50px;"></new-dropdown>
               </div>
               <div class="col-2 align-right">
                 <i class="filter mb-10 mr-10 on" *ngIf="listed || boxesgrid > 20" [ngClass]="{on: filterPortfolio}"
@@ -106,7 +106,7 @@
                 </ul>
               </div>
               <div class="col-2 align-right">
-                <new-dropdown [options]="contracts" [label]="Contratos" (onUpdate)="foo" style="position: relative; left: 50px;"></new-dropdown>
+                <new-dropdown [options]="contracts" [label]="Contratos" style="position: relative; left: 50px;"></new-dropdown>
               </div>
               <div class="col-2 align-right">
                 <i class="filter mb-10 mr-10 on" *ngIf="listed || boxesgrid > 20" [ngClass]="{on: filterPortfolio}"
