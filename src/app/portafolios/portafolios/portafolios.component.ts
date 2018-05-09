@@ -58,10 +58,15 @@ export class PortafoliosComponent implements OnInit {
       }
     }).subscribe(portfolios => {
 
+      _.forEach(portfolios.structuredProductInformation, function(value) {
+        let precios = _.map(value.prices, 'price');
+        let fechas = _.map(value.prices, 'date');
+        value.prices.precios = [{ data: precios, label: 'Precio'}];
+        value.prices.fechas = fechas;
+      });
       this.buildContracts(portfolios.relatedContracts);
       this.buildsubjacents(portfolios.underlyingAssets);
       this.buildBriefcases(portfolios.structuredProductInformation);
-      this.buildCharts(portfolios.structuredProductInformation);
 
     });
   }
@@ -75,45 +80,10 @@ export class PortafoliosComponent implements OnInit {
   }
 
   buildBriefcases(briefcases) {
-
-    //this.boxes = of(briefcases);
-    this.boxes = briefcases;
-
-    //console.log(this.boxes);
-
-    // Find item index using _.findIndex (thanks @AJ Richardson for comment)
-
-    // var index = _.findIndex(this.boxes, {id: 1});
-
-    // Replace item at index using native splice
-
-    // arr.splice(index, 1, {id: 100, name: 'New object.'});
-
-    //_.forEach(this.boxes.value, function(value, prices) {
-     //console.log(prices);
-    //});
-
-    //console.log(this.boxes);
-
-    _.forEach(this.boxes, function(value, key) {
-      console.log(value);
-    });
-
+    this.boxes = of(briefcases);
     this.boxesgrid = briefcases.length;
-
   }
 
-  buildCharts(prices) {
-    this.prices = prices;
-
-    //let foo = this.boxes.value['0'].prices;
-    //let bar = _.map(foo, 'price');
-    //console.log(bar);
-    // var foo = _.map(this.prices, 'prices');
-    // var arr = _.map(foo, 'price');
-  }
-
-  // Do actions
 
   bankersPortfolio(){
 
@@ -128,10 +98,15 @@ export class PortafoliosComponent implements OnInit {
       }
     }).subscribe(portfolios => {
 
+      _.forEach(portfolios.structuredProductInformation, function(value) {
+        let precios = _.map(value.prices, 'price');
+        let fechas = _.map(value.prices, 'date');
+        value.prices.precios = [{ data: precios, label: 'Precio'}];
+        value.prices.fechas = fechas;
+      });
       this.buildContracts(portfolios.relatedContracts);
       this.buildsubjacents(portfolios.underlyingAssets);
       this.buildBriefcases(portfolios.structuredProductInformation);
-      this.buildCharts(portfolios.structuredProductInformation);
 
     });
   }
@@ -149,10 +124,15 @@ export class PortafoliosComponent implements OnInit {
       }
     }).subscribe(portfolios => {
 
+      _.forEach(portfolios.structuredProductInformation, function(value) {
+        let precios = _.map(value.prices, 'price');
+        let fechas = _.map(value.prices, 'date');
+        value.prices.precios = [{ data: precios, label: 'Precio'}];
+        value.prices.fechas = fechas;
+      });
       this.buildContracts(portfolios.relatedContracts);
       this.buildsubjacents(portfolios.underlyingAssets);
       this.buildBriefcases(portfolios.structuredProductInformation);
-      this.buildCharts(portfolios.structuredProductInformation);
 
     });
   }

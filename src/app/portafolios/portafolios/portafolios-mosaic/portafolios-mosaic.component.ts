@@ -13,14 +13,7 @@ export class PortafoliosMosaicComponent implements OnInit {
 
   @Input() boxes = [];
 
-  // lineChart
-  public lineChartcolors: any[] = [
-    { backgroundColor: ['#e6f0f4']}
-  ];
-
-  public lineChartData: Array<any> = [{data: ['97.9964', '97.5857', '96.873'], label: 'Precio'}];
-  public lineChartLabels: Array<any> = ['02-07-2019', '02-08-2019', '02-09-2019'];
-
+  public lineChartcolors: any[] = [{ backgroundColor: ['#e6f0f4']}];
   public lineChartLegend: boolean = false;
   public lineChartType: string = 'line';
   public lineChartOptions: any = {
@@ -49,12 +42,9 @@ export class PortafoliosMosaicComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {}
 
-  ngOnInit() {
-    //console.log(this.boxes.value["0"].prices);
-    //date
-  }
+  ngOnInit() {}
 
   gotoDetail(serie: string, id: number) {
     this.router.navigate(['portafolios/detalle', serie, id]);

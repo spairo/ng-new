@@ -25,9 +25,9 @@
     <span class="date">Precio al {{ box.priceDate }}</span>
   </div>
   <div class="content-graphic">
-    <canvas
-      baseChart [datasets]="lineChartData"
-      [labels]="lineChartLabels"
+    <canvas baseChart
+      [datasets]="box.prices.precios"
+      [labels]="box.prices.fechas"
       [options]="lineChartOptions"
       [legend]="lineChartLegend"
       [colors]="lineChartcolors"
