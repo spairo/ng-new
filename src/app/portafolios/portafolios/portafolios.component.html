@@ -69,7 +69,9 @@
               <div class="col-12 pr-0" *ngIf="!listed && boxesgrid <= 20">
                 <new-portafolios-mosaic [boxes]="boxes"></new-portafolios-mosaic>
               </div>
-              <div class="col-12" *ngIf="listed || boxesgrid > 20"></div>
+              <div class="col-12" *ngIf="listed || boxesgrid > 20">
+                <new-portafolios-list></new-portafolios-list>
+              </div>
             </div>
 
           </div>
@@ -132,7 +134,7 @@
                 <new-portafolios-mosaic [boxes]="boxes"></new-portafolios-mosaic>
               </div>
               <div class="col-12" *ngIf="listed || boxesgrid > 20">
-
+                <new-portafolios-list></new-portafolios-list>
               </div>
             </div>
 

@@ -19,6 +19,7 @@ import { DetalleService } from './detalle/detalle.service';
 import { DetalleCuponesChartComponent } from './detalle/detalle-cupones-chart/detalle-cupones-chart.component';
 import { DetalleMultichartComponent } from './detalle/detalle-multichart/detalle-multichart.component';
 import { DetalleNavbarComponent } from './detalle/detalle-navbar/detalle-navbar.component';
+import { PortafoliosListComponent } from './portafolios/portafolios-list/portafolios-list.component';
 
 @NgModule({
   imports: [
@@ -33,7 +34,8 @@ import { DetalleNavbarComponent } from './detalle/detalle-navbar/detalle-navbar.
     DetalleCuponesChartComponent,
     PortafoliosMosaicComponent,
     DetalleMultichartComponent,
-    DetalleNavbarComponent
+    DetalleNavbarComponent,
+    PortafoliosListComponent
   ],
   providers: [PortafoliosService],
   entryComponents: []
