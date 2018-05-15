@@ -7,11 +7,11 @@
 <div class="row">
   <div class="col-12">
     <ul class="tabs portfolio">
-      <li (click)="activeTab = 'banquero'; tabCode = 'B000'; bankersPortfolio();" [ngClass]="{current: activeTab === 'banquero'}">
+      <li (click)="activeTab = 'banquero'; queryType = 0; tabCode = 'B000'; bankersPortfolio();" [ngClass]="{current: activeTab === 'banquero'}">
         <span>Mi Portafolio</span>
         <i class="lock" style="margin-top: -30px;"></i>
       </li>
-      <li (click)="activeTab = 'default'; tabCode = '0000'; RecentClosures();" [ngClass]="{current: activeTab === 'default'}">
+      <li (click)="activeTab = 'default'; queryType = 1; tabCode = '0000'; RecentClosures();" [ngClass]="{current: activeTab === 'default'}">
         <span>Cierres recientes</span>
         <i class="lock" style="margin-top: -30px; "></i>
       </li>
@@ -36,17 +36,17 @@
             <div class="row">
               <div class="col-8">
                 <ul class="nav-subjacents">
-                  <li [ngClass]="{activeTab: subyacenteTab === 'TODO'}" (click)="subyacente = null;">TODO</li>
-                  <li *ngFor="let subjacent of subjacents | async; let i = index" (click)="subyacenteFilter = {subyacente: subjacent}; subyacente = subjacent; subyacenteTab = i;"
+                  <li [ngClass]="{activeTab: subyacenteTab === 'ALL'}" (click)="subyacente = 'ALL';">TODO</li>
+                  <li *ngFor="let subjacent of subjacents | async; let i = index" (click)="subyacente = subjacent.name; subyacenteTab = i;"
                     [ngClass]="{activeTab: subyacenteTab === i}">{{subjacent.name}}</li>
                 </ul>
               </div>
               <div class="col-2 align-right">
-                <new-dropdown [options]="contracts" [label]="'Contratos'" style="position: relative; left: 50px;"></new-dropdown>
+                <new-dropdown [options]="contracts" [label]="'Contratos'" (modelo)="getContract($event);" style="position: relative; left: 50px;"></new-dropdown>
               </div>
               <div class="col-2 align-right">
-                <i class="filter mb-10 mr-10 on" *ngIf="listed || boxesgrid > 20" [ngClass]="{on: filterPortfolio}"
-                  (click)="filterPortfolio = !filterPortfolio;"></i>
+                <i class="filter on" *ngIf="listed || boxesgrid > 20" [ngClass]="{on: filterPortfolio}"
+                  (click)="filterPortfolio = !filterPortfolio;" style="position: relative; right: 10px; top: 5px;"></i>
                 <i class="views list" [ngClass]="{list: listed}" (click)="listed = !listed" *ngIf="boxesgrid <= 20" style="position: relative; right: 10px; top: 5px;"></i>
               </div>
             </div>
@@ -106,7 +106,7 @@
                 </ul>
               </div>
               <div class="col-2 align-right">
-                <new-dropdown [options]="contracts" [label]="Contratos" style="position: relative; left: 50px;"></new-dropdown>
+                <new-dropdown [options]="contracts" [label]="'Contratos'" (modelo)="getContract($event);" style="position: relative; left: 50px;"></new-dropdown>
               </div>
               <div class="col-2 align-right">
                 <i class="filter mb-10 mr-10 on" *ngIf="listed || boxesgrid > 20" [ngClass]="{on: filterPortfolio}"

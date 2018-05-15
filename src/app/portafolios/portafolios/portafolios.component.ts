@@ -17,7 +17,6 @@ export class PortafoliosComponent implements OnInit {
 
   animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
 
-  public subyacenteTab: string;
   public briefcases: Observable <any[]>;
   public tabs: Observable <any[]>;
   public subjacents: any;
@@ -31,7 +30,10 @@ export class PortafoliosComponent implements OnInit {
   public contracts: any;
   public listed: any;
   public showView: string;
-  public Selectedcontract: string;
+  public contractNumber: string = null;
+  public queryType: number = 1;
+  public subyacenteTab: string = 'ALL';
+  public subyacente: string =  'ALL';
 
   constructor(
     private _briefcases: PortafoliosService,
@@ -39,8 +41,15 @@ export class PortafoliosComponent implements OnInit {
     private router: Router
   ) { }
 
+  ngOnChanges(){
+    console.log('ngOnChanges()');
+  }
+
+  ngOnDestroy(){
+    console.log('ngOnDestroy()');
+  }
+
   ngOnInit() {
-    this.subyacenteTab = 'TODO';
     this.userId = 'MB79547';
     this.banquero = true;
     this.activeTab = 'banquero';
@@ -52,9 +61,9 @@ export class PortafoliosComponent implements OnInit {
       method : 'get',
       params: {
         portfolioId: '0000',
-        queryType: 1,
-        contractNumber: 4564,
-        underlyingType: this.subyacenteTab
+        queryType: this.queryType,
+        contractNumber: this.contractNumber,
+        underlyingType: this.subyacente
       }
     }).subscribe(portfolios => {
 
@@ -92,9 +101,9 @@ export class PortafoliosComponent implements OnInit {
       method : 'get',
       params: {
         portfolioId: this.tabCode,
-        queryType: 0,
-        contractNumber: 4564,
-        underlyingType: 'EQD'
+        queryType: this.queryType,
+        contractNumber: this.contractNumber,
+        underlyingType: this.subyacente
       }
     }).subscribe(portfolios => {
 
@@ -118,9 +127,9 @@ export class PortafoliosComponent implements OnInit {
       method : 'get',
       params: {
         portfolioId: this.tabCode,
-        queryType: 1,
-        contractNumber: 4564,
-        underlyingType: 'EQD'
+        queryType: this.queryType,
+        contractNumber: this.contractNumber,
+        underlyingType: this.subyacente
       }
     }).subscribe(portfolios => {
 
@@ -135,6 +144,10 @@ export class PortafoliosComponent implements OnInit {
       this.buildBriefcases(portfolios.structuredProductInformation);
 
     });
+  }
+
+  getContract(event){
+    this.contractNumber = event.modelo;
   }
 
 }

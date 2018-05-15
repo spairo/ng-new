@@ -20,6 +20,8 @@ export class ApibuilderService {
     if (env.production){
       service.url = env.hostname + '/' + env.platform + '/' + env.apiVersion + '/' + service.module;
         return this.BuildRequest(service);
+      /*service.url = env.hostname + env.dynPath + env.platform + '/' + env.apiVersion + '/' + service.module + '.json';
+        return this.BuildRequest(service);*/
     } else {
       service.url = env.hostname + env.dynPath + env.platform + '/' + env.apiVersion + '/' + service.module + '.json';
         return this.BuildRequest(service);

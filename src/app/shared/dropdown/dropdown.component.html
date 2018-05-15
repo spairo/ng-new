@@ -6,6 +6,6 @@
 	</a>
 	<ul (click)="opened = false;" [hidden]="opened &amp;&amp; !disabled">
     <input [hidden]="options?.length >= 10" type="search" />
-		<li *ngFor="let option of options" (click)="foo = option; selected(option);"> {{option}}</li>
+		<li *ngFor="let option of options" (click)="selected(option);">{{option}}</li>
 	</ul>
 </div>
