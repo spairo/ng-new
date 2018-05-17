@@ -3,8 +3,10 @@
 .panel
   h1
     &.detail
-      font-size: 18px
-      font-weight: bold
+      font 16px 'Stag Sans medium'
+
+  label
+    color: $color('gray', 'pale')
 
   &.active
     min-height: 170px
@@ -36,11 +38,12 @@
         color: $color('gray', 'pale')
 
       .see-more
-        color: $color('blue', 'medium')
-        cursor: pointer
+        color $color('blue', 'medium')
+        cursor pointer
+        font-size 14px
 
         &:hover
-          text-decoration: underline
+          text-decoration underline
 
     p
       &.description
