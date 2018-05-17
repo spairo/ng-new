@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs/Subject';
 import { ANIMATE_ON_ROUTE_ENTER } from '@app/core';
@@ -14,6 +15,11 @@ import {  LateralService } from './lateral.service'
 export class LateralComponent implements OnInit {
 
   animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
+
+  @Input('tabcode') tabcode: string;
+  @Input('contrato') contrato: string;
+  @Input('subyacente') subyacente: string;
+
 
   public details: any;
   public amount: any;
@@ -42,10 +48,13 @@ export class LateralComponent implements OnInit {
   public barChartData:any[] = [{data: [6.67, 46.67, 26.67, 20]}];
 
   constructor(
-    private _detail: LateralService
+    private _detail: LateralService,
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+
     this.showSubmenu = true;
     this.activeTabHeader = 0;
 
@@ -77,5 +86,15 @@ export class LateralComponent implements OnInit {
 
   viewPrint() {
     console.log('print pdf');
+    this.router.navigate(['portafolios/pdf', '0001', '456578', 'EQD']);
   }
+
+  ngOnChanges(){
+    console.log('ngOnChanges()');
+  }
+
+  ngOnDestroy(){
+    console.log('ngOnDestroy()');
+  }
+
 }

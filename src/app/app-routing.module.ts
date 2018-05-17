@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PortafoliosComponent } from './portafolios';
 import { DetalleComponent } from './portafolios/detalle/detalle.component';
+import { PdfComponent } from './portafolios/pdf/pdf.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,13 @@ const routes: Routes = [
   {
     path: 'portafolios/detalle/:serie/:id',
     component: DetalleComponent,
+    data: {
+      title: 'Detalle Portafolio'
+    }
+  },
+  {
+    path: 'portafolios/pdf/:tab/:contrato/:subyacente',
+    component: PdfComponent,
     data: {
       title: 'Detalle Portafolio'
     }

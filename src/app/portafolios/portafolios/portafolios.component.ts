@@ -41,15 +41,8 @@ export class PortafoliosComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnChanges(){
-    console.log('ngOnChanges()');
-  }
-
-  ngOnDestroy(){
-    console.log('ngOnDestroy()');
-  }
-
   ngOnInit() {
+
     this.userId = 'MB79547';
     this.banquero = true;
     this.activeTab = 'banquero';
@@ -60,7 +53,7 @@ export class PortafoliosComponent implements OnInit {
       module : 'portfolio',
       method : 'get',
       params: {
-        portfolioId: '0000',
+        portfolioId: this.tabCode,
         queryType: this.queryType,
         contractNumber: this.contractNumber,
         underlyingType: this.subyacente
@@ -94,7 +87,7 @@ export class PortafoliosComponent implements OnInit {
   }
 
 
-  bankersPortfolio(){
+  bankersPortfolio(): void{
 
     this._briefcases.getBriefcases({
       module : 'portfolio',
@@ -120,7 +113,7 @@ export class PortafoliosComponent implements OnInit {
     });
   }
 
-  RecentClosures(){
+  RecentClosures(): void{
 
     this._briefcases.getBriefcases({
       module : 'portfolio',
@@ -148,6 +141,14 @@ export class PortafoliosComponent implements OnInit {
 
   getContract(event){
     this.contractNumber = event.modelo;
+  }
+
+  ngOnChanges(){
+    console.log('ngOnChanges()');
+  }
+
+  ngOnDestroy(){
+    console.log('ngOnDestroy()');
   }
 
 }

@@ -1,0 +1,211 @@
+@import 'main'
+
+.actions
+	i
+		margin-left: 10px
+
+	.tooltip
+		&.views
+			.content
+				margin: -41px 0 0 -68px
+				padding: 6px 5px
+				text-align: center
+				width: 100px
+
+				&:after
+					margin-left: 22px
+
+				i
+					margin: 0 2px
+
+	span
+		font-size: 12px
+
+.graphics-print
+	display: inline-block
+	margin: 35px 0 0 20px
+
+	iframe
+		display: inherit !important
+		position: inherit !important
+
+	canvas
+		&.chart-bar
+			height: 205px !important
+			margin-top: -150px
+			width: 360px !important
+
+		&.chart-pie
+			height: 205px !important
+			margin: -150px 0 0 50px
+			width: 215px !important
+
+.grid-box
+	border: 1px solid $color('gray', 'light')
+	border-radius: 5px
+	float: left
+	height: auto
+	margin: 5px
+	padding: 10px
+	width: 49%
+
+	.categories
+		display: inline-block
+		float: right
+		font-size: 14px
+		margin-top: 30px
+		width: 215px
+
+		.grid
+			margin-top: 5px
+
+			.square
+				display: inline-block
+				height: 15px
+				margin-right: 5px
+				vertical-align: middle
+				width: 15px
+
+				span
+					color: $color('white')
+					cursor: pointer
+					font-size: 1.22em
+					line-height: 16px
+					padding-left: .12em
+
+	.close
+		float: right
+
+	.overflow
+		height: 330px
+		overflow: auto
+
+	.select-graphic
+		border: 1px solid $color('gray', 'light')
+		border-radius: 5px
+		cursor: pointer
+		display: table
+		float: left
+		font-size: 15px
+		height: 100px
+		margin: 5px
+		padding: 5px
+		position: relative
+		text-align: center
+		width: 136px
+
+		.container-icon
+			position: absolute
+			right: 5px
+
+		span
+			display: table-cell
+			vertical-align: middle
+
+		&.inactive
+			background: $color('blue', 'degraded2')
+			border: 1px solid $color('blue', 'degraded2')
+			color: $color('white')
+
+	span
+		&.add-graphic
+			color: $color('gray', 'pale')
+			display: block
+			font-size: 25px
+			text-align: center
+
+		&.amount
+			color: $color('gray', 'pale')
+			display: block
+			font-size: 25px
+			text-align: center
+
+		&.title-amount
+			color: $color('gray', 'pale')
+			display: block
+			font-size: 16px
+			margin-top: 30px
+			text-align: center
+
+	.title-graphic
+		color: $color('blue')
+		font-size: 18px
+
+	// Vistas
+	&.double
+		height: 800px
+
+		.categories
+			width: 590px
+
+		.chart-bar
+			height: 300px !important
+			width: 570px !important
+
+		.chart-pie
+			height: 280px !important
+			margin: -150px 0 0 140px
+			width: 280px !important
+
+		.graphics-print
+			display: block
+
+		.overflow
+			height: 720px
+
+		.title-amount
+			margin-top: 50px
+
+	&.simple
+		height: 800px
+		width: 100%
+
+		.amount
+			font-size: 30px
+
+		.btn-add
+			&.big
+				height: 250px
+				width: 250px
+
+		.categories
+			margin-top: 80px
+			width: 400px
+
+		.chart-bar
+			height: 500px !important
+			width: 750px !important
+
+		.chart-pie
+			height: 530px !important
+			margin: -150px 0 0 140px
+			width: 530px !important
+
+		.graphics-print
+			margin-top: 65px
+
+		.grid
+			.square
+				height: 20px
+				width: 20px
+
+			span
+				font-size: 16px
+
+		.overflow
+			height: 720px
+
+			.select-graphic
+				height: 120px
+				width: 198px
+
+		.title-amount
+			font-size: 18px
+
+		.title-graphic
+			font-size: 22px
+
+h1
+	&.print
+		font-size: 20px
+		font-weight: bold

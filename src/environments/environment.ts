@@ -10,7 +10,8 @@ export const environment = {
   envName: 'DEV',
   production: false,
   hostname: 'http://localhost:4200',
-  dynPath: '/assets/',
+  dynPath: '',
+  mock: '/assets/',
   platform: 'structuredProduct',
   apiVersion: 'v1',
   versions: {

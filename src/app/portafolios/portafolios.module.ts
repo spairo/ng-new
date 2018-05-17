@@ -20,6 +20,7 @@ import { DetalleCuponesChartComponent } from './detalle/detalle-cupones-chart/de
 import { DetalleMultichartComponent } from './detalle/detalle-multichart/detalle-multichart.component';
 import { DetalleNavbarComponent } from './detalle/detalle-navbar/detalle-navbar.component';
 import { PortafoliosListComponent } from './portafolios/portafolios-list/portafolios-list.component';
+import { PdfComponent } from './pdf/pdf.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { PortafoliosListComponent } from './portafolios/portafolios-list/portafo
     PortafoliosMosaicComponent,
     DetalleMultichartComponent,
     DetalleNavbarComponent,
-    PortafoliosListComponent
+    PortafoliosListComponent,
+    PdfComponent
   ],
   providers: [PortafoliosService],
   entryComponents: []
