@@ -18,9 +18,7 @@ export class ApibuilderService {
 
   Build(service : any) {
     if (env.production){
-      /*service.url = env.hostname + '/' + env.platform + '/' + env.apiVersion + '/' + service.module;
-        return this.BuildRequest(service);*/
-      service.url = env.hostname + env.mock + env.platform + '/' + env.apiVersion + '/' + service.module + '.json';
+      service.url = env.hostname + '/' + env.platform + '/' + env.apiVersion + '/' + service.module;
         return this.BuildRequest(service);
     } else {
       service.url = env.hostname + env.mock + env.platform + '/' + env.apiVersion + '/' + service.module + '.json';
