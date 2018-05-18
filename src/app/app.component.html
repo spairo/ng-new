@@ -15,8 +15,43 @@
   <nav>
     <li><a class="home"></a></li>
     <li routerLinkActive="active">
-      <a class="portafolios" routerLink="/portafolios">Portafolios de Inversi&oacute;n</a>
+      <a clas="portafolios" routerLink="/portafolios">Portafolios de Inversi&oacute;n</a>
     </li>
+    <li>
+      <a class="tracing">Simbologia</a>
+      <ul class="columns-full">
+				<div class="col-6 pr-0">
+					<div class="title">Complejidad</div>
+          <br>
+          <div class="box-menu-full"> foo 2</div>
+          <div class="box-menu-full"> foo 3</div>
+          <div class="box-menu-full"> foo 4</div>
+          <div class="box-menu-full"> foo 4</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+          <br>
+
+          <div class="title">Complejidad</div>
+          <br>
+          <div class="box-menu-full"> foo 2</div>
+          <div class="box-menu-full"> foo 3</div>
+          <div class="box-menu-full"> foo 4</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+          <br>
+          <div class="title">Complejidad</div>
+          <div class="box-menu-full"> foo 2</div>
+          <div class="box-menu-full"> foo 3</div>
+
+				</div>
+				<div class="col-6 pr-0">
+
+          <label>Complejidad</label>
+          <div class="box-menu-full"> foo 2</div>
+          <div class="box-menu-full"> foo 3</div>
+          <div class="box-menu-full"> foo 4</div>
+
+				</div>
+			</ul>
+		</li>
   </nav>
   <div class="content" [@routerTransition]="o.isActivated && o.activatedRoute.routeConfig.path">
     <router-outlet #o="outlet"></router-outlet>
