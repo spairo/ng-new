@@ -21,7 +21,8 @@ export class ApibuilderService {
       service.url = env.hostname + '/' + env.platform + '/' + env.apiVersion + '/' + service.module;
         return this.BuildRequest(service);
     } else {
-      service.url = env.hostname + env.mock + env.platform + '/' + env.apiVersion + '/' + service.module + '.json';
+      service.url = env.hostname + env.dynPath + env.mock + env.platform + '/' + env.apiVersion + '/' + service.module + '.json';
+      console.log("dispatcher: " + service.url);
         return this.BuildRequest(service);
     }
   }

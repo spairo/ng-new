@@ -2,6 +2,9 @@ import { Title } from '@angular/platform-browser';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import { ActivationEnd, Router } from '@angular/router';
+import { Headers, RequestOptions } from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import { Store } from '@ngrx/store';
 import { Subject } from 'rxjs/Subject';
 import { takeUntil } from 'rxjs/operators/takeUntil';
@@ -27,6 +30,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   @HostBinding('class') componentCssClass;
 
+  public href:any;
   isProd = env.production;
   envName = env.envName;
   version = env.versions.app;
@@ -49,7 +53,8 @@ export class AppComponent implements OnInit, OnDestroy {
     public overlayContainer: OverlayContainer,
     private store: Store<any>,
     private router: Router,
-    private titleService: Title
+    private titleService: Title,
+    private _http: HttpClient,
   ) {}
 
   ngOnInit(): void {
@@ -73,6 +78,28 @@ export class AppComponent implements OnInit, OnDestroy {
           title ? `${title} - ${env.appName}` : env.appName
         );
       });
+
+    this.doGETWithHeaders();
+
+    this.href = this.router.url;
+    console.log(this.router.url);
+
+
+  }
+
+  doGETWithHeaders() {
+    console.log("GET WITH HEADERS");
+    let headers = new Headers();
+    headers.append('foo', 'bar');
+    console.log("********************");
+    console.log(headers);
+    console.log("********************");
+
+    this._http.get('/').subscribe((res:Response) => {
+      console.log(res.headers);
+      // you can assign the value to any variable here
+    });
+
   }
 
   ngOnDestroy(): void {
