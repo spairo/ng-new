@@ -1,0 +1,60 @@
+{
+  "headerNames": [{
+      "description": "Vencimiento"
+    },
+    {
+      "description": "Subyacente"
+    },
+    {
+      "description": "Activo de referencia"
+    },
+    {
+      "description": "Tailor-made"
+    },
+    {
+      "description": "Plazo"
+    },
+    {
+      "description": "Geografia"
+    },
+    {
+      "description": "Distribucion por perfil"
+    },
+    {
+      "description": "Precio"
+    }
+  ],
+  "headerValues": [
+    {
+      "fieldValue": "Distribucion de vencimiento"
+    },
+    {
+      "fieldValue": "Subyacente"
+    },
+    {
+      "fieldValue": "Activo de referencia"
+    }
+  ],
+  "basketValues": [{
+      "fieldValue": "Valor9"
+    },
+    {
+      "fieldValue": "Valor9"
+    }
+  ],
+  "portfolio": {
+    "amountIssued": {
+      "amount": 4000000000.5448
+    },
+    "name": "EQD",
+    "disclaimer": {
+      "description": "La informacion contenida en el presente documento y, en su caso, en sus anexos (en adelante, el Documento) tiene caracter puramente ilustrativo y ha sido elaborada por BBVA Bancomer S.A."
+    }
+  },
+  "colores": [
+    "#89D1F3",
+    "#009EE5",
+    "#094fa4",
+    "#86C82D"
+  ]
+}

@@ -1,0 +1,627 @@
+{
+  "underlyingAssets": [{
+    "code": "abcd",
+    "name": "CURR"
+  }, {
+    "code": "efgh",
+    "name": "EQD"
+  }, {
+    "code": "ijkl",
+    "name": "IRD"
+  }, {
+    "code": "mnop",
+    "name": "BOND"
+  }, {
+    "code": "qrst",
+    "name": "MIX"
+  }, {
+    "code": "uvwx",
+    "name": "HYBRID"
+  }],
+  "productTabs": [{
+    "code": "abcd",
+    "name": "creado por mi 1"
+  }, {
+    "code": "defg",
+    "name": "test port"
+  }, {
+    "code": "hijk",
+    "name": "test 2 port"
+  }],
+  "relatedContracts": ["350867", "351008", "351008", "353473", "353473", "363027", "366692", "366692", "366692", "367605"],
+  "structuredProductInformation": [{
+    "id": "3655",
+    "series": "C8012D",
+    "stActivo": true,
+    "underlyingAssociates": [{
+      "name": "CURR"
+    }],
+    "paymentType": "Call Corto",
+    "productPrice": {
+      "amount": 100.0
+    },
+    "dueDate": "02-07-2019",
+    "currency": {
+      "code": "MXN"
+    },
+    "priceDifference": {
+      "amount": 1.25
+    },
+    "priceDate": "02-07-2019",
+    "status": "1",
+    "listPayOff": [],
+    "referenceAssets": [{
+			"nbActivo": "Índice Eurostoxx 50®",
+			"precioActivo": 3368.25,
+			"diferencia": -100.0
+		}],
+    "prices": [{
+        "price": "97.9964",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.209",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "94.6646",
+        "date": "02-07-2019"
+      }
+    ],
+    "productIndicators": [],
+    "detailStructuredProducts": [],
+    "semaforo": {
+			"color": "#86C82D",
+			"comentario": "lorem iptins",
+			"nombreSemaforo": "lspa"
+		}
+  }, {
+    "id": "3656",
+    "series": "C8013D",
+    "stActivo": true,
+    "underlyingAssociates": [{
+      "name": "CURR"
+    }],
+    "paymentType": "Call Digital",
+    "productPrice": {
+      "amount": 100.0
+    },
+    "dueDate": "02-07-2019",
+    "currency": {
+      "code": "MXN"
+    },
+    "priceDifference": {
+      "amount": 1.25
+    },
+    "priceDate": "02-07-2019",
+    "status": "1",
+    "listPayOff": [],
+    "referenceAssets": [
+      {
+			"nbActivo": "Índice S&P 500®",
+			"precioActivo": 95.3256,
+			"diferencia": -100.0
+      }, {
+        "nbActivo": "Índice Eurostoxx 50®",
+        "precioActivo": 95.3256,
+        "diferencia": -100.0
+      }
+    ],
+    "prices": [{
+        "price": "97.9964",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.209",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "94.6646",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.148",
+        "date": "02-07-2019"
+      }
+    ],
+    "productIndicators": [],
+    "detailStructuredProducts": [],
+    "semaforo": {
+			"color": "#86C82D",
+			"comentario": null,
+			"nombreSemaforo": null
+		}
+  }, {
+    "id": "3657",
+    "series": "C8014D",
+    "stActivo": true,
+    "underlyingAssociates": [{
+      "name": "CURR"
+    }],
+    "paymentType": "Call KO Up",
+    "productPrice": {
+      "amount": 100.0
+    },
+    "dueDate": "02-07-2019",
+    "currency": {
+      "code": "MXN"
+    },
+    "priceDifference": {
+      "amount": 1.25
+    },
+    "priceDate": "02-07-2019",
+    "status": "1",
+    "listPayOff": [],
+    "referenceAssets": [{
+			"nbActivo": "Índice Eurostoxx 50®",
+			"precioActivo": 3368.25,
+			"diferencia": -100.0
+		}],
+    "prices": [{
+        "price": "97.9964",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.209",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "94.6646",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.148",
+        "date": "02-07-2019"
+      }
+    ],
+    "productIndicators": [],
+    "detailStructuredProducts": [],
+    "semaforo": {
+			"color": "#86C82D",
+			"comentario": null,
+			"nombreSemaforo": null
+		}
+  }, {
+    "id": "3658",
+    "series": "C8015D",
+    "stActivo": true,
+    "underlyingAssociates": [{
+      "name": "CURR"
+    }],
+    "paymentType": "Call Spread",
+    "productPrice": {
+      "amount": 100.0
+    },
+    "dueDate": "02-07-2019",
+    "currency": {
+      "code": "MXN"
+    },
+    "priceDifference": {
+      "amount": 1.25
+    },
+    "priceDate": "02-07-2019",
+    "status": "1",
+    "listPayOff": [],
+    "referenceAssets": [{
+			"nbActivo": "Índice Eurostoxx 50®",
+			"precioActivo": 3368.25,
+			"diferencia": -100.0
+		}],
+    "prices": [{
+        "price": "97.9964",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.209",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "94.6646",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.148",
+        "date": "02-07-2019"
+      }
+    ],
+    "productIndicators": [],
+    "detailStructuredProducts": [],
+    "semaforo": {
+			"color": "#86C82D",
+			"comentario": null,
+			"nombreSemaforo": null
+		}
+  }, {
+    "id": "3659",
+    "series": "C8016",
+    "stActivo": true,
+    "underlyingAssociates": [{
+      "name": "CURR"
+    }],
+    "paymentType": "Call Spread Escalonado",
+    "productPrice": {
+      "amount": 100.0
+    },
+    "dueDate": "02-07-2019",
+    "currency": {
+      "code": "MXN"
+    },
+    "priceDifference": {
+      "amount": 1.25
+    },
+    "priceDate": "02-07-2019",
+    "status": "1",
+    "listPayOff": [],
+    "referenceAssets": [{
+			"nbActivo": "Índice Eurostoxx 50®",
+			"precioActivo": 3368.25,
+			"diferencia": -100.0
+		}],
+    "prices": [{
+        "price": "97.9964",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.209",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "94.6646",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.148",
+        "date": "02-07-2019"
+      }
+    ],
+    "productIndicators": [],
+    "detailStructuredProducts": [],
+    "semaforo": {
+			"color": "#86C82D",
+			"comentario": null,
+			"nombreSemaforo": null
+		}
+  }, {
+    "id": "3660",
+    "series": "C8017D",
+    "stActivo": true,
+    "underlyingAssociates": [{
+      "name": "CURR"
+    }],
+    "paymentType": "Double No Touch",
+    "productPrice": {
+      "amount": 100.0
+    },
+    "dueDate": "02-07-2019",
+    "currency": {
+      "code": "MXN"
+    },
+    "priceDifference": {
+      "amount": 1.25
+    },
+    "priceDate": "02-07-2019",
+    "status": "1",
+    "listPayOff": [],
+    "referenceAssets": [{
+			"nbActivo": "Índice Eurostoxx 50®",
+			"precioActivo": 3368.25,
+			"diferencia": -100.0
+		}],
+    "prices": [{
+        "price": "97.9964",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.209",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "94.6646",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.148",
+        "date": "02-07-2019"
+      }
+    ],
+    "productIndicators": [],
+    "detailStructuredProducts": [],
+    "semaforo": {
+			"color": "#86C82D",
+			"comentario": null,
+			"nombreSemaforo": null
+		}
+  }, {
+    "id": "3661",
+    "series": "S8017",
+    "stActivo": true,
+    "underlyingAssociates": [{
+      "name": "CURR"
+    }],
+    "paymentType": "Double No Touch Cuponado",
+    "productPrice": {
+      "amount": 100.0
+    },
+    "dueDate": "02-07-2019",
+    "currency": {
+      "code": "MXN"
+    },
+    "priceDifference": {
+      "amount": 1.25
+    },
+    "priceDate": "02-07-2019",
+    "status": "1",
+    "listPayOff": [],
+    "referenceAssets": [{
+			"nbActivo": "Índice Eurostoxx 50®",
+			"precioActivo": 3368.25,
+			"diferencia": -100.0
+		}],
+    "prices": [{
+        "price": "97.9964",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.209",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "94.6646",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.148",
+        "date": "02-07-2019"
+      }
+    ],
+    "productIndicators": [],
+    "detailStructuredProducts": [],
+    "semaforo": {
+			"color": "#86C82D",
+			"comentario": null,
+			"nombreSemaforo": null
+		}
+  }, {
+    "id": "3662",
+    "series": "S8016",
+    "stActivo": true,
+    "underlyingAssociates": [{
+      "name": "CURR"
+    }],
+    "paymentType": "Dual",
+    "productPrice": {
+      "amount": 100.0
+    },
+    "dueDate": "02-07-2019",
+    "currency": {
+      "code": "MXN"
+    },
+    "priceDifference": {
+      "amount": 1.25
+    },
+    "priceDate": "02-07-2019",
+    "status": "1",
+    "listPayOff": [],
+    "referenceAssets": [{
+			"nbActivo": "Índice Eurostoxx 50®",
+			"precioActivo": 3368.25,
+			"diferencia": -100.0
+		}],
+    "prices": [],
+    "productIndicators": [],
+    "detailStructuredProducts": [],
+    "semaforo": {
+			"color": "#86C82D",
+			"comentario": null,
+			"nombreSemaforo": null
+		}
+  }, {
+    "id": "3663",
+    "series": "S8016",
+    "stActivo": true,
+    "underlyingAssociates": [{
+      "name": "CURR"
+    }],
+    "paymentType": "Dual Topada",
+    "productPrice": {
+      "amount": 100.0
+    },
+    "dueDate": "02-07-2019",
+    "currency": {
+      "code": "MXN"
+    },
+    "priceDifference": {
+      "amount": 1.25
+    },
+    "priceDate": "02-07-2019",
+    "status": "1",
+    "listPayOff": [],
+    "referenceAssets": [{
+			"nbActivo": "Índice Eurostoxx 50®",
+			"precioActivo": 3368.25,
+			"diferencia": -100.0
+		}],
+    "prices": [{
+        "price": "97.9964",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.209",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "94.6646",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.148",
+        "date": "02-07-2019"
+      }
+    ],
+    "productIndicators": [],
+    "detailStructuredProducts": [],
+    "semaforo": {
+			"color": "#86C82D",
+			"comentario": null,
+			"nombreSemaforo": null
+		}
+  }, {
+    "id": "3664",
+    "series": "S8019",
+    "stActivo": false,
+    "underlyingAssociates": [{
+      "name": "CURR"
+    }],
+    "paymentType": "Escalera KO Up",
+    "productPrice": {
+      "amount": 100.0
+    },
+    "dueDate": "02-07-2019",
+    "currency": {
+      "code": "MXN"
+    },
+    "priceDifference": {
+      "amount": -1.25
+    },
+    "priceDate": "02-07-2019",
+    "status": "2",
+    "listPayOff": [],
+    "referenceAssets": [{
+			"nbActivo": "Índice Eurostoxx 50®",
+			"precioActivo": 3368.25,
+			"diferencia": -100.0
+		}],
+    "prices": [{
+        "price": "97.9964",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "97.5857",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.209",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "94.6646",
+        "date": "02-07-2019"
+      },
+      {
+        "price": "95.148",
+        "date": "02-07-2019"
+      }
+    ],
+    "productIndicators": [],
+    "detailStructuredProducts": [],
+    "semaforo": {
+			"color": "#86C82D",
+			"comentario": null,
+			"nombreSemaforo": null
+		}
+  }]
+}

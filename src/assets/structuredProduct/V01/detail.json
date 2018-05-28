@@ -1,0 +1,28 @@
+{
+  "underlyingAssociates": [],
+  "listPayOff": [{
+    "complexity": {
+      "id": "A",
+      "name": "Alta"
+    },
+    "protectedCapital": {
+      "amount": 0
+    },
+    "volatilityIndicator": "1",
+    "liquidityIndicator": "0",
+    "paymentTypeFeature": {
+      "id": "GF",
+      "name": "Generacion de flujo"
+    },
+    "term": "LP",
+    "series": "EUE804L DC014"
+  }],
+  "strategyDetail": [],
+  "graphicCoupons": [],
+  "disclaimer": {
+    "description": "El contenido de este sistema es confidencial, elaborado para uso exclusivo del personal de BBVA Bancomer. Queda prohibida su reproduccion o distribucion fuera del Grupo Financiero BBVA Bancomer."
+  },
+  "yieldDetails": [],
+  "trackingCoupons": [],
+  "graphicDetails": []
+}

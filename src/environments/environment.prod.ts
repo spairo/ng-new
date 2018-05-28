@@ -5,7 +5,7 @@ export const environment = {
   envName: 'DEV',
   production: false,
   hostname: 'https://150.100.96.75:36020',
-  dynPath: '/mgrm_mult_web_gestionbanqueros_01/',
+  dynPath: '/mgrm_mult_web_gestionbanqueros_01',
   mock: '/assets/',
   platform: 'structuredProduct',
   apiVersion: 'v1',
